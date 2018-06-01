@@ -1,0 +1,57 @@
+Title: Build a Bracelet
+
+----
+
+Form-title: Sign Up for Updates
+
+----
+
+Map-text: Get In Touch
+
+----
+
+Address: 
+
+787 Cherry Ridge Court, Grantsville
+UT 84029, US
+
+----
+
+Phone: 801-833-0432
+
+----
+
+Office-hours: 
+
+Monday - Friday: 9AM - 8PM
+Saturday: By Appointment
+Sunday: Closed
+
+----
+
+Copyright: Copyright © (date: Y) Babble Charms - All Rights Reserved.
+
+----
+
+Social-title: Get Social:
+
+----
+
+Social-media: 
+
+- 
+  social_title: Facebook
+  social_link: >
+    https://www.facebook.com/buildabracelet21/
+  social_class: facebook
+- 
+  social_title: Twitter
+  social_link: https://twitter.com/buildabracelet4
+- 
+  social_title: Instagram
+  social_link: >
+    https://www.instagram.com/Build_a_Bracelet21
+
+----
+
+Background: cta.png

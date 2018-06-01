@@ -1,0 +1,35 @@
+# System files
+# ------------
+
+Icon
+.DS_Store
+/vendor/
+/node_modules/
+
+# Temporary files
+# ---------------
+
+/thumbs/*
+/thumbs/.gitkeep
+
+/site/cache/*
+!/site/cache/.gitkeep
+
+# -------------SECURITY-------------
+# NEVER publish these files via Git!
+# -------------SECURITY-------------
+
+.env
+.htpasswd
+
+# Kirby accounts
+# ---------------
+
+/site/accounts/*
+!/site/accounts/.gitkeep
+
+# Avatars
+# ---------------
+
+/assets/avatars/*
+/assets/avatars/.gitkeep

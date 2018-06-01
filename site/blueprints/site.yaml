@@ -1,0 +1,55 @@
+title: Site
+fields:
+  tabSettings:
+    label: Settings
+    type:  tabs
+    icon: gear
+  title:
+    label: Title
+    type:  text
+  background:
+    label: Default Background
+    type: image
+  tabForm:
+    label: Form
+    type:  tabs
+    icon: file-text-o
+  form_title:
+    label: Form Title
+    type: text
+  map_text:
+    label: Map Text
+    type: text
+  address:
+    label: Address
+    type: markdown
+  phone:
+    label: Phone Number
+    type: Text
+  office_hours:
+    label: Office Hours
+    type: markdown
+  tabFooter:
+    label: Footer
+    type:  tabs
+    icon: file-text-o
+  copyright:
+    label: Copyright
+    type:  markdown
+  social_title:
+    label: Social Media Title
+    type: Text
+  social_media:
+    label: Social Media Links
+    type: structure
+    modalsize: large
+    style: table
+    fields:
+      social_title:
+        label: Title
+        type: text
+        required: true
+      social_link:
+        label: Link
+        type: url
+        required: true

@@ -1,0 +1,17 @@
+title: Product
+fields:
+  tabContent:
+    label: Content
+    type:  tabs
+    icon: file-text-o
+  title:
+    label: Title
+    type:  text
+  menu_title:
+    label: Menu Title
+    type:  text
+  background: background
+  text:
+    label: Text
+    type: markdown
+    required: true

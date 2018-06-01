@@ -1,0 +1,22 @@
+Tabcontent: 
+
+----
+
+Title: About
+
+----
+
+Menu-title: 
+
+----
+
+Background: cta.png
+
+----
+
+Text: 
+
+# About Us
+## About Charms for Etsy
+
+We at Charms for Etsy sell quality charms at wholesale prices, we have hundreds of charms to choose from. Email or message us with questions, We look forward to hearing and interacting with you!

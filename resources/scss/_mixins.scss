@@ -1,0 +1,68 @@
+@mixin vertical-center($top: 50%, $position: relative) {
+	transform: translateY(-50%);
+	position: $position;
+	top: $top;
+}
+
+@mixin horizontal-center($left: 50%, $position: relative) {
+	transform: translateX(-50%);
+	position: $position;
+	left: $left;
+}
+
+@mixin center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@mixin flex($display: flex, $align: center) {
+	display: $display;
+	align-items: $align;
+}
+
+@mixin flex-space($justify: space-between) {
+	flex-wrap: wrap;
+	justify-content: $justify;
+}
+
+@mixin max-width($width) {
+	max-width: $width;
+	margin: 0 auto;
+}
+
+@mixin container($padding) {
+	padding-left: $padding;
+	padding-right: $padding;
+}
+
+@mixin selection($bg, $color) {
+	::-moz-selection {
+		background-color: $bg;
+		color: $color;
+	}
+	::selection {
+		background-color: $bg;
+		color: $color;
+	}
+}
+
+@mixin fa($content) {
+	content: $content;
+	font-family: 'FontAwesome';
+}
+
+@mixin bg {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+@mixin fixed-bg($height: 100%, $top: 0) {
+	@include bg;
+	top: $top;
+	width: 100%;
+	height: $height;
+	position: fixed;
+}

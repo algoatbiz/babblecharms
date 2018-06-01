@@ -1,0 +1,60 @@
+title: Home
+pages: false
+fields:
+  tabContent:
+    label: Content
+    type:  tabs
+    icon: file-text-o
+  title:
+    label: Title
+    type:  text
+  menu_title:
+    label: Menu Title
+    type:  text
+  sliders:
+    label: Sliders
+    type: structure
+    style: table
+    modalsize: large
+    fields:
+      slider_image:
+        label: Image
+        type: image
+        required: true
+      slider_title:
+        label: Title
+        type: text
+        required: true
+      slider_text:
+        label: Text
+        type: markdown
+        required: true
+  collections_text:
+    label: Collections Text
+    type: markdown
+    required: true
+  collections_cards:
+    label: Collections Cards
+    type: structure
+    modalsize: large
+    fields:
+      card_text:
+        label: Text
+        type: markdown
+        required: true
+      card_image:
+        label: Image
+        type: image
+        required: true
+  featured_text:
+    label: Featured Text
+    type: markdown
+    required: true
+  cta_image:
+    label: CTA Image
+    type: image
+    required: true
+  cta_text:
+    label: CTA Text
+    type: markdown
+    required: true

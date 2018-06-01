@@ -1,0 +1,24 @@
+[submodule "panel"]
+	path = panel
+	url = https://github.com/getkirby/panel.git
+[submodule "kirby"]
+	path = kirby
+	url = https://github.com/getkirby/kirby.git
+[submodule "site/fields/tabs"]
+	path = site/fields/tabs
+	url = https://github.com/byybora/Kirby-Tabs-Field
+[submodule "site/plugins/thumbext"]
+	path = site/plugins/thumbext
+	url = https://github.com/jbeyerstedt/kirby-plugin-thumbExt.git
+[submodule "site/fields/markdown"]
+	path = site/fields/markdown
+	url = https://github.com/JonasDoebertin/kirby-visual-markdown.git
+[submodule "site/plugins/field-selector"]
+	path = site/plugins/field-selector
+	url = https://github.com/storypioneers/kirby-selector.git
+[submodule "site/plugins/minifyhtml"]
+	path = site/plugins/minifyhtml
+	url = https://github.com/ian-cox/Kirby-MinifyHTML
+[submodule "site/fields/fieldtoggle"]
+	path = site/fields/fieldtoggle
+	url = https://github.com/medienbaecker/kirby-fieldtoggle

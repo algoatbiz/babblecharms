@@ -1,0 +1,49 @@
+/*=============================
+=            Fonts            =
+=============================*/
+
+$oswald: "Oswald", sans-serif;
+$raleway: "Raleway", sans-serif;
+$roboto: "Roboto", sans-serif;
+// $odin rounded light
+
+/*==============================
+=          Font Sizes          =
+==============================*/
+
+
+
+/*==============================
+=         Font Weights         =
+==============================*/
+
+$light: 300;
+$normal: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+
+/*==============================
+=            Colors            =
+==============================*/
+
+$black: #000000;
+$white: #ffffff;
+$peach: #f9dfce;
+
+/*===================================
+=            Breakpoints            =
+===================================*/
+
+$above-lg: 1500px;
+$lg: max-width 1499px;
+$above-md: 1200px;
+$md: max-width 1199px;
+$above-sm: 1024px;
+$sm: max-width 1023px;
+$above-xs: 768px;
+$xs: max-width 767px;
+$above-mobile: 480px;
+$mobile-landscape: max-height 479px;
+$mobile: max-width 479px;
+$iphone: max-width 320px;

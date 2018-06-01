@@ -1,0 +1,65 @@
+Title: Home
+
+----
+
+Menu-title: 
+
+----
+
+Sliders: 
+
+- 
+  slider_image: banner.jpg
+  slider_title: Vestibulum nunc
+  slider_text: |
+    Praesent varius, diam quis rutrum tempor, purus turpis congue libero, a eleifend augue augue vel justo proin vel feugiat
+    
+    (link: # text: Learn More class: button white)
+
+----
+
+Collections-text: Phasellus quis ligula cursus sapien tincidunt lacinia ut sit amet est. Donec sit amet augue lorem. Donec sed egestas eros. Aliquam volutpat vestibulum justo vel vestibulum.
+
+----
+
+Featured-text: Morbi non turpis non arcu blandit molestie. Donec mattis sapien ac magna elementum ultrices. Praesent sit amet ultrices arcu. Morbi suscipit erat ac hendrerit sodales. Praesent mattis a eros eget tristique.
+
+----
+
+Cta-image: cta.png
+
+----
+
+Cta-text: 
+
+## About Babble Charms
+Donec eget lacus varius, tempor lacus ultricies, ultrices justo. Vivamus ac pharetra nulla. Morbi eleifend arcu quam,
+eu viverra elit pharetra ac.
+
+(link: about text: Learn More class: button white)
+
+----
+
+Collections-cards: 
+
+- 
+  card_text: |
+    ### What's Hot
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus aliquet risus eget rutrum semper.
+    
+    (link: # text: Shop Now)
+  card_image: whats-hot.png
+- 
+  card_text: |
+    ### New Arrivals
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus aliquet risus eget rutrum semper.
+    
+    (link: # text: See All New Arrivals)
+  card_image: new-arrivals.png
+- 
+  card_text: |
+    ### Mother's Day Specials
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus aliquet risus eget rutrum semper.
+    
+    (link: # text: Shop Now)
+  card_image: mothers-day.png
