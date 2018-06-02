@@ -41,18 +41,52 @@ nav {
 }
 
 #menu {
-	height: 2.5rem;
 	@include flex;
-	@include flex-space;
-	@include max-width(20rem);
+	@include flex-space(center);
 
+	.top {
+		position: relative;
+
+		&.active, &:hover {
+			&:before {
+				content: '';
+				left: 0;
+				top: -1px;
+				height: 1px;
+				width: 100%;
+				position: absolute;
+				background: $black;
+			}
+		}
+		a {
+			display: block;
+			position: relative;
+			padding: .5rem 1.5rem;
+		}
+	}
 	.has-children {
-		a:after {
+		> a:after {
 			margin-left: .75rem;
 			@include fa('\f107');
 		}
 		ul {
+			left: 0;
+			top: 2.5rem;
 			display: none;
+			min-width: 12rem;
+			position: absolute;
+			background: $white;
+
+			a {
+				display: block;
+				padding: .5rem 1.5rem;
+				transition: all .3s;
+			}
+			li {
+				&.active, &:hover {
+					background: $peach;
+				}
+			}
 		}
 	}
 }

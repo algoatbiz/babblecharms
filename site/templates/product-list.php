@@ -1,6 +1,7 @@
 <?php snippet('header') ?>
 <?= $page->buildHero() ?>
+<?= $page->productNavigation() ?>
 	<main>
-		<?= $page->productNavigation() ?>
+		<?= $page->categoryContent() ?>
 	</main>
 <?php snippet('footer') ?>

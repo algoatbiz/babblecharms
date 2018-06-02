@@ -1,0 +1,17 @@
+Tabcontent: 
+
+----
+
+Title: Lotus Flower Charm
+
+----
+
+Text: This adorable lotus flower charm is the cutest!! About the size of a penny. It adds cuteness and color to any necklace, keychain or bracelet!!
+
+----
+
+Short-description: Lotus Flower charm
+
+----
+
+Primary-image: 4.png

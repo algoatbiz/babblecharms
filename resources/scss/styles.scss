@@ -125,6 +125,40 @@ button, .button {
 	}
 }
 
+#hero {
+	height: 30rem;
+
+	&.short {
+		height: 17rem;
+
+		.container {
+			top: 4rem;
+		}
+	}
+	> div:first-of-type {
+		@include fixed-bg(30rem, 8.75rem);
+	}
+	.container {
+		top: 5rem;
+
+		> div {
+			max-width: 40rem;
+		}
+	}
+	h2 {
+		font-size: $title;
+	}
+	p {
+		line-height: 1.5;
+		font-size: $big;
+		font-family: $roboto;
+	}
+}
+
+body.default #hero h2 {
+	margin-bottom: 1.5rem;
+}
+
 /*=============================
 =             Form            =
 =============================*/

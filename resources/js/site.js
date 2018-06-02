@@ -35,6 +35,49 @@ var ua = window.navigator.userAgent,
 body.className += trident > 0 || msie > 0 ? ' ie' : edge > 0 ? ' edge' : '';
 
 /*=============================
+=             Menu            =
+=============================*/
+
+for(var i=0; i<desktopLinks.length; i++)
+	desktopLinks[i].addEventListener('click', toggleMenu);
+
+body.addEventListener('click', function(e) {
+	var isMenu = menu ? menu.contains(e.target) : false;
+	if(!isMenu && menu) {
+		closeMenu(this, menu);
+	}
+});
+
+function toggleMenu(e) {
+	if(e.currentTarget.getAttribute('href') !== '#')
+		return true;
+
+	e.preventDefault();
+
+	var sub = this.nextSibling,
+		animation = window.getComputedStyle(sub).display == 'block' ? 'slideUp' : 'slideDown';
+
+	closeMenu(this, this.parentNode.parentNode);
+
+	Velocity(sub, animation, {duration: 150});
+	this.parentNode.classList.toggle('open');
+}
+
+function closeMenu(el, parent) {
+	var openMenu = parent.querySelector('.open > a');
+	if(openMenu && openMenu !== el) {
+		Velocity(openMenu.nextSibling, 'slideUp', {duration: 150});
+		openMenu.parentNode.classList.remove('open');
+
+		var openChild = openMenu.nextSibling.querySelector('.open > a');
+		if(openChild) {
+			openChild.parentNode.classList.remove('open');
+			openChild.nextSibling.style.display = 'none';
+		}
+	}
+}
+
+/*=============================
 =          Google Map         =
 =============================*/
 

@@ -10,9 +10,9 @@
 				<ul>
 					<li class="<?= r($pg->isActive(), 'active') ?>"><a href="<?= $pg->url() ?>"><?= $pg->title() ?></a></li>
 					<?php foreach($pg->menuPages() as $ch): ?>
-						<li class="<?= r($ch->hasMenuPages(), 'has-children') ?><?= r($ch->isOpen(), ' active') ?>">
-							<a href="<?= r($ch->hasMenuPages(), '#', $ch->url()) ?>"><?= $ch->menuTitle() ?></a>
-							<?php if($ch->hasMenuPages()): ?>
+						<li class="<?= r($ch->hasMenuPages() && $ch->template() != 'product-category', 'has-children') ?><?= r($ch->isOpen(), ' active') ?>">
+							<a href="<?= r($ch->hasMenuPages() && $ch->template() != 'product-category', '#', $ch->url()) ?>"><?= $ch->menuTitle() ?></a>
+							<?php if($ch->hasMenuPages() && $ch->template() != 'product-category'): ?>
 								<ul>
 									<li class="<?= r($ch->isActive(), 'active') ?>"><a href="<?= $ch->url() ?>"><?= $ch->title() ?></a></li>
 									<?php foreach($ch->menuPages() as $gh): ?>

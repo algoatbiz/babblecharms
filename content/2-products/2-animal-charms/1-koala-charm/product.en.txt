@@ -1,0 +1,17 @@
+Tabcontent: 
+
+----
+
+Title: Koala Charm
+
+----
+
+Text: This cute little koala charm that is the same height as the penny, they are so adorable!!
+
+----
+
+Short-description: Koala charm, koala bear
+
+----
+
+Primary-image: 2.png

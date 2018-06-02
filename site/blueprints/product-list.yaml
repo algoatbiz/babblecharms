@@ -1,21 +1,7 @@
 title: Product List
 pages: product-category
 fields:
-  tabContent:
-    label: Content
-    type:  tabs
-    icon: file-text-o
-  title:
-    label: Title
-    type:  text
-  menu_title:
-    label: Menu Title
-    type:  text
-  background: background
-  text:
-    label: Text
-    type: markdown
-    required: true
+  content_fields: content_fields
   category_description:
     label: Category Description
     type: markdown

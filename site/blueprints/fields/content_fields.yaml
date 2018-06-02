@@ -1,4 +1,4 @@
-title: Product
+type: group
 fields:
   tabContent:
     label: Content
@@ -7,13 +7,15 @@ fields:
   title:
     label: Title
     type:  text
+  menu_title:
+    label: Menu Title
+    type:  text
+    width: 1/2
+  background:
+    label: Background
+    type: image
+    width: 1/2
   text:
     label: Text
     type: markdown
     required: true
-  short_description:
-    label: Short Description
-    type: text
-  primary_image:
-    label: Primary Image
-    type: image

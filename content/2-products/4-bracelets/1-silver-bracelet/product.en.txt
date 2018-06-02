@@ -1,0 +1,17 @@
+Tabcontent: 
+
+----
+
+Title: Silver Bracelet
+
+----
+
+Text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus aliquet risus eget rutrum semper.
+
+----
+
+Short-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+----
+
+Primary-image: 3.png

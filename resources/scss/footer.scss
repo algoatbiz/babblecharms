@@ -17,7 +17,7 @@
 	}
 	.title {
 		margin-bottom: 2rem;
-		font-size: 1.875rem;
+		font-size: $title;
 		font-weight: $light;
 		font-family: $oswald;
 		text-transform: uppercase;
@@ -140,7 +140,7 @@ footer {
 		color: inherit;
 
 		&:before {
-			font-size: 1.25rem;
+			font-size: $big;
 		}
 		&:not(:last-of-type) {
 			margin-right: .75rem;
