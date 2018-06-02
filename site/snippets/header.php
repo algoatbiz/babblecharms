@@ -3,6 +3,7 @@
 	<head>
 
 		<?= r($page->noindex()->isTrue(), '<meta name="robots" content="noindex, nofollow">') ?>
+		<meta name="robots" content="noindex, nofollow">
 		<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0" />
 
 		<link rel="alternate" href="<?= url() ?>" hreflang="en-us" />
