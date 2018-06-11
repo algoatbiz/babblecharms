@@ -15,11 +15,7 @@ class ProductListPage extends DefaultPage {
 
 	public function categoryContent() {
 		$content = brick('div', $this->title(), ['class'=>'title']).brick('div', $this->category_description()->kt());
-		return brick('div', brick('div', $content, ['class'=>'container']), ['id'=>'category-description']);
-	}
-
-	public function allProducts() {
-		return site()->index()->filterBy('template', 'product')->visible();
+		return brick('div', $content, ['id'=>'category-description']);
 	}
 
 }

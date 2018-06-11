@@ -46,20 +46,20 @@ Collections-cards:
   card_text: |
     ### What's Hot
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus aliquet risus eget rutrum semper.
-    
-    (link: # text: Shop Now)
   card_image: whats-hot.png
+  link_text: Show Now
+  card_link: products
 - 
   card_text: |
     ### New Arrivals
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus aliquet risus eget rutrum semper.
-    
-    (link: # text: See All New Arrivals)
   card_image: new-arrivals.png
+  link_text: See All New Arrivals
+  card_link: products
 - 
   card_text: |
     ### Mother's Day Specials
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus aliquet risus eget rutrum semper.
-    
-    (link: # text: Shop Now)
   card_image: mothers-day.png
+  link_text: Show Now
+  card_link: products

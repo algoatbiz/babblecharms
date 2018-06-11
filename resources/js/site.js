@@ -77,6 +77,12 @@ function closeMenu(el, parent) {
 	}
 }
 
+var productCategoryLinks = document.querySelectorAll('.product-submenu a');
+for(var i=0; i<productCategoryLinks.length; i++)
+	productCategoryLinks[i].addEventListener('mouseover', function() {
+		document.querySelector('.product-submenu .product-image').style = "background-image: url('"+this.dataset.image+"')";
+	});
+
 /*=============================
 =          Google Map         =
 =============================*/

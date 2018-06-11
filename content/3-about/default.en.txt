@@ -2,7 +2,7 @@ Tabcontent:
 
 ----
 
-Title: About
+Title: About Us
 
 ----
 
@@ -10,7 +10,7 @@ Menu-title:
 
 ----
 
-Background: cta.png
+Background: 
 
 ----
 

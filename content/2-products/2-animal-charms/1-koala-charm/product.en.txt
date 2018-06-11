@@ -15,3 +15,15 @@ Short-description: Koala charm, koala bear
 ----
 
 Primary-image: 2.png
+
+----
+
+Product-id: a2e1a331f825041eaf3885f2a5f8b7b9
+
+----
+
+Quantity: 1
+
+----
+
+Price: 0.50

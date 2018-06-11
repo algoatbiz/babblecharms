@@ -42,6 +42,12 @@ fields:
         label: Text
         type: markdown
         required: true
+      link_text:
+        label: Link Text
+        type: text
+      card_link:
+        label: Link
+        type: text
       card_image:
         label: Image
         type: image

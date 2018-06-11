@@ -3,7 +3,7 @@
 class HomePage extends DefaultPage {
 
 	public function buildSlider() {
-		$sliders = $this->sliders()	->toStructure();
+		$sliders = $this->sliders()->toStructure();
 
 		$content = '';
 		foreach($sliders as $slider) {
@@ -26,14 +26,16 @@ class HomePage extends DefaultPage {
 		$content = '';
 		foreach($collections as $collection) {
 			$image = brick('div', '', ['class'=>'image', 'style'=>'background-image: url("'.$this->file($collection->card_image())->url().'")']);
-			$content.= brick('div', $image.brick('div', $collection->card_text()->kt(), ['class'=>'text']), ['class'=>'card']);
+			$link = brick('p', brick('a', brick('span', $collection->link_text()), ['href'=>page($collection->card_link())->url()]));
+			$content.= brick('div', $image.brick('div', $collection->card_text()->kt().$link, ['class'=>'text']), ['class'=>'card']);
 		}
 
 		return brick('div', $content);
 	}
 
 	public function buildFeatured() {
-		
+		$button = brick('a', 'View all products', ['href'=>site()->index()->filterBy('template', 'product-list')->first()->url(), 'class'=>'button']);
+		return brick('div', site()->allProducts(), ['class'=>'product-list-container']).$button;
 	}
 
 }

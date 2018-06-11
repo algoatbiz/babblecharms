@@ -22,3 +22,6 @@
 [submodule "site/fields/fieldtoggle"]
 	path = site/fields/fieldtoggle
 	url = https://github.com/medienbaecker/kirby-fieldtoggle
+[submodule "site/plugins/autoid"]
+	path = site/plugins/autoid
+	url = https://github.com/helllicht/kirby-autoid.git

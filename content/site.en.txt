@@ -54,4 +54,4 @@ Social-media:
 
 ----
 
-Background: cta.png
+Background: default-hero.png

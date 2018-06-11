@@ -43,6 +43,8 @@ nav {
 #menu {
 	@include flex;
 	@include flex-space(center);
+	font-size: .875rem;
+	letter-spacing: 1px;
 
 	.top {
 		position: relative;
@@ -58,10 +60,10 @@ nav {
 				background: $black;
 			}
 		}
-		a {
+		> a {
 			display: block;
 			position: relative;
-			padding: .5rem 1.5rem;
+			padding: .594rem 1.5rem;
 		}
 	}
 	.has-children {
@@ -69,24 +71,62 @@ nav {
 			margin-left: .75rem;
 			@include fa('\f107');
 		}
-		ul {
-			left: 0;
-			top: 2.5rem;
+		> ul, .product-submenu {
+			left: 1.25rem;
+			top: 2.45rem;
 			display: none;
-			min-width: 12rem;
 			position: absolute;
-			background: $white;
+			border: 1px solid #c2c2c2;
+			box-shadow: 5px 5px 10px 0 rgba($black,.2);
 
 			a {
 				display: block;
-				padding: .5rem 1.5rem;
+				padding: 0 1.5rem;
 				transition: all .3s;
+				font-weight: $normal;
 			}
 			li {
 				&.active, &:hover {
-					background: $peach;
+					a {
+						text-decoration: underline;
+					}
+				}
+				&:not(:last-of-type) {
+					margin-bottom: .5rem;
 				}
 			}
+		}
+		> ul, .product-submenu ul {
+			min-width: 12rem;
+			background: $peach;
+			padding: 1.25rem 0;
+		}
+		.product-submenu {
+			> div {
+				@include flex(flex, inherit);
+			}
+			ul li:nth-last-of-type(2) {
+				margin-top: 3rem;
+			}
+			a {
+				position: relative;
+
+				&:hover {
+					&:after {
+						right: -.5rem;
+						color: #c2c2c2;
+						font-size: 2rem;
+						@include fa('\f105');
+						@include vertical-center(50%, absolute);
+					}
+				}
+			}
+		}
+		.product-image {
+			@include bg;
+			min-width: 15rem;
+			background: $white;
+			border-left: 1px solid #c2c2c2;
 		}
 	}
 }

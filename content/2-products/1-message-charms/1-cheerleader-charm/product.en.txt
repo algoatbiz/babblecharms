@@ -14,8 +14,20 @@ Stainless Steel will not tarnish or turn your skin green.
 
 ----
 
-Short-description: Cheerleader Charm, Stainless Steel Charm, Message Charm, Cheer
+Short-description: Cheerleader Charm, Stainless Steel
 
 ----
 
 Primary-image: 1.png
+
+----
+
+Product-id: 2654159322a054a7eeaf24db0c9014f9
+
+----
+
+Quantity: 1
+
+----
+
+Price: 1.50

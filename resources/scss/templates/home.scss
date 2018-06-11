@@ -3,6 +3,10 @@
 @import "../mixins";
 @import "../vars";
 
+/*=============================
+=            Slider           =
+=============================*/
+
 #slider {
 	z-index: 1;
 
@@ -55,24 +59,19 @@ main section:not(.cta) {
 		&:before {
 			content: '';
 			top: 0;
+			left: 5rem;
 			height: 1px;
 			background: #ddd;
 			position: absolute;
 			width: calc(100% - 10rem);
 		}
-		> div {
+		> div:first-of-type {
+			@include flex;
 			@include flex-space;
+			margin-bottom: 3rem;
 
-			&:first-of-type {
-				@include flex;
-				margin-bottom: 3rem;
-
-				> * {
-					width: 50%;
-				}
-			}
-			&:last-of-type {
-				@include flex(flex, inherit);
+			> * {
+				width: 50%;
 			}
 		}
 	}
@@ -92,7 +91,15 @@ h3 {
 	font-size: 1.5rem;
 }
 
+/*=============================
+=         Collections         =
+=============================*/
+
 #collections {
+	.container > div:last-of-type {
+		@include flex-space;
+		@include flex(flex, inherit);
+	}
 	.card {
 		max-width: 23rem;
 	}
@@ -100,7 +107,7 @@ h3 {
 		padding-bottom: 81.522%;
 	}
 	.text {
-		padding: 2.5rem 2rem;
+		padding: 2.25rem 2rem 2.5rem;
 		border: 1px solid #c2c2c2;
 	}
 	h3 {
@@ -114,12 +121,29 @@ h3 {
 	a:not(.image) {
 		color: inherit;
 		text-transform: uppercase;
-		text-decoration: underline;
 
+		span {
+			text-decoration: underline;
+		}
 		&:after {
 			@include fa('\f101');
 			padding-left: .75rem;
 		}
+	}
+}
+
+/*=============================
+=           Featured          =
+=============================*/
+
+#featured {
+	text-align: center;
+
+	.container > div {
+		text-align: left;
+	}
+	.product-list-container {
+		margin-bottom: 5rem;
 	}
 }
 

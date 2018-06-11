@@ -15,3 +15,15 @@ Short-description: Lotus Flower charm
 ----
 
 Primary-image: 4.png
+
+----
+
+Product-id: ff37602c80939c1760b30f20ce9aec98
+
+----
+
+Quantity: 1
+
+----
+
+Price: 0.50

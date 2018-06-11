@@ -43,13 +43,12 @@ main {
 }
 
 #category-description {
-	.container {
-		@include flex;
-		@include flex-space;
+	@include flex;
+	@include flex-space;
+	margin-bottom: 3.5rem;
 
-		> div:last-of-type {
-			max-width: 33.5rem;
-		}
+	> div:last-of-type {
+		max-width: 33.5rem;
 	}
 	.title {
 		font-size: $title;

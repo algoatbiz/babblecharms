@@ -3,6 +3,10 @@
 @import "mixins";
 @import "vars";
 
+body:not(.home):not(.default):not(.contact) #footer-contact {
+	border-top: 2px solid #eee;
+}
+
 #footer-contact {
 	@include flex(flex, flex-start);
 

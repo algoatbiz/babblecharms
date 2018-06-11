@@ -2,7 +2,4 @@ title: Product List
 pages: product-category
 fields:
   content_fields: content_fields
-  category_description:
-    label: Category Description
-    type: markdown
-    required: true
+  product_category_additional: product_category_additional

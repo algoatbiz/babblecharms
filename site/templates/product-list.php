@@ -2,6 +2,9 @@
 <?= $page->buildHero() ?>
 <?= $page->productNavigation() ?>
 	<main>
-		<?= $page->categoryContent() ?>
+		<div class="container">
+			<?= $page->categoryContent() ?>
+			<div class="product-list-container"><?= $site->allProducts() ?></div>
+		</div>
 	</main>
 <?php snippet('footer') ?>

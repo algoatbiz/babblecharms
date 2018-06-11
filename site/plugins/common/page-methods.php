@@ -49,3 +49,43 @@ page::$methods['menuTitle'] = function($page) {
 	return $page->content()->menu_title()->value();
 
 };
+
+page::$methods['allProducts'] = function($site) {
+
+	return $site->buildProductList($site->index()->filterBy('template', 'product')->visible());
+
+};
+
+page::$methods['products'] = function($page) {
+
+	return site()->buildProductList($page->children()->visible());
+
+};
+
+page::$methods['buildProductList'] = function($site, $products) {
+
+	$content = '';
+	foreach($products as $product) {
+		$image = brick('a', brick('img', false, ['src'=>$product->file($product->primary_image())->url(), 'alt'=>$product->title()]), ['href'=>$product->url(), ['class'=>'product-image']]);
+		$details = brick('h3', brick('a', $product->title(), ['href'=>$product->url()]));
+		$details.= $product->short_description()->kt();
+		$details.= brick('div', '$'.$product->price(), ['class'=>'price']);
+		$details.= $site->getRatings();
+		$details.= brick('a', 'Add to bag', ['href'=>'#', 'class'=>'button small add-bag']);
+		$content.= brick('div', $image.brick('div', $details, ['class'=>'details']), ['class'=>'product-item']);
+	}
+
+	return $content;
+
+};
+
+page::$methods['getRatings'] = function($site) {
+
+	$rating = 4;
+	$stars = '';
+	for($i=0; $i<5; $i++)
+		$stars.= brick('span', false, ['class'=>r($i<$rating, 'full')]);
+
+	return brick('div', $stars, ['class'=>'ratings']);
+
+};
