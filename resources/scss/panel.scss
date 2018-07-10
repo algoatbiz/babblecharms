@@ -6,7 +6,7 @@
 .form-blueprint-products {
 	.structure-entries.ui-sortable {
 		@include flex;
-		@include flex-space;
+		@include flex-space(flex-start);
 
 		> div {
 			width: 32%;

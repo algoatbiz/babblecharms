@@ -46,13 +46,14 @@ fields:
         required: true
         width: 1/2
       quantity:
-        label: Quantity
+        label: Stock
         type: number
         required: true
         width: 1/2
       image:
         label: Image
-        type: image
+        type: selector
+        size: 3
         required: true
   content_fields: content_fields
   category_description:
