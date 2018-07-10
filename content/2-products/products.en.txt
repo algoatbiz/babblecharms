@@ -1,0 +1,70 @@
+Tabcontent: 
+
+----
+
+Title: All Products
+
+----
+
+Text: 
+
+# Products
+Praesent varius, diam quis rutrum tempor, purus turpis congue libero, a eleifend augue augue vel justo proin vel feugiat
+
+----
+
+Category-description: Morbi non turpis non arcu blandit molestie. Donec mattis sapien ac magna elementum ultrices. Praesent sit amet ultrices arcu. Morbi suscipit erat ac hendrerit sodales. Praesent mattis a eros eget tristique.
+
+----
+
+Menu-image: 4.png
+
+----
+
+Products: 
+
+- 
+  name: Cheerleader Charm
+  text: |
+    This is a 20mm Stainless steel Round. It is lazer etched. Perfect for a Cheer bracelet or necklace.
+    
+    Stainless Steel will not tarnish or turn your skin green.
+  price: "1.50"
+  category: message
+  quantity: "1"
+  image: 4.png
+  product_id: "1234"
+- 
+  name: BFF Charm
+  text: |
+    Stainless steel BFF charm, perfect for a BFF necklace, bracelet or keychain.
+    
+    Won't tarnish or turn your skin green.
+  price: "1.50"
+  category: message
+  quantity: "1"
+  image: bff.jpg
+  product_id: "1233"
+- 
+  name: Koala Charm
+  text: >
+    This cute little koala charm that is the
+    same height as the penny, they are so
+    adorable!!
+  price: "0.50"
+  category: animal
+  product_id: "1223"
+  quantity: "1"
+  image: 4.png
+- 
+  name: Lotus Flower Charm
+  text: >
+    This adorable lotus flower charm is the
+    cutest!! About the size of a penny. It
+    adds cuteness and color to any necklace,
+    keychain or bracelet!!
+  price: "0.50"
+  category: flower
+  product_id: "1123"
+  quantity: "1"
+  image: 4.png

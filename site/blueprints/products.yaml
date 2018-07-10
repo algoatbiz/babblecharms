@@ -1,0 +1,65 @@
+title: Products
+pages: false
+fields:
+  tabProducts:
+    label: Products
+    type:  tabs
+    icon: file-text-o
+  products:
+    label: Products
+    type: structure
+    modalsize: large
+    entry: >
+      <img src="/content/2-products/{{image}}"><br>
+      <strong>{{name}}</strong><br>
+      {{category}}<br>
+      ${{price}}
+    fields:
+      name:
+        label: Title
+        type: text
+        required: true
+      text:
+        label: Product Description
+        type: markdown
+        required: true
+      price:
+        label: Price
+        type: number
+        step: .01
+        required: true
+        placeholder: e.g. 1.25
+        width: 1/2
+      category:
+        label: Category
+        type: select
+        default: message
+        options:
+          message: Message
+          animal: Animal
+          flower: Flower
+          bracelet: Bracelet
+        width: 1/2
+      product_id:
+        label: Product ID
+        type: text
+        required: true
+        width: 1/2
+      quantity:
+        label: Quantity
+        type: number
+        required: true
+        width: 1/2
+      image:
+        label: Image
+        type: image
+        required: true
+  content_fields: content_fields
+  category_description:
+    label: Category Description
+    type: markdown
+    required: true
+  menu_image:
+    label: Menu Image
+    type: image
+    required: true

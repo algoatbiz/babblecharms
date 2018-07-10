@@ -1,20 +1,12 @@
 type: group
 fields:
   tabContent:
-    label: Content
+    label: Page Content
     type:  tabs
     icon: file-text-o
   title:
     label: Title
     type:  text
-  menu_title:
-    label: Menu Title
-    type:  text
-    width: 1/2
-  background:
-    label: Background
-    type: image
-    width: 1/2
   text:
     label: Text
     type: markdown

@@ -5,7 +5,7 @@ class DefaultPage extends Page {
 	public function buildHero() {
 		$options = [
 			'id' => 'hero',
-			'class' => r(in_array($this->template(), ['contact', 'gallery', 'product-list', 'product-category', 'product']), 'short')
+			'class' => r(in_array($this->template(), ['contact', 'gallery', 'products']), 'short')
 		];
 		$content = brick('div', false, ['style'=>'background-image: url("'.$this->bg().'")']);
 

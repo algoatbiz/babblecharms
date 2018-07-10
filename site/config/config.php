@@ -18,8 +18,8 @@ c::set('languages', [
     ],
 ]);
 
-c::set('autoid.name', 'product_id');
-c::set('autoid.type', 'hash');
+// c::set('autoid.name', 'product_id');
+// c::set('autoid.type', 'hash');
 
 c::set('kirbytext.snippets.pre', [
   'domain' => url()
@@ -35,3 +35,5 @@ c::set('language.detect', true);
 if(function_exists('panel')) { c::set('MinifyHTML', false); }
 
 c::set('timezone', 'America/New_York');
+
+c::set('panel.stylesheet', 'assets/css/panel.css');

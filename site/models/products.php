@@ -1,9 +1,9 @@
 <?php
 
-class ProductListPage extends DefaultPage {
+class ProductsPage extends DefaultPage {
 
 	public function productNavigation() {
-		$productList = site()->index()->filterBy('template', 'product-list')->first();
+		$productList = site()->index()->filterBy('template', 'products')->first();
 		$categories = $productList->children();
 
 		$content = brick('a', brick('span', $productList->title()), ['href'=>$productList->url(), 'class'=>r($productList->isActive(), 'active')]);

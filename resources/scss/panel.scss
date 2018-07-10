@@ -1,0 +1,20 @@
+@import "bourbon";
+@import "neat";
+@import "mixins";
+@import "vars";
+
+.form-blueprint-products {
+	.structure-entries.ui-sortable {
+		@include flex;
+		@include flex-space;
+
+		> div {
+			width: 32%;
+			margin-bottom: 2.25%;
+
+			&:not(:nth-child(3)) {
+				margin-right: 2%;
+			}
+		}
+	}
+}
