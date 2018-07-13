@@ -4,9 +4,9 @@
 		$pages = $site->pages()->visible();
 	?>
 	<?php foreach($pages as $pg): ?>
-		<li class="top<?= r($pg->hasMenuPages(), ' has-children') ?><?= r($pg->isOpen(), ' active') ?>">
-			<a href="<?= r($pg->hasMenuPages(), '#', $pg->url()) ?>"><?= $pg->menuTitle() ?></a>
-			<?php if($pg->hasMenuPages() && $pg->template() != 'product-list'): ?>
+		<li class="top<?= r($pg->hasMenuPages() || $pg->template() == 'products', ' has-children') ?><?= r($pg->isOpen(), ' active') ?>">
+			<a href="<?= r($pg->hasMenuPages() || $pg->template() == 'products', '#', $pg->url()) ?>"><?= $pg->menuTitle() ?></a>
+			<?php if($pg->hasMenuPages()): ?>
 				<ul>
 					<li class="<?= r($pg->isActive(), 'active') ?>"><a href="<?= $pg->url() ?>"><?= $pg->title() ?></a></li>
 					<?php foreach($pg->menuPages() as $ch): ?>
@@ -25,15 +25,21 @@
 						</li>
 					<?php endforeach; ?>
 				</ul>
-			<?php elseif($pg->template() == 'product-list'): ?>
+			<?php elseif($pg->template() == 'products'): ?>
 				<div class="product-submenu">
 					<div>
 						<ul>
-							<?php foreach($pg->menuPages() as $ch): ?>
-								<li><a href="<?= $ch->url() ?>" data-image="<?= $ch->file($ch->menu_image())->url() ?>"><?= $ch->menuTitle() ?></a></li>
+							<?php foreach($site->productCategories(true) as $cat): ?>
+								<li class="<?= isset($category) && $category == $cat['uri'] ? 'active' : false ?>">
+									<a href="<?= $cat['link'] ?>" data-image=""><?= $cat['name'] ?></a>
+								</li>
 							<?php endforeach; ?>
-							<li><a href="<?= $pg->url() ?>" data-image="<?= $pg->file($pg->menu_image())->url() ?>"><?= $pg->title() ?></a></li>
-							<li><a href="#" data-image="<?= $pg->file($pg->menu_image())->url() ?>">Build a Bracelet</a></li>
+							<li class="<?= r($pg->isActive() && (!isset($category) || !$category), 'active') ?>">
+								<a href="<?= $pg->url() ?>" data-image="<?= $pg->file($pg->menu_image())->url() ?>">All <?= $pg->title() ?></a>
+							</li>
+							<li>
+								<a href="#" data-image="<?= $pg->file($pg->menu_image())->url() ?>">Build a Bracelet</a>
+							</li>
 						</ul>
 						<div class="product-image"></div>
 					</div>

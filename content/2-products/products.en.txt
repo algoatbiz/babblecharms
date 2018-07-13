@@ -2,7 +2,7 @@ Tabcontent:
 
 ----
 
-Title: All Products
+Title: Products
 
 ----
 
@@ -30,7 +30,7 @@ Products:
     
     Stainless Steel will not tarnish or turn your skin green.
   price: "1.50"
-  category: message
+  category: Message
   quantity: "1"
   image: 4.png
   product_id: "1234"
@@ -41,7 +41,7 @@ Products:
     
     Won't tarnish or turn your skin green.
   price: "1.50"
-  category: message
+  category: Message
   quantity: "1"
   image: bff.jpg
   product_id: "1233"
@@ -52,7 +52,7 @@ Products:
     same height as the penny, they are so
     adorable!!
   price: "0.50"
-  category: animal
+  category: Animal
   product_id: "1223"
   quantity: "1"
   image: 4.png
@@ -64,7 +64,36 @@ Products:
     adds cuteness and color to any necklace,
     keychain or bracelet!!
   price: "0.50"
-  category: flower
+  category: Flower
   product_id: "1123"
   quantity: "1"
   image: 4.png
+- 
+  name: Dog Charm
+  text: Test
+  price: "1.50"
+  category: Animal
+  product_id: "1232"
+  quantity: "1"
+  image: bff.jpg
+
+----
+
+Categories: Message,Flower,Animal,Bracelet
+
+----
+
+Category-descriptions: 
+
+- 
+  category: Message
+  text: Message Lorem Ipsum
+- 
+  category: Flower
+  text: Flower Lorem Ipsum
+- 
+  category: Animal
+  text: 'Animal Lorem  Ipsum'
+- 
+  category: Bracelet
+  text: Bracelet Lorem Ipsum

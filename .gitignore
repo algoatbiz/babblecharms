@@ -5,6 +5,8 @@ Icon
 .DS_Store
 /vendor/
 /node_modules/
+error_log
+panel/error_log
 
 # Temporary files
 # ---------------

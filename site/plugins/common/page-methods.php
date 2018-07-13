@@ -50,24 +50,61 @@ page::$methods['menuTitle'] = function($page) {
 
 };
 
-page::$methods['allProducts'] = function($site) {
+page::$methods['productsPage'] = function($site) {
 
-	return $site->buildProductList($site->index()->filterBy('template', 'product')->visible());
+	return $site->index()->filterBy('template', 'products')->first();
 
 };
 
-page::$methods['products'] = function($page) {
+page::$methods['productList'] = function($site, $category = false) {
 
-	return site()->buildProductList($page->children()->visible());
+	$products = $site->productsPage()->products()->toStructure();
+
+	if($category) {
+		$categoryProducts = [];
+
+		foreach($products as $product) {
+			if(strtolower($product->category()) == $category) {
+				$categoryProducts[] = $product;
+			}
+		}
+
+		$products = $categoryProducts;
+	}
+
+	return $site->buildProductList($products);
+
+};
+
+page::$methods['productCategories'] = function($site, $menu = false) {
+
+	$categories = $site->productsPage()->categories()->split(',');
+
+	if($menu) {
+		$categoriesForMenu = [];
+		foreach($categories as $category) {
+			$categoriesForMenu[] = [
+				'name' => r($category == 'Bracelet', $category.'s', $category).r($category != 'Bracelet', ' Charms'),
+				'link' => url('products/'.strtolower($category)),
+				'uri' => strtolower($category)
+			];
+		}
+
+		return $categoriesForMenu;
+	}
+
+	return $categories;
 
 };
 
 page::$methods['buildProductList'] = function($site, $products) {
 
+	$page = $site->productsPage();
+
 	$content = '';
 	foreach($products as $product) {
-		$image = brick('a', brick('img', false, ['src'=>$product->file($product->primary_image())->url(), 'alt'=>$product->title()]), ['href'=>$product->url(), ['class'=>'product-image']]);
-		$details = brick('h3', brick('a', $product->title(), ['href'=>$product->url()]));
+		$image = brick('a', brick('img', false, ['src'=>$page->file($product->image())->url(), 'alt'=>$product->name()]), ['href'=>'#', ['class'=>'product-image']]);
+		$details = brick('h3', brick('a', $product->name(), ['href'=>'#']));
 		$details.= $product->short_description()->kt();
 		$details.= brick('div', '$'.$product->price(), ['class'=>'price']);
 		$details.= $site->getRatings();

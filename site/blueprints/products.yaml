@@ -33,13 +33,11 @@ fields:
       category:
         label: Category
         type: select
-        default: message
-        options:
-          message: Message
-          animal: Animal
-          flower: Flower
-          bracelet: Bracelet
         width: 1/2
+        required: true
+        options: field
+        field:
+          name: categories
       product_id:
         label: Product ID
         type: text
@@ -53,6 +51,8 @@ fields:
       image:
         label: Image
         type: selector
+        types: image
+        mode: multiple
         size: 3
         required: true
   content_fields: content_fields
@@ -64,3 +64,24 @@ fields:
     label: Menu Image
     type: image
     required: true
+  categories:
+    label: Product Categories
+    type: tags
+  category_descriptions:
+    label: Descriptions Per Category
+    type: structure
+    modalsize: large
+    entry: >
+      <strong>{{category}}</strong><br>
+      {{text}}
+    fields:
+      category:
+        label: Category
+        type: select
+        required: true
+        options: field
+        field:
+          name: categories
+      text:
+        label: Text
+        type: markdown

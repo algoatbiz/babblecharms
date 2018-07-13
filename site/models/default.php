@@ -9,8 +9,7 @@ class DefaultPage extends Page {
 		];
 		$content = brick('div', false, ['style'=>'background-image: url("'.$this->bg().'")']);
 
-		$text = in_array($this->template(), ['product-category', 'product']) ? $this->ancestor() : $this;
-		$content.= brick('div', brick('div', $text->text()->kt()), ['class'=>'container']);
+		$content.= brick('div', brick('div', $this->text()->kt()), ['class'=>'container']);
 		return brick('section', $content, $options);
 	}
 

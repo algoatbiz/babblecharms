@@ -4,7 +4,7 @@
 @import "vars";
 
 .form-blueprint-products {
-	.structure-entries.ui-sortable {
+	.field-name-products .structure-entries.ui-sortable {
 		@include flex;
 		@include flex-space(flex-start);
 

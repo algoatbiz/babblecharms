@@ -37,3 +37,17 @@ if(function_exists('panel')) { c::set('MinifyHTML', false); }
 c::set('timezone', 'America/New_York');
 
 c::set('panel.stylesheet', 'assets/css/panel.css');
+
+c::set('routes', array(
+  [
+    'pattern' => 'products/(:any)',
+    'method' => 'GET',
+    'action' => function($category) {
+      $data = [
+        'category' => $category
+      ];
+      site()->visit('products');
+      return ['products', $data];
+    }
+  ]
+));
