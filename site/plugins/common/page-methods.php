@@ -78,15 +78,17 @@ page::$methods['productList'] = function($site, $category = false) {
 
 page::$methods['productCategories'] = function($site, $menu = false) {
 
-	$categories = $site->productsPage()->categories()->split(',');
+	$categories = $site->productsPage()->category_descriptions()->toStructure();
 
 	if($menu) {
 		$categoriesForMenu = [];
-		foreach($categories as $category) {
+		foreach($categories as $c) {
+			$category = $c->category();
 			$categoriesForMenu[] = [
 				'name' => r($category == 'Bracelet', $category.'s', $category).r($category != 'Bracelet', ' Charms'),
 				'link' => url('products/'.strtolower($category)),
-				'uri' => strtolower($category)
+				'uri' => strtolower($category),
+				'image' => $site->productsPage()->image($c->featured_image())->url()
 			];
 		}
 
@@ -103,8 +105,9 @@ page::$methods['buildProductList'] = function($site, $products) {
 
 	$content = '';
 	foreach($products as $product) {
-		$image = brick('a', brick('img', false, ['src'=>$page->file($product->image())->url(), 'alt'=>$product->name()]), ['href'=>'#', ['class'=>'product-image']]);
-		$details = brick('h3', brick('a', $product->name(), ['href'=>'#']));
+		$productUrl = url('products/'.strtolower($product->category()).'/'.str::slug($product->name()));
+		$image = brick('a', brick('img', false, ['src'=>$page->file($product->featured_image())->url(), 'alt'=>$product->name()]), ['href'=>$productUrl, ['class'=>'product-image']]);
+		$details = brick('h3', brick('a', $product->name(), ['href'=>$productUrl]));
 		$details.= $product->short_description()->kt();
 		$details.= brick('div', '$'.$product->price(), ['class'=>'price']);
 		$details.= $site->getRatings();

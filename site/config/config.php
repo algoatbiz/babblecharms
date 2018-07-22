@@ -49,5 +49,17 @@ c::set('routes', array(
       site()->visit('products');
       return ['products', $data];
     }
+  ],
+  [
+    'pattern' => 'products/(:any)/(:any)',
+    'method' => 'GET',
+    'action' => function($category, $product) {
+      $data = [
+        'category' => $category,
+        'product' => $product
+      ];
+      site()->visit('products');
+      return ['products', $data];
+    }
   ]
 ));

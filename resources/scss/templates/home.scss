@@ -61,7 +61,7 @@ main section:not(.cta) {
 			top: 0;
 			left: 5rem;
 			height: 1px;
-			background: #ddd;
+			background: $border;
 			position: absolute;
 			width: calc(100% - 10rem);
 		}

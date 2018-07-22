@@ -20,7 +20,7 @@
 
 	</head>
 
-	<body id="<?= $page->slug() ?>" class="<?= $page->template() ?>">
+	<body id="<?= $product ?? $page->slug() ?>" class="<?= isset($product) ? 'product' : $page->template() ?>">
 
 		<header>
 			<div id="topbar">

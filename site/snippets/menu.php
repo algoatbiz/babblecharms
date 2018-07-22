@@ -31,7 +31,7 @@
 						<ul>
 							<?php foreach($site->productCategories(true) as $cat): ?>
 								<li class="<?= isset($category) && $category == $cat['uri'] ? 'active' : false ?>">
-									<a href="<?= $cat['link'] ?>" data-image=""><?= $cat['name'] ?></a>
+									<a href="<?= $cat['link'] ?>" data-image="<?= $cat['image'] ?>"><?= $cat['name'] ?></a>
 								</li>
 							<?php endforeach; ?>
 							<li class="<?= r($pg->isActive() && (!isset($category) || !$category), 'active') ?>">
@@ -41,7 +41,7 @@
 								<a href="#" data-image="<?= $pg->file($pg->menu_image())->url() ?>">Build a Bracelet</a>
 							</li>
 						</ul>
-						<div class="product-image"></div>
+						<div class="product-image" style="background-image: url('<?= $pg->file($pg->menu_image())->url() ?>')"></div>
 					</div>
 				</div>
 			<?php endif; ?>

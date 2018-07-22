@@ -25,3 +25,6 @@
 [submodule "site/plugins/autoid"]
 	path = site/plugins/autoid
 	url = https://github.com/helllicht/kirby-autoid.git
+[submodule "site/plugins/images"]
+	path = site/plugins/images
+	url = https://github.com/medienbaecker/kirby-images

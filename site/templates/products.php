@@ -1,10 +1,11 @@
 <?php snippet('header') ?>
-<?= $page->buildHero() ?>
-<?= $page->productNavigation($category) ?>
+<?= $hero ?>
+<?= $productNavigation ?>
 	<main>
 		<div class="container">
-			<?= $page->categoryContent($category) ?>
-			<div class="product-list-container"><?= $site->productList($category) ?></div>
+			<?= $content ?>
+			<div class="product-list-container"><?= $productList ?></div>
+			<div class="product-list-container"><?= $otherProductList ?></div>
 		</div>
 	</main>
 <?php snippet('footer') ?>

@@ -32,4 +32,33 @@ class ProductsPage extends DefaultPage {
 		return brick('div', $content, ['id'=>'category-description']);
 	}
 
+	public function buildProduct($productUri) {
+		$products = site()->productsPage()->products()->toStructure();
+		foreach($products as $p) {
+			if($productUri == str::slug($p->name())) {
+				$category = $p->category() == 'Bracelet' ? 'Bracelet' : $p->category().' Charms';
+				$header = brick('div', brick('h1', $p->name()).brick('div', brick('strong', 'Category: ').brick('a', $category, ['href'=>url('products/'.strtolower($p->category()))])));
+
+				$featuredImage = $this->image($p->featured_image())->url();
+				$images = brick('img', false, ['src'=>$featuredImage]);
+				if($p->images()->isNotEmpty()) {
+					foreach($p->images()->yaml() as $img)
+						$images.= brick('img', false, ['src'=>$this->image($img)->url()]);
+				}
+
+				$reviews = brick('div', 'Review: '.site()->getRatings()).brick('a', 'Write a review');
+
+				$qtyOptions = '<option value="">Quantity</option>';
+				for($i=1; $i<=$p->quantity()->value(); $i++)
+					$qtyOptions.= brick('option', $i, ['value'=>$i]);
+
+				$content = brick('div', brick('div', $images), ['class'=>'photo-container', 'style'=>'background-image: url('.$featuredImage.')']).
+						   brick('div', brick('div', $p->text()->kt()).brick('div', $reviews, ['class'=>'reviews-container']).
+						   brick('div', '$'.$p->price(), ['class'=>'price']).
+						   brick('div', brick('a', 'Add to Bag', ['class'=>'button', 'href'=>'#']).brick('div', brick('select', $qtyOptions), ['class'=>'select-container']), ['class'=>'buy-container']));
+			}
+		}
+		return $header.brick('div', $content, ['class'=>'product-details']);
+	}
+
 }

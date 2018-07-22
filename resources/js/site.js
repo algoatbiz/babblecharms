@@ -84,6 +84,19 @@ for(var i=0; i<productCategoryLinks.length; i++)
 	});
 
 /*=============================
+=         Product Images      =
+=============================*/
+
+var products = document.querySelectorAll('body.product .photo-container img');
+if(products.length > 0) {
+	for(var i=0; i<products.length; i++) {
+		products[i].addEventListener('mouseover', function() {
+			document.querySelector('body.product .photo-container').style.backgroundImage = 'url("'+this.src+'")';
+		});
+	}
+}
+
+/*=============================
 =          Google Map         =
 =============================*/
 

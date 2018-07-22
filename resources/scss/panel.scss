@@ -4,15 +4,36 @@
 @import "vars";
 
 .form-blueprint-products {
-	.field-name-products .structure-entries.ui-sortable {
-		@include flex;
-		@include flex-space(flex-start);
+	.field-name-products, .field-name-category_descriptions {
+		.structure-entries.ui-sortable img {
+			width: 100%;
+		}
+	}
+}
 
-		> div {
+@include media($above-mobile) {
+	.form-blueprint-products {
+		.field-name-products, .field-name-category_descriptions {
+			.structure-entries.ui-sortable {
+				@include flex;
+				@include flex-space(flex-start);
+
+				> div {
+					margin-bottom: 2.25%;
+				}
+			}
+		}
+		.field-name-products .structure-entries.ui-sortable > div {
 			width: 32%;
-			margin-bottom: 2.25%;
 
-			&:not(:nth-child(3)) {
+			&:not(:nth-child(3n)) {
+				margin-right: 2%;
+			}
+		}
+		.field-name-category_descriptions .structure-entries.ui-sortable > div {
+			width: 23.5%;
+
+			&:not(:nth-child(4n)) {
 				margin-right: 2%;
 			}
 		}

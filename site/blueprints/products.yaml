@@ -1,5 +1,7 @@
 title: Products
 pages: false
+files:
+  sortable: true
 fields:
   tabProducts:
     label: Products
@@ -10,7 +12,7 @@ fields:
     type: structure
     modalsize: large
     entry: >
-      <img src="/content/2-products/{{image}}"><br>
+      <img src="/content/2-products/{{featured_image}}"><br>
       <strong>{{name}}</strong><br>
       {{category}}<br>
       ${{price}}
@@ -48,13 +50,13 @@ fields:
         type: number
         required: true
         width: 1/2
-      image:
-        label: Image
-        type: selector
-        types: image
-        mode: multiple
-        size: 3
+      featured_image:
+        label: Featured Image
+        type: image
         required: true
+      images:
+        label: Other Images
+        type: images
   content_fields: content_fields
   category_description:
     label: Category Description
@@ -68,10 +70,11 @@ fields:
     label: Product Categories
     type: tags
   category_descriptions:
-    label: Descriptions Per Category
+    label: Descriptions and Featured Image Per Category
     type: structure
     modalsize: large
     entry: >
+      <img src="/content/2-products/{{featured_image}}"><br>
       <strong>{{category}}</strong><br>
       {{text}}
     fields:
@@ -85,3 +88,7 @@ fields:
       text:
         label: Text
         type: markdown
+      featured_image:
+        label: Featured Image
+        type: image
+        required: true
