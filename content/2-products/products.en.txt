@@ -24,58 +24,328 @@ Menu-image: 4.png
 Products: 
 
 - 
-  name: Cheerleader Charm
-  text: |
-    This is a 20mm Stainless steel Round. It is lazer etched. Perfect for a Cheer bracelet or necklace.
-    
-    Stainless Steel will not tarnish or turn your skin green.
-  price: "1.50"
+  name: Mother and friend
+  text: Mother and friend
+  price: "2.50"
   category: Message
-  quantity: "1"
-  image: 4.png
-  product_id: "1234"
+  product_id: "123"
+  quantity: "50"
+  image: dsc00055_20180703103745689.jpg
+  featured_image: dsc00055_20180703103745689.jpg
+  images: ""
 - 
-  name: BFF Charm
-  text: |
-    Stainless steel BFF charm, perfect for a BFF necklace, bracelet or keychain.
-    
-    Won't tarnish or turn your skin green.
-  price: "1.50"
+  name: mermaid charm
+  text: alloy mermaid message charm
+  price: "2.50"
   category: Message
-  quantity: "1"
-  image: bff.jpg
-  product_id: "1233"
+  product_id: mermaid1
+  quantity: "1111"
+  featured_image: dsc00003.jpg
+  images: dsc00003.jpg
 - 
-  name: Koala Charm
-  text: >
-    This cute little koala charm that is the
-    same height as the penny, they are so
-    adorable!!
-  price: "0.50"
-  category: Animal
-  product_id: "1223"
-  quantity: "1"
-  image: 4.png
+  name: '#momlife charm, alloy charm'
+  text: '#momlife charm, alloy message charm, 20mm.'
+  price: "2.50"
+  category: Message
+  product_id: momlife
+  quantity: "100"
+  featured_image: dsc00004.jpg
+  images: dsc00004.jpg
 - 
-  name: Lotus Flower Charm
-  text: >
-    This adorable lotus flower charm is the
-    cutest!! About the size of a penny. It
-    adds cuteness and color to any necklace,
-    keychain or bracelet!!
-  price: "0.50"
-  category: Flower
-  product_id: "1123"
-  quantity: "1"
-  image: 4.png
+  name: "Daddy's girl & Mommy's world charm"
+  text: "Daddy's girl & Mommy's World alloy charm, 20mm."
+  price: "2.50"
+  category: Message
+  product_id: daddygirl
+  quantity: "100"
+  featured_image: dsc00005.jpg
+  images: dsc00005.jpg
 - 
-  name: Dog Charm
-  text: Test
-  price: "1.50"
-  category: Animal
-  product_id: "1232"
-  quantity: "1"
-  image: bff.jpg
+  name: >
+    There are these kids they stole my
+    heart, they call me Mom charm
+  text: |
+    There are these kids they stole my heart, they call me Mom charm.
+    
+    20mm alloy charm.
+  price: "2.00"
+  category: Message
+  product_id: momcharm1
+  quantity: "100"
+  featured_image: dsc00005_20180630184657731.jpg
+  images: dsc00005_20180630184657731.jpg
+- 
+  name: Love you to the beach and back charm
+  text: |
+    Love you to the beach and back alloy charm
+    charm is 20mm.
+  price: "2.50"
+  category: Message
+  product_id: beach1
+  quantity: "20"
+  featured_image: dsc00006.jpg
+  images: dsc00006.jpg
+- 
+  name: Be Happy, Elephant charm
+  text: |
+    He Happy Elephant charm.
+    Charm is Alloy, 20mm.
+  price: "2.50"
+  category: Message
+  product_id: behappy
+  quantity: "20"
+  featured_image: dsc00007.jpg
+  images: dsc00007.jpg
+- 
+  name: Mothers are like buttons charm
+  text: |
+    Mothers are like buttons, they hold everything together charm
+    Charm is alloy and 20mm
+  price: "2.50"
+  category: Message
+  product_id: motherbutton
+  quantity: "20"
+  featured_image: dsc00008.jpg
+  images: dsc00008.jpg
+- 
+  name: "Mommy's little monster charm"
+  text: "Mommy's little Monster Alloy charm, 20mm."
+  price: "2.50"
+  category: Message
+  product_id: monster
+  quantity: "20"
+  featured_image: dsc00009.jpg
+  images: dsc00009.jpg
+- 
+  name: When life gives you lemons charm
+  text: |
+    When life gives you lemons put them in your sweet tea & thank God you're Southern charm.
+    Alloy 20mm charm.
+  price: "2.50"
+  category: Message
+  product_id: lemons
+  quantity: "20"
+  featured_image: dsc00010.jpg
+  images: dsc00010.jpg
+- 
+  name: Mother Charm, stainless steel charm
+  text: |
+    Stainless steel Mother charm, charm is 15mm stainless steel. Comes stamped with Mother, Gold 8mm heart included.
+    Stainless steel is Hpoallergenic, won't tarnish, won't discolor skin. good quality metal charm.
+  price: "3.00"
+  category: Message
+  product_id: mother
+  quantity: "100"
+  featured_image: >
+    dsc00010_20180630210059552_20180630211443425.jpg
+  images: >
+    dsc00010_20180630210059552_20180630211443425.jpg
+- 
+  name: >
+    The Navy has my soldier, but I have his
+    heart charm
+  text: |
+    The Navy has my Slodier, But i have his heart charm
+    20mm alloy charm.
+  price: "2.50"
+  category: Message
+  product_id: navy
+  quantity: "20"
+  featured_image: dsc00011_1.jpg
+  images: dsc00011_1.jpg
+- 
+  name: Best Mom Ever charm
+  text: Best Mom Ever Alloy 20mm charm
+  price: "2.50"
+  category: Message
+  product_id: best mom
+  quantity: "20"
+  featured_image: dsc00012_1.jpg
+  images: dsc00012_1.jpg
+- 
+  name: Life is tough charm
+  text: |
+    Life is tough, my darling, but so are you charm
+    
+    20mm Alloy charm
+  price: "2.50"
+  category: Message
+  product_id: tough
+  quantity: "20"
+  featured_image: dsc00013_1.jpg
+  images: dsc00013_1.jpg
+- 
+  name: >
+    Be the Change you wish to see in the
+    world charm
+  text: |
+    Be the Change you wish to see in the world charm
+    20mm Alloy charm
+  price: "2.50"
+  category: Message
+  product_id: bethechange
+  quantity: "20"
+  featured_image: dsc00014_1.jpg
+  images: dsc00014_1.jpg
+- 
+  name: Life is better in flip flops charm
+  text: |
+    Life is better in flip flops charm
+    20mm Alloy charm
+  price: "2.50"
+  category: Message
+  product_id: flipflop
+  quantity: "20"
+  featured_image: dsc00015_1.jpg
+  images: dsc00015_1.jpg
+- 
+  name: Love you to the Beach and back charm
+  text: |
+    Love you to the Beach and Back charm
+    20mm alloy charm
+  price: "2.50"
+  category: Message
+  product_id: beach
+  quantity: "20"
+  featured_image: dsc00030.jpg
+  images: dsc00030.jpg
+- 
+  name: >
+    Always my Mother, Forever my Friend
+    charm
+  text: |
+    Always my Mother, Forever my Friend charm
+    20mm Alloy charm
+  price: "2.50"
+  category: Message
+  product_id: mother1
+  quantity: "20"
+  featured_image: dsc00055.jpg
+  images: dsc00055.jpg
+- 
+  name: Yin and Yang charm
+  text: Yin and Yang alloy charm
+  price: ".75"
+  category: Message
+  product_id: yinyang
+  quantity: "100"
+  featured_image: dsc00057.jpg
+  images: dsc00057.jpg
+- 
+  name: Music Note charm
+  text: Green Music note alloy charm
+  price: ".75"
+  category: Message
+  product_id: musicnote
+  quantity: "50"
+  featured_image: dsc00058.jpg
+  images: dsc00058.jpg
+- 
+  name: Music note charm
+  text: Yellow Music note alloy charm
+  price: ".75"
+  category: Message
+  product_id: musicnoteyellow
+  quantity: "50"
+  featured_image: dsc00059.jpg
+  images: dsc00059.jpg
+- 
+  name: Bronze Horse Shoe Charm, Lucky horseshoe
+  text: Bronze Horse shoe alloy charm
+  price: ".75"
+  category: Message
+  product_id: horseshoe
+  quantity: "50"
+  featured_image: dsc00073.jpg
+  images: dsc00073.jpg
+- 
+  name: Horse Shoe Charm
+  text: Silver Alloy Horse shoe charm
+  price: ".75"
+  category: Message
+  product_id: horseshoesilver
+  quantity: "50"
+  featured_image: dsc00074.jpg
+  images: dsc00074.jpg
+- 
+  name: Fossil Charm
+  text: Silver Alloy Fossil Charm
+  price: "0.75"
+  category: Message
+  product_id: fossil
+  quantity: "50"
+  featured_image: dsc00078.jpg
+  images: |
+    - dsc00078.jpg
+    - dsc00079.jpg
+- 
+  name: Silver Good Luck Horse shoe charm
+  text: Silver Good Luck Horse shoe charm
+  price: "0.75"
+  category: Message
+  product_id: goodluck
+  quantity: "50"
+  featured_image: dsc00080.jpg
+  images: |
+    - dsc00080.jpg
+    - dsc00081.jpg
+- 
+  name: Pistol Gun Charm
+  text: Silver Alloy Pistol gun charm
+  price: "0.75"
+  category: Message
+  product_id: pistol
+  quantity: "50"
+  featured_image: dsc00083.jpg
+  images: |
+    - dsc00083.jpg
+    - dsc00085.jpg
+- 
+  name: Bronze Fossil Charm
+  text: Bronze Alloy Fossil charm
+  price: "0.75"
+  category: Message
+  product_id: bronzefossil
+  quantity: "50"
+  featured_image: dsc00086.jpg
+  images: |
+    - dsc00086.jpg
+    - dsc00087.jpg
+    - dsc00088.jpg
+- 
+  name: Stainless Steel four leaf clover charm
+  text: Stainless steel four leaf clover charm
+  price: "50"
+  category: Message
+  product_id: clover
+  quantity: "100"
+  featured_image: dsc00089.jpg
+  images: |
+    - dsc00089.jpg
+    - dsc00092.jpg
+- 
+  name: Black Sneaker shoe charm
+  text: Sterling Silver Black Shoe charm
+  price: "5"
+  category: Message
+  product_id: shoe1
+  quantity: "25"
+  featured_image: dsc00093.jpg
+  images: dsc00093.jpg
+- 
+  name: Red Cowboy Boot charm
+  text: |
+    Red Cowboy boot charm
+    alloy charm
+  price: "0.75"
+  category: Message
+  product_id: redboot
+  quantity: "50"
+  featured_image: dsc00097.jpg
+  images: |
+    - dsc00097.jpg
+    - dsc00096.jpg
+    - dsc00098.jpg
 
 ----
 
@@ -88,12 +358,16 @@ Category-descriptions:
 - 
   category: Message
   text: Message Lorem Ipsum
+  featured_image: 1.png
 - 
   category: Flower
   text: Flower Lorem Ipsum
+  featured_image: 2.png
 - 
   category: Animal
   text: 'Animal Lorem  Ipsum'
+  featured_image: 3.png
 - 
   category: Bracelet
   text: Bracelet Lorem Ipsum
+  featured_image: 4.png
