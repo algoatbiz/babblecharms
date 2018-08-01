@@ -43,11 +43,8 @@ c::set('routes', array(
     'pattern' => 'products/(:any)',
     'method' => 'GET',
     'action' => function($category) {
-      $data = [
-        'category' => $category
-      ];
       site()->visit('products');
-      return ['products', $data];
+      return ['products', ['category' => $category]];
     }
   ],
   [
@@ -60,6 +57,33 @@ c::set('routes', array(
       ];
       site()->visit('products');
       return ['products', $data];
+    }
+  ],
+  [
+    'pattern' => 'photo-gallery/(:any)',
+    'method' => 'GET',
+    'action' => function($category) {
+      site()->visit('photo-gallery');
+      return ['photo-gallery', ['category' => $category]];
+    }
+  ],
+  [
+    'pattern' => 'photo-gallery',
+    'method' => 'GET',
+    'action' => function() {
+      $categories = site()->productsPage()->categories()->split(',');
+      return go('photo-gallery/'.strtolower($categories[0]));
+    }
+  ],
+  [
+    'pattern' => 'api/categories.json',
+    'method' => 'GET',
+    'action' => function() {
+      $data = [];
+      foreach(site()->productsPage()->categories()->split(',') as $category)
+        $data[strtolower($category)] = $category;
+      
+      return response::json($data);
     }
   ]
 ));

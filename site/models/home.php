@@ -34,8 +34,9 @@ class HomePage extends DefaultPage {
 	}
 
 	public function buildFeatured() {
-		$button = brick('a', 'View all products', ['href'=>site()->productsPage()->url(), 'class'=>'button']);
-		return brick('div', site()->productList(), ['class'=>'product-list-container']).$button;
+		$button = brick('a', 'View all products', ['href'=>site()->productsPage()->url(), 'class'=>'button big']);
+
+		return brick('div', site()->productList(false, 8), ['class'=>'product-list-container']).$button;
 	}
 
 }

@@ -13,6 +13,7 @@
 	&:after {
 		content: '';
 		bottom: 0;
+		z-index: 0;
 		height: 45%;
 		width: 100%;
 		position: absolute;
@@ -23,11 +24,12 @@
 .slide {
 	@include bg;
 	position: relative;
-	height: calc(100vh - 8.75rem);
+	height: calc(100vh - 11.875rem);
 	background-position: center top;
 
 	.container {
 		top: 8rem;
+		z-index: 1;
 
 		> div {
 			max-width: 32rem;
@@ -43,6 +45,7 @@
 	}
 	.button {
 		margin-top: 2rem;
+		padding: 0 3.6524rem;
 	}
 }
 
@@ -78,12 +81,13 @@ main section:not(.cta) {
 }
 
 h2, h3 {
-	font-family: $oswald;
 	font-weight: $light;
+	font-family: $oswald;
 	text-transform: uppercase;
 }
 
 h2 {
+	color: $blue;
 	font-size: 3rem;
 }
 
@@ -119,7 +123,7 @@ h3 {
 		}
 	}
 	a:not(.image) {
-		color: inherit;
+		color: $orange;
 		text-transform: uppercase;
 
 		span {
@@ -144,6 +148,9 @@ h3 {
 	}
 	.product-list-container {
 		margin-bottom: 5rem;
+	}
+	.button.big {
+		font-size: 1.125rem;
 	}
 }
 
@@ -178,6 +185,7 @@ h3 {
 		}
 	}
 	h2 {
+		color: $white;
 		margin-bottom: 2rem;
 	}
 	p {

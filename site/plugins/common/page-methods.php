@@ -56,9 +56,12 @@ page::$methods['productsPage'] = function($site) {
 
 };
 
-page::$methods['productList'] = function($site, $category = false) {
+page::$methods['productList'] = function($site, $category = false, $limit = false) {
 
 	$products = $site->productsPage()->products()->toStructure();
+
+	if($limit)
+		$products = $products->limit($limit);
 
 	if($category) {
 		$categoryProducts = [];
@@ -76,7 +79,7 @@ page::$methods['productList'] = function($site, $category = false) {
 
 };
 
-page::$methods['productCategories'] = function($site, $menu = false) {
+page::$methods['productCategories'] = function($site, $menu = false, $template = 'products') {
 
 	$categories = $site->productsPage()->category_descriptions()->toStructure();
 
@@ -86,7 +89,7 @@ page::$methods['productCategories'] = function($site, $menu = false) {
 			$category = $c->category();
 			$categoriesForMenu[] = [
 				'name' => r($category == 'Bracelet', $category.'s', $category).r($category != 'Bracelet', ' Charms'),
-				'link' => url('products/'.strtolower($category)),
+				'link' => url(r($template == 'gallery', 'photo-gallery', 'products').'/'.strtolower($category)),
 				'uri' => strtolower($category),
 				'image' => $site->productsPage()->image($c->featured_image())->url()
 			];

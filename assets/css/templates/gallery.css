@@ -1,1 +1,1 @@
-html{box-sizing:border-box}*,::after,::before{box-sizing:inherit}
+html{box-sizing:border-box}*,::after,::before{box-sizing:inherit}main{padding:3rem 0}#gallery-container{overflow:hidden}#gallery-container>div:first-child{background-size:cover;background-position:center;background-repeat:no-repeat;padding-bottom:47.009%}#gallery-container>div:last-child{display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center}#gallery-container>div:last-child img{width:16.66%;display:block}

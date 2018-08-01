@@ -3,62 +3,8 @@
 @import "../mixins";
 @import "../vars";
 
-#product-navigation {
-	border-bottom: 1px solid $border;
-
-	.container {
-		@include flex;
-		@include flex-space(center);
-	}
-	a {
-		height: 3.125rem;
-		color: inherit;
-		font-size: $small;
-		font-weight: $bold;
-		font-family: $oswald;
-		position: relative;
-		text-transform: uppercase;
-
-		&:not(:last-child) span {
-			border-right: 1px solid $border;
-		}
-		&.active:after {
-			content: '';
-			width: 100%;
-			height: 1px;
-			bottom: -1px;
-			position: absolute;
-			background: $black;
-		}
-	}
-	span {
-		display: block;
-		padding: 0 2.5rem;
-		@include vertical-center;
-	}
-}
-
 main {
 	padding: 3rem 0;
-}
-
-#category-description {
-	@include flex;
-	margin-bottom: 3.5rem;
-
-	> div {
-		width: 50%;
-
-		&:last-of-type {
-			max-width: 33.5rem;
-		}
-	}
-	.title {
-		font-size: $title;
-		font-weight: $light;
-		font-family: $oswald;
-		text-transform: uppercase;
-	}
 }
 
 /*=============================
@@ -169,7 +115,7 @@ body.product {
 			.button {
 				height: 3rem;
 				text-align: center;
-				line-height: 2.75rem;
+				line-height: 3rem;
 			}
 			.select-container:after {
 				right: 1.25rem;

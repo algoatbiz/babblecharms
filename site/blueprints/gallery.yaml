@@ -1,0 +1,42 @@
+title: Gallery
+pages: false
+files:
+  fields:
+    category:
+      label: Product Category
+      type: select
+      required: true
+      options: url
+      url: api/categories.json
+fields:
+  tabImages:
+    label: Images
+    type:  tabs
+    icon: file-text-o
+  gallery_images:
+    label: Images
+    type: images
+  tabContent:
+    label: Page Content
+    type:  tabs
+    icon: file-text-o
+  title:
+    label: Title
+    type:  text
+  category_descriptions:
+    label: Descriptions Per Category
+    type: structure
+    modalsize: large
+    entry: >
+      <strong>{{category}}</strong><br>
+      {{text}}
+    fields:
+      category:
+        label: Category
+        type: select
+        required: true
+        options: url
+        url: api/categories.json
+      text:
+        label: Text
+        type: markdown

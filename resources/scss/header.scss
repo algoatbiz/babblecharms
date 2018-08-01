@@ -9,9 +9,14 @@ header {
 	z-index: 2;
 	width: 100%;
 	position: fixed;
+	font-weight: $medium;
+	font-family: $oswald;
+	text-transform: uppercase;
 }
 
 #topbar {
+	color: #999;
+	font-size: .875rem;
 	position: relative;
 
 	&:after {
@@ -23,27 +28,57 @@ header {
 		background-color: #d1baab;
 	}
 	.container {
-		height: 6.25rem;
 		@include flex;
 		@include flex-space;
+		height: 9.375rem;
+
+		> div {
+			@include flex;
+		}
+	}
+	.logo {
+		@include center;
+	}
+	a {
+		color: inherit;
+	}
+	.welcome, .search, .shopping-bag {
+		@include flex;
+
+		&:before {
+			margin-right: .75rem;
+		}
+	}
+	.welcome:before {
+		@include fa('\f007');
+		margin-top: .1rem;
+	}
+	.search:before {
+		@include fa('\f002');
+	}
+	.shopping-bag:before {
+		@include fa('\f290');
+	}
+	.divider {
+		width: 2px;
+		height: .875rem;
+		background: #999;
+		margin: 0 2rem;
 	}
 }
 
 nav {
-	font-weight: $bold;
-	font-family: $oswald;
-	background-color: $peach;
+	background-color: #4a4c57;
 
 	a {
-		color: $black;
-		text-transform: uppercase;
+		color: $white;
 	}
 }
 
 #menu {
 	@include flex;
 	@include flex-space(center);
-	font-size: .875rem;
+	font-size: .813rem;
 	letter-spacing: 1px;
 
 	.top {
@@ -53,17 +88,16 @@ nav {
 			&:before {
 				content: '';
 				left: 0;
-				top: -1px;
-				height: 1px;
+				height: 2px;
 				width: 100%;
 				position: absolute;
-				background: $black;
+				background: $orange;
 			}
 		}
 		> a {
 			display: block;
 			position: relative;
-			padding: .594rem 1.5rem;
+			padding: .65rem 1.5rem;
 		}
 	}
 	.has-children {
@@ -74,7 +108,7 @@ nav {
 	}
 	.has-children > ul, .product-submenu {
 		left: 1.25rem;
-		top: 2.45rem;
+		top: 2.5rem;
 		display: none;
 		position: absolute;
 		border: 1px solid #c2c2c2;
@@ -99,7 +133,7 @@ nav {
 	}
 	.has-children > ul, .product-submenu ul {
 		min-width: 12rem;
-		background: $peach;
+		background: $orange;
 		padding: 1.25rem 0;
 	}
 	.product-submenu {

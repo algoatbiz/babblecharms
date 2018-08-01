@@ -14,7 +14,7 @@ Sliders:
   slider_text: |
     Praesent varius, diam quis rutrum tempor, purus turpis congue libero, a eleifend augue augue vel justo proin vel feugiat
     
-    (link: # text: Learn More class: button white)
+    (link: # text: Learn More class: button big)
 
 ----
 
@@ -36,7 +36,7 @@ Cta-text:
 Donec eget lacus varius, tempor lacus ultricies, ultrices justo. Vivamus ac pharetra nulla. Morbi eleifend arcu quam,
 eu viverra elit pharetra ac.
 
-(link: about text: Learn More class: button white)
+(link: about text: Learn More class: button)
 
 ----
 

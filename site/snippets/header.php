@@ -25,9 +25,17 @@
 		<header>
 			<div id="topbar">
 				<div class="container">
-					<div></div>
-					<a href="<?= url() ?>" class="logo"><img src="/assets/images/build-a-bracelet-logo.png" alt="Build A Bracelet Logo"></a>
-					<div></div>
+					<div>
+						<div class="welcome">Welcome User</div>
+						<span class="divider"></span>
+						<div class="account">Account</div>
+					</div>
+					<a href="<?= url() ?>" class="logo"><img src="/assets/images/babble-charms-logo.png" alt="Babble Charms Logo"></a>
+					<div>
+						<div class="search">Search</div>
+						<span class="divider"></span>
+						<a href="#" class="shopping-bag">Shopping Bag (0)</a>
+					</div>
 				</div>
 			</div>
 			<?php snippet('menu') ?>

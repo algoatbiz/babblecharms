@@ -1,0 +1,35 @@
+Tabcontent: 
+
+----
+
+Title: Photo Gallery
+
+----
+
+Gallery-images: 
+
+- 1.png
+- 2.png
+- 3.png
+- 4.png
+- bff.jpg
+- message-charm.png
+- message-charm2.png
+- message-charm3.png
+
+----
+
+Category-descriptions: 
+
+- 
+  category: message
+  text: Message Lorem Ipsum
+- 
+  category: flower
+  text: Flower Lorem Ipsum
+- 
+  category: animal
+  text: Animal Lorem Ipsum
+- 
+  category: bracelet
+  text: Bracelet Lorem Ipsum

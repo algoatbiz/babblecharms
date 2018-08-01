@@ -2,3 +2,26 @@
 @import "neat";
 @import "../mixins";
 @import "../vars";
+
+main {
+	padding: 3rem 0;
+}
+
+#gallery-container {
+	overflow: hidden;
+
+	> div {
+		&:first-child {
+			@include bg;
+			padding-bottom: 47.009%;
+		}
+		&:last-child {
+			@include flex;
+
+			img {
+				width: 16.66%;
+				display: block;
+			}
+		}
+	}
+}
