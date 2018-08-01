@@ -346,6 +346,839 @@ Products:
     - dsc00097.jpg
     - dsc00096.jpg
     - dsc00098.jpg
+- 
+  name: Light blue cowboy boot charm
+  text: light blue cowboy boot charm
+  price: "0.75"
+  category: Message
+  product_id: blueboot
+  quantity: "50"
+  featured_image: dsc00099.jpg
+  images: |
+    - dsc00099.jpg
+    - dsc00100.jpg
+    - dsc00101.jpg
+- 
+  name: Blue Cowboy boot alloy charm
+  text: Blue cowboy boot charm
+  price: "0.75"
+  category: Message
+  product_id: darkblueboot
+  quantity: "50"
+  featured_image: dsc00102.jpg
+  images: |
+    - dsc00102.jpg
+    - dsc00103.jpg
+    - dsc00104.jpg
+- 
+  name: >
+    Flip Flops alloy charm, flip flop, beach
+    charm
+  text: |
+    Flip Flops alloy charm
+    made with love & sole charm
+  price: "0.75"
+  category: Message
+  product_id: flipflops
+  quantity: "50"
+  featured_image: dsc00109.jpg
+  images: |
+    - dsc00108_20180704131957930.jpg
+    - dsc00109.jpg
+- 
+  name: Telephone charm, telephone
+  text: Telephone alloy charm
+  price: "0.75"
+  category: Message
+  product_id: telephone
+  quantity: "50"
+  featured_image: dsc00109_20180531120136797.jpg
+  images: dsc00109_20180531120136797.jpg
+- 
+  name: Boot charm
+  text: Alloy boot charm
+  price: "0.75"
+  category: Message
+  product_id: boot
+  quantity: "50"
+  featured_image: dsc00110.jpg
+  images: |
+    - dsc00110.jpg
+    - dsc00111.jpg
+- 
+  name: Antique Butterfly Alloy charm
+  text: Antique Butterfly charm
+  price: "0.75"
+  category: Message
+  product_id: antiquebutterfly
+  quantity: "50"
+  featured_image: dsc00112_20180704120024119.jpg
+  images: |
+    - dsc00112_20180704120024119.jpg
+    - dsc00113.jpg
+- 
+  name: Go with all your heart charm
+  text: Go with all your heart 20mm alloy charm
+  price: "2.50"
+  category: Message
+  product_id: goheart
+  quantity: "20"
+  featured_image: dsc00143_20180601173410409.jpg
+  images: dsc00143_20180601173410409.jpg
+- 
+  name: Live Laugh Love alloy charm
+  text: Live Laugh Love 20mm alloy charm
+  price: "2.50"
+  category: Message
+  product_id: live
+  quantity: "20"
+  featured_image: dsc00352.jpg
+  images: dsc00352.jpg
+- 
+  name: Bride Alloy charm
+  text: |
+    Bride Charm
+    20mm alloy charm
+  price: "2.50"
+  category: Message
+  product_id: bride
+  quantity: "20"
+  featured_image: dsc00360.jpg
+  images: dsc00360.jpg
+- 
+  name: Believe in the Magic charm
+  text: |
+    Believe in the Magic charm
+    20mm alloy charm
+  price: "2.50"
+  category: Message
+  product_id: magic
+  quantity: "20"
+  featured_image: dsc00361.jpg
+  images: dsc00361.jpg
+- 
+  name: Blessed, Alloy charm
+  text: Blessed 20 mm alloy charm
+  price: "2.50"
+  category: Message
+  product_id: blessed
+  quantity: "20"
+  featured_image: dsc00362.jpg
+  images: dsc00362.jpg
+- 
+  name: Raising my Tribe charm
+  text: |
+    Raising my Tribe charm
+    20mm alloy charm
+  price: "2.50"
+  category: Message
+  product_id: raisingtribe
+  quantity: "20"
+  featured_image: dsc00363.jpg
+  images: dsc00363.jpg
+- 
+  name: Love you more charm
+  text: |
+    Love you more charm
+    20mm alloy 	charm
+  price: "2.50"
+  category: Message
+  product_id: loveyoumore
+  quantity: "20"
+  featured_image: dsc00364.jpg
+  images: dsc00364.jpg
+- 
+  name: 'Strong & Brave charm'
+  text: |
+    Strong & Brave charm
+    20mm alloy charm
+  price: "2.50"
+  category: Message
+  product_id: strongbrave
+  quantity: "20"
+  featured_image: dsc00365.jpg
+  images: dsc00365.jpg
+- 
+  name: Free spirit charm
+  text: |
+    Free spirit charm
+    20mm alloy charm
+  price: "2.50"
+  category: Message
+  product_id: freespirit
+  quantity: "20"
+  featured_image: dsc00365.jpg
+  images: dsc00366.jpg
+- 
+  name: Fur mama charm
+  text: |
+    Fur Mama Charm
+    20mm alloy charm
+  price: "2.50"
+  category: Message
+  product_id: furmama
+  quantity: "20"
+  featured_image: dsc00368.jpg
+  images: dsc00368.jpg
+- 
+  name: Be Brave little Warrior charm
+  text: |
+    Be brave little warrior charm
+    20mm alloy charm
+  price: "2.50"
+  category: Message
+  product_id: bebrave
+  quantity: "20"
+  featured_image: dsc00369.jpg
+  images: dsc00369.jpg
+- 
+  name: Be your own kind of Beautiful charm
+  text: |
+    Be your own kind of Beautiful Stainless steel charm
+    20mm Laser etched stainless steel charm
+  price: "1.50"
+  category: Message
+  product_id: beautiful
+  quantity: "25"
+  featured_image: >
+    dsc00501_20180629123820736_20180629130404825.jpg
+  images: >
+    dsc00501_20180629123820736_20180629130404825.jpg
+- 
+  name: think happy thoughts charm
+  text: |
+    Think happy thoughts charm
+    20mm laser etched stainless steel charm
+  price: "1.50"
+  category: Message
+  product_id: happythoughts
+  quantity: "25"
+  featured_image: dsc00504_20180629130229971.jpg
+  images: dsc00504_20180629130229971.jpg
+- 
+  name: Reach for the sky charm
+  text: |
+    Reach for the sky charm
+    20mm laser etched stainless steel charm
+  price: "1.50"
+  category: Message
+  product_id: reachsky
+  quantity: "25"
+  featured_image: dsc00505_20180629130151009.jpg
+  images: dsc00505_20180629130151009.jpg
+- 
+  name: All I want for Christmas is you charm
+  text: |
+    All I want for Christmas is you charm
+    * stainless steel
+    * laser etched
+    * 20mm
+  price: "1.50"
+  category: Message
+  product_id: christmas
+  quantity: "25"
+  featured_image: dsc00506_20180629130118765.jpg
+  images: dsc00506_20180629130118765.jpg
+- 
+  name: "I used to be his angel now he's mine charm"
+  text: |
+    I used to be his angel now he's mine charm
+    * stainless steel
+    * 20mm
+    * laser etched
+  price: "1.50"
+  category: Message
+  product_id: hisangel
+  quantity: "25"
+  featured_image: dsc00507_20180629130052485.jpg
+  images: dsc00507_20180629130052485.jpg
+- 
+  name: Mommy to be charm
+  text: |
+    Mommy to be charm
+    * stainless steel
+    * 20mm charm
+    * laser etched
+  price: "1.50"
+  category: Message
+  product_id: mommytobe
+  quantity: "25"
+  featured_image: dsc00508.jpg
+  images: dsc00508.jpg
+- 
+  name: Rescue Charm
+  text: |
+    Rescue charm
+    * stainless steel
+    * 20mm
+    * laser etched
+  price: "1.50"
+  category: Message
+  product_id: rescue
+  quantity: "20"
+  featured_image: dsc00509.jpg
+  images: dsc00509.jpg
+- 
+  name: "Forever and always my baby you'll be charm"
+  text: |
+    Forever and always my baby you'll be charm
+    * stainless steel
+    * 20mm
+    * laser etched
+  price: "1.50"
+  category: Message
+  product_id: alwaysbaby
+  quantity: "20"
+  featured_image: dsc00510.jpg
+  images: dsc00510.jpg
+- 
+  name: "You can't scare me, I'm a Mom charm"
+  text: |
+    You can't scare me I'm a Mom charm
+    * stainless steel
+    * laser etched
+    * 20mm
+  price: "1.50"
+  category: Message
+  product_id: scaremom
+  quantity: "20"
+  featured_image: dsc00511.jpg
+  images: dsc00511.jpg
+- 
+  name: "You'll be in my heart charm"
+  text: |
+    You'll be in my heart charm
+    * 20mm
+    * stainless steel
+    * laser etched
+  price: "1.50"
+  category: Message
+  product_id: inmyheart
+  quantity: "20"
+  featured_image: dsc00505_20180629130151009.jpg
+  images: dsc00512.jpg
+- 
+  name: Blue Lives Matter charm
+  text: |
+    Blue Lives Matter charm
+    * stainless steel
+    * 20mm
+    * laser etched
+  price: "1.50"
+  category: Message
+  product_id: bluelives
+  quantity: "20"
+  featured_image: dsc00513.jpg
+  images: dsc00513.jpg
+- 
+  name: >
+    Angel babies in Heaven above Never
+    forgotten Always loved charm
+  text: |
+    Angel babies in Heaven above Never forgotten Always loved
+    * stainless steel
+    * 20mm
+    * laser etched
+  price: "1.50"
+  category: Message
+  product_id: angelbabies
+  quantity: "20"
+  featured_image: dsc00514_20180629132234968.jpg
+  images: dsc00514_20180629132234968.jpg
+- 
+  name: >
+    Thank you for Raising the man of my
+    dreams charm
+  text: |
+    Thank you for Raising the man of my dreams
+    * stainless steel
+    * 20mm
+    * laser etched
+  price: "1.50"
+  category: Message
+  product_id: manofdreams
+  quantity: "20"
+  featured_image: dsc00515.jpg
+  images: dsc00515.jpg
+- 
+  name: When a child is born so is a Mom charm
+  text: |
+    When a child is born so is a Mom
+    * stainless steel
+    * 20mm
+    * laser etched
+  price: "1.50"
+  category: Message
+  product_id: childborn
+  quantity: "20"
+  featured_image: dsc00516.jpg
+  images: dsc00516.jpg
+- 
+  name: >
+    Feathers appear when Angels are near
+    charm
+  text: |
+    Feathers appear when Angels are near
+    * stainless steel
+    * 20mm
+    * laser etched
+  price: "1.50"
+  category: Message
+  product_id: feathers
+  quantity: "10"
+  featured_image: 1.png
+  images: dsc00517.jpg
+- 
+  name: If you can dream it You can do it charm
+  text: |
+    If you can dream it You can do it
+    * stainless steel
+    * 20mm
+    * laser etched
+  price: "1.50"
+  category: Message
+  product_id: dreamit
+  quantity: "20"
+  featured_image: dsc00518.jpg
+  images: dsc00518.jpg
+- 
+  name: Carpe Diem charm
+  text: |
+    Carpe Diem charm
+    * stainless steel
+    * 20mm
+    * laser etched
+  price: "1.50"
+  category: Message
+  product_id: carpediem
+  quantity: "20"
+  featured_image: dsc00519.jpg
+  images: dsc00519.jpg
+- 
+  name: I got gadgets and gizmos aplenty charm
+  text: |
+    I got gadgets and  gizmos aplenty
+    * stainless steel
+    * 20mm
+    * laser etched
+  price: "1.50"
+  category: Message
+  product_id: gadgetsgizmos
+  quantity: "25"
+  featured_image: dsc00520.jpg
+  images: dsc00520.jpg
+- 
+  name: >
+    All it takes is Faith Trust and Pixie
+    Dust charm
+  text: |
+    All it takes if Faith Trust and Pixie dust
+    * stainless steel
+    * 20mm
+    * laser etched
+  price: "1.50"
+  category: Message
+  product_id: pixiedust
+  quantity: "20"
+  featured_image: dsc00521.jpg
+  images: dsc00521.jpg
+- 
+  name: I think I can, I think I can charm
+  text: |
+    I Think I Can, I Think I can
+    * stainless steel
+    * 20mm
+    * laser etched
+  price: "1.50"
+  category: Message
+  product_id: think i can
+  quantity: "20"
+  featured_image: dsc00522.jpg
+  images: dsc00522.jpg
+- 
+  name: >
+    Mom you are the heart of our family
+    charm
+  text: |
+    Mom- you are the heart of our family charm
+    20mm Alloy charm
+  price: "1.00"
+  category: Message
+  product_id: heartoffamimly
+  quantity: "50"
+  featured_image: dsc07935webshot.jpg
+  images: dsc07935webshot.jpg
+- 
+  name: Bronze Elephant charm
+  text: Bronze alloy elephant charm
+  price: "0.50"
+  category: Message
+  product_id: elephant
+  quantity: "50"
+  featured_image: dsc08139.jpg
+  images: dsc08139.jpg
+- 
+  name: Cat charm
+  text: Cat charm, alloy charm
+  price: "0.75"
+  category: Animal
+  product_id: cat
+  quantity: "50"
+  featured_image: dsc08183.jpg
+  images: dsc08183.jpg
+- 
+  name: Angel Charm
+  text: Angel charm, alloy charm
+  price: "0.75"
+  category: Message
+  product_id: angel
+  quantity: "50"
+  featured_image: dsc09137.jpg
+  images: dsc09137.jpg
+- 
+  name: Angel wings charm
+  text: Angel wings charm, alloy charm
+  price: "1.00"
+  category: Message
+  product_id: angel wing
+  quantity: "50"
+  featured_image: dsc09138.jpg
+  images: dsc09138.jpg
+- 
+  name: Sterling Silver Baby Bottle Charm
+  text: Sterling Silver Baby Bottle charm
+  price: "5"
+  category: Message
+  product_id: babybottle
+  quantity: "25"
+  featured_image: dsc09139.jpg
+  images: dsc09139.jpg
+- 
+  name: Sterling silver House charm
+  text: Sterling Silver House charm
+  price: "5"
+  category: Flower
+  product_id: housess
+  quantity: "25"
+  featured_image: dsc09142.jpg
+  images: dsc09142.jpg
+- 
+  name: Sterling Silver Fish charm
+  text: Cute sterling silver fish charm
+  price: "5.00"
+  category: Message
+  product_id: ssfish
+  quantity: "25"
+  featured_image: dsc09143.jpg
+  images: dsc09143.jpg
+- 
+  name: Sterling Silver Monkey charm
+  text: Sterling Silver Monkey charm
+  price: "5.00"
+  category: Animal
+  product_id: monkeyss
+  quantity: "25"
+  featured_image: dsc09144.jpg
+  images: |
+    - dsc09144.jpg
+    - dsc09144_20180505005616478.jpg
+- 
+  name: Sterling silver butterfly charm
+  text: Sterling Silver Butterfly charm
+  price: "5.00"
+  category: Animal
+  product_id: butterflyss
+  quantity: "25"
+  featured_image: dsc09146.jpg
+  images: dsc09146.jpg
+- 
+  name: Sterling Silver Religous Charms
+  text: Sterling Silver Religious Charm
+  price: "5.00"
+  category: Message
+  product_id: religionss
+  quantity: "25"
+  featured_image: dsc09147.jpg
+  images: dsc09147.jpg
+- 
+  name: Stainless steel Tree charm
+  text: |
+    Tree charm
+    * stainless steel
+    * 20mm
+  price: "2.50"
+  category: Message
+  product_id: steeltree
+  quantity: "50"
+  featured_image: dsc09148.jpg
+  images: |
+    - dsc09148.jpg
+    - dsc09148_20180502212531684.jpg
+- 
+  name: >
+    Sterling Silver heart charm with cubic
+    zirconium
+  text: |
+    Heart charm
+    * sterling silver
+    * cubic zirconium
+  price: "5.00"
+  category: Message
+  product_id: czheart
+  quantity: "25"
+  featured_image: dsc09149.jpg
+  images: dsc09149.jpg
+- 
+  name: Heart Charm, Cubic Zirconium charm
+  text: |
+    heart charm
+    * sterling silver
+    * cuic zirconium
+  price: "5.00"
+  category: Message
+  product_id: czheart2
+  quantity: "25"
+  featured_image: dsc09152.jpg
+  images: dsc09152.jpg
+- 
+  name: >
+    Stainless Steel heart charm, cubic
+    zirconium heart
+  text: |
+    Heart charm
+    * cubic zironium
+    * stainless steel
+  price: "5.00"
+  category: Message
+  product_id: czheart3
+  quantity: "25"
+  featured_image: dsc09152.jpg
+  images: dsc09153.jpg
+- 
+  name: >
+    Stainless steel heart charm, cubic
+    zirconium heart
+  text: |
+    Heart charm
+    * stainless steel
+    * cubic zirconium
+  price: "5.00"
+  category: Message
+  product_id: czheart4
+  quantity: "25"
+  featured_image: dsc09154.jpg
+  images: dsc09154.jpg
+- 
+  name: Sterling Silver monkey charm
+  text: Sterling Silver Monkey Charm
+  price: "5.00"
+  category: Message
+  product_id: ssmonkey1
+  quantity: "25"
+  featured_image: dsc09157.jpg
+  images: dsc09157.jpg
+- 
+  name: Sterling Silver Monkey Charm
+  text: Sterling Silver Monkey Charm
+  price: "5.00"
+  category: Animal
+  product_id: ssmonkey3
+  quantity: "25"
+  featured_image: dsc09158.jpg
+  images: dsc09158.jpg
+- 
+  name: >
+    Stainless Steel Butterfly Charm, cubic
+    zirconium charm
+  text: |
+    Butterfly Charm
+    * stainless steel
+    * cubic zirconium
+    * 20mm
+  price: "5.00"
+  category: Animal
+  product_id: stainlessbutterfly
+  quantity: "25"
+  featured_image: dsc09159.jpg
+  images: dsc09159.jpg
+- 
+  name: >
+    Stainless Steel Starfish Charm, Cubic
+    Zirconium charm
+  text: |
+    Starfish Charm
+    * Stainless steel
+    * Cubic Zirconium
+    * 20mm
+  price: "5.00"
+  category: Animal
+  product_id: starfishss
+  quantity: "25"
+  featured_image: dsc09161.jpg
+  images: dsc09161.jpg
+- 
+  name: Stainless Steel Lotus Charm
+  text: |
+    Lotus flower charm
+    * 20mm
+    * stainless steel
+  price: "5.00"
+  category: Flower
+  product_id: sslotus
+  quantity: "25"
+  featured_image: dsc09163.jpg
+  images: dsc09163.jpg
+- 
+  name: Stainless Steel Love heart charm
+  text: |
+    Love charm
+    * stainless steel
+    * approx 20mm
+  price: "5.00"
+  category: Message
+  product_id: sslove
+  quantity: "20"
+  featured_image: dsc09166.jpg
+  images: dsc09166.jpg
+- 
+  name: Stamped Stainless Steel Heart charm
+  text: |
+    Heart Charm
+    * 10mm
+    * hand stamped
+    * stainless steel
+  price: "5.00"
+  category: Message
+  product_id: ssheartcharm
+  quantity: "100"
+  featured_image: dsc09224.jpg
+  images: dsc09224.jpg
+- 
+  name: >
+    Mom you are the heart of the family
+    charm
+  text: |
+    Mom you are the heart of the family charm
+    Includes:
+    * alloy tree charm
+    * smashed penny behind for luck
+    * on a 7mm stainless steel jump ring
+  price: "3.00"
+  category: Message
+  product_id: momtree
+  quantity: "100"
+  featured_image: dsc09243.jpg
+  images: dsc09243.jpg
+- 
+  name: Mom Heart Charm
+  text: Mom Heart alloy charm
+  price: "0.75"
+  category: Message
+  product_id: momheart
+  quantity: "50"
+  featured_image: dsc09269_20180515233320847.jpg
+  images: dsc09269_20180515233320847.jpg
+- 
+  name: Nana Charm, alloy charm
+  text: Nana alloy charm
+  price: "0.75"
+  category: Message
+  product_id: nanacharm
+  quantity: "50"
+  featured_image: dsc09271.jpg
+  images: dsc09271.jpg
+- 
+  name: Rose charm, flower charm
+  text: Rose alloy charm
+  price: "0.75"
+  category: Flower
+  product_id: rose
+  quantity: "100"
+  featured_image: dsc09626.jpg
+  images: dsc09626.jpg
+- 
+  name: Flower Charm
+  text: Flower alloy charm
+  price: "0.75"
+  category: Flower
+  product_id: flower1
+  quantity: "100"
+  featured_image: dsc09660.jpg
+  images: dsc09660.jpg
+- 
+  name: Sun charm, alloy charm
+  text: Sun alloy charm
+  price: "0.75"
+  category: Message
+  product_id: suncharm
+  quantity: "50"
+  featured_image: dsc09894.jpg
+  images: dsc09894.jpg
+- 
+  name: Born to sing charm
+  text: |
+    Born to sing charm
+    * 20mm
+    * stainless steel
+    * laser etched
+  price: "1.50"
+  category: Message
+  product_id: borntosing
+  quantity: "30"
+  featured_image: dsc09938.jpg
+  images: dsc09938.jpg
+- 
+  name: Let your dreams set sail charm
+  text: |
+    Let your dreams set sail charm
+    * stainless steel
+    * laser etched
+    * 20mm
+  price: "1.50"
+  category: Message
+  product_id: dreamssetsail
+  quantity: "30"
+  featured_image: dsc09939.jpg
+  images: dsc09939.jpg
+- 
+  name: Class of 2018 charm
+  text: |
+    Class of 2018 charm
+    * 20mm
+    * stainless steel
+    * laser etched
+  price: "1.50"
+  category: Message
+  product_id: classof2018
+  quantity: "50"
+  featured_image: dsc09941.jpg
+  images: dsc09941.jpg
+- 
+  name: Dream as big as your wishes charm
+  text: |
+    Dream as big as your wishes charm
+    * 20mm
+    * stamped
+    * alloy charm
+  price: "2.50"
+  category: Message
+  product_id: bigwishes
+  quantity: "20"
+  featured_image: dsc09942.jpg
+  images: dsc09942.jpg
+- 
+  name: Mimi charm
+  text: |
+    Mimi charm
+    * 20mm
+    * stainless steel
+    * laser etched
+  price: "1.50"
+  category: Message
+  product_id: mimi
+  quantity: "50"
+  featured_image: dsc09944.jpg
+  images: dsc09944.jpg
 
 ----
 
