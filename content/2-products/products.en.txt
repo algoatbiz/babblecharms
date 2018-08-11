@@ -1179,6 +1179,511 @@ Products:
   quantity: "50"
   featured_image: dsc09944.jpg
   images: dsc09944.jpg
+- 
+  name: You Belong among the Wildflowers Charm
+  text: |
+    You Belong among the WIldflowers Charm
+    * Alloy message charm
+    * 20mm
+  price: "2.50"
+  category: Message
+  product_id: wildflowers
+  quantity: "20"
+  featured_image: dsc09944_20180722141007445.jpg
+  images: dsc09944_20180722141007445.jpg
+- 
+  name: Best Mama Ever Charm
+  text: |
+    Best Mama Ever charm
+    * alloy message charm
+    * 20mm
+  price: "2.50"
+  category: Message
+  product_id: bestmama
+  quantity: "20"
+  featured_image: dsc09945.jpg
+  images: dsc09945.jpg
+- 
+  name: "Don't be a Prick charm"
+  text: |
+    Don't be a Prick charm
+    * alloy charm
+    * message charm
+    * 20mm
+  price: "2.50"
+  category: Message
+  product_id: prick
+  quantity: "19"
+  featured_image: dsc09946.jpg
+  images: dsc09946.jpg
+- 
+  name: >
+    So much awesome in such a little one
+    charm
+  text: |
+    So much awesome in such a little one charm
+    * alloy charm
+    * 20mm
+    * message charm
+  price: "2.50"
+  category: Message
+  product_id: awesomelittle
+  quantity: "20"
+  featured_image: dsc09947.jpg
+  images: dsc09947.jpg
+- 
+  name: Made out of Stars charm
+  text: |
+    Made out of Stars charm
+    * message charm
+    * alloy charm
+    * 20mm
+  price: "2.50"
+  category: Message
+  product_id: madeoutofstars
+  quantity: "20"
+  featured_image: dsc09948.jpg
+  images: dsc09948.jpg
+- 
+  name: Raising my Tribe charm
+  text: |
+    Raising my Tribe charm
+    * message charm
+    * alloy charm
+    * 20mm
+  price: "2.50"
+  category: Message
+  product_id: "2.50"
+  quantity: "20"
+  featured_image: dsc09949.jpg
+  images: dsc09949.jpg
+- 
+  name: Fur Mama charm
+  text: |
+    Fur Mama charm
+    * alloy charm
+    * 20mm
+    * message charm
+  price: "2.50"
+  category: Message
+  product_id: furmama
+  quantity: "20"
+  featured_image: dsc09950.jpg
+  images: dsc09950.jpg
+- 
+  name: Teach Love Inspire charm
+  text: |
+    Teach Love Inspire charm
+    * message charm
+    * alloy charm
+    * teacher charm
+    * 20mm
+  price: "2.50"
+  category: Message
+  product_id: Teacher
+  quantity: "20"
+  featured_image: dsc09944_20180722141007445.jpg
+  images: dsc09951.jpg
+- 
+  name: My Hero Wears Blue charm
+  text: |
+    My hero wears blue charm
+    * police charm
+    * message charm
+    * stainless steel charm
+    * 20mm
+  price: "2.50"
+  category: Message
+  product_id: wearsblue
+  quantity: "25"
+  featured_image: dsc09952.jpg
+  images: dsc09952.jpg
+- 
+  name: >
+    Who lives Who dies Who tells your story
+    charm
+  text: >
+    Who lives Who dies Who tells your story
+    charm
+  price: "1.50"
+  category: Message
+  product_id: wholives
+  quantity: "25"
+  featured_image: dsc09953.jpg
+  images: dsc09953.jpg
+- 
+  name: "If your Dreams don't scare you they aren't big enough charm"
+  text: |
+    If your Dreams don't scare you they aren't big enough charm
+    * alloy charm
+    * 20mm
+    * message charm
+    * dream charm
+  price: "2.50"
+  category: Message
+  product_id: dreambig
+  quantity: "25"
+  featured_image: dsc09953_20180722143723566.jpg
+  images: dsc09953_20180722143723566.jpg
+- 
+  name: My Boat is calling and I must go charm
+  text: |
+    My Boat is calling and I must go charm
+    * boat charm
+    * message charm
+    * 20mm
+    * alloy charm
+  price: "2.50"
+  category: Message
+  product_id: boatcalling
+  quantity: "20"
+  featured_image: dsc09955.jpg
+  images: dsc09955.jpg
+- 
+  name: >
+    Land of the Free because my daddy is
+    brave charm
+  text: |
+    Land of the Free because my daddy is brave charm
+    * alloy charm
+    * message charm
+    * 20mm
+    * freedom charm
+  price: "2.50"
+  category: Message
+  product_id: landoffree
+  quantity: "20"
+  featured_image: dsc09954.jpg
+  images: dsc09954.jpg
+- 
+  name: Make your Dreams happen charm
+  text: |
+    Make your dreams happen charm
+    * alloy charm
+    * message charm
+    * 20mm
+  price: "2.50"
+  category: Message
+  product_id: dreamshappen
+  quantity: "20"
+  featured_image: dsc09956.jpg
+  images: dsc09956.jpg
+- 
+  name: Spoiled by Nana charm
+  text: |
+    Spoiled by Nana charm
+    * message charm
+    * alloy charm
+    * 20mm
+    * Nana charm
+  price: "2.50"
+  category: Message
+  product_id: spoiledbynana
+  quantity: "20"
+  featured_image: dsc09957.jpg
+  images: dsc09957.jpg
+- 
+  name: Home is where my Mom is charm
+  text: |
+    Home is where my Mom is charm
+    * alloy charm
+    * 20mm
+    * message charm
+  price: "2.50"
+  category: Message
+  product_id: homemom
+  quantity: "20"
+  featured_image: dsc09958.jpg
+  images: dsc09958.jpg
+- 
+  name: "I'd Rather be Fishing charm"
+  text: |
+    I'd Rather be Fishing charm
+    * alloy charm
+    * fishing charm
+    * 20mm
+    * message charm
+  price: "2.50"
+  category: Message
+  product_id: fishing
+  quantity: "20"
+  featured_image: dsc09959.jpg
+  images: dsc09959.jpg
+- 
+  name: You are Beautiful inside and out charm
+  text: |
+    You are Beautiful inside and out charm
+    * alloy charm
+    * 20mm
+    * message charm
+  price: "2.50"
+  category: Message
+  product_id: beautiful
+  quantity: "20"
+  featured_image: dsc09960.jpg
+  images: dsc09960.jpg
+- 
+  name: Beach Babe charm
+  text: |
+    Beach Babe charm
+    * alloy charm
+    * beach charm
+    * 20mm
+    * message charm
+  price: "2.50"
+  category: Message
+  product_id: beachbabe
+  quantity: "20"
+  featured_image: dsc09961.jpg
+  images: dsc09961.jpg
+- 
+  name: Love you more charm
+  text: |
+    Love you more charm
+    * alloy charm
+    * message charm
+    * 20mm
+    * love charm
+  price: "2.50"
+  category: Message
+  product_id: loveyoumore
+  quantity: "20"
+  featured_image: dsc09962.jpg
+  images: dsc09962.jpg
+- 
+  name: Free Spirit charm
+  text: |
+    Free Spirit charm
+    * alloy charm
+    * 20mm
+    * message charm
+  price: "2.50"
+  category: Message
+  product_id: freespirit
+  quantity: "20"
+  featured_image: dsc09963.jpg
+  images: dsc09963.jpg
+- 
+  name: It is well with my soul charm
+  text: |
+    It is well with my soul charm
+    * 20mm
+    * alloy charm
+    * message charm
+  price: "2.50"
+  category: Message
+  product_id: wellsoul
+  quantity: "20"
+  featured_image: dsc09964.jpg
+  images: dsc09964.jpg
+- 
+  name: "World's Greatest Mom charm"
+  text: "World's Greatest Mom charm"
+  price: "2.50"
+  category: Message
+  product_id: greatestmom
+  quantity: "20"
+  featured_image: dsc09965.jpg
+  images: dsc09965.jpg
+- 
+  name: Nothing can stop you charm
+  text: |
+    Nothing can stop you charm
+    * stainless steel
+    * 20mm
+    * message charm
+  price: "2.50"
+  category: Message
+  product_id: stop
+  quantity: "25"
+  featured_image: dsc09966.jpg
+  images: dsc09966.jpg
+- 
+  name: Captain Adorable charm
+  text: |
+    Captain adorable charm
+    * message charm
+    * alloy charm
+    * 20mm
+  price: "2.50"
+  category: Message
+  product_id: captain
+  quantity: "20"
+  featured_image: dsc09967.jpg
+  images: dsc09967.jpg
+- 
+  name: So Loved charm
+  text: |
+    So Loved charm
+    * alloy charm
+    * 20mm
+    * message charm
+  price: "2.50"
+  category: Message
+  product_id: soloved
+  quantity: "20"
+  featured_image: dsc09968.jpg
+  images: dsc09968.jpg
+- 
+  name: "You're my best catch charm"
+  text: |
+    You're my best catch charm
+    * stainless steel
+    * 20mm
+    * message charm
+  price: "1.50"
+  category: Message
+  product_id: bestcatch
+  quantity: "25"
+  featured_image: dsc09969.jpg
+  images: dsc09969.jpg
+- 
+  name: Baby Bear Charm
+  text: |
+    Baby Bear charm
+    * alloy charm
+    * 20mm
+    * message charm
+  price: "2.50"
+  category: Message
+  product_id: babybear
+  quantity: "20"
+  featured_image: dsc09970.jpg
+  images: dsc09970.jpg
+- 
+  name: I am your person charm
+  text: |
+    I am your person charm
+    * stainless steel
+    * 20mm
+    * message charm
+  price: "2.50"
+  category: Message
+  product_id: person
+  quantity: "30"
+  featured_image: dsc09971.jpg
+  images: dsc09971.jpg
+- 
+  name: Boy Mama charms
+  text: |
+    Boy Mama charm
+    * 20mm
+    * alloy charm
+    * message charm
+  price: "2.50"
+  category: Message
+  product_id: boymama
+  quantity: "50"
+  featured_image: dsc09972.jpg
+  images: dsc09972.jpg
+- 
+  name: Medical Assistant charm
+  text: |
+    Medical Assistant charm
+    * 20mm
+    * stainless steel
+    * message charm
+  price: "1.50"
+  category: Message
+  product_id: medical assist
+  quantity: "30"
+  featured_image: dsc09973.jpg
+  images: dsc09973.jpg
+- 
+  name: Girl Mama charm
+  text: |
+    Girl Mama charm
+    * 20mm
+    * message charm
+    * alloy charm
+  price: "2.50"
+  category: Message
+  product_id: girlmama
+  quantity: "50"
+  featured_image: dsc09973_20180722215710499.jpg
+  images: dsc09973_20180722215710499.jpg
+- 
+  name: Doctor charm
+  text: |
+    Doctor charm
+    * stainless steel
+    * 20mm
+    * message charm
+  price: "1.50"
+  category: Message
+  product_id: doctor
+  quantity: "30"
+  featured_image: dsc09974.jpg
+  images: dsc09974.jpg
+- 
+  name: LPN charm, nurse charm
+  text: |
+    LPN charm, nurse charm
+    * stainless steel
+    * 20mm
+    * message charm
+  price: "1.50"
+  category: Message
+  product_id: LPN
+  quantity: "30"
+  featured_image: dsc09975.jpg
+  images: dsc09975.jpg
+- 
+  name: home sweet home charm
+  text: |
+    Home sweet Home charm
+    * alloy charm
+    * 20mm
+    * message charm
+  price: "2.50"
+  category: Message
+  product_id: sweethome
+  quantity: "20"
+  featured_image: dsc09976.jpg
+  images: dsc09976.jpg
+- 
+  name: Compass Charm
+  text: |
+    Compass charm
+    * alloy charm
+  price: "0.75"
+  category: Flower
+  product_id: compass
+  quantity: "50"
+  featured_image: dsc00002_1.jpg
+  images: |
+    - dsc00001.jpg
+    - dsc00002_1.jpg
+    - dsc00032_1.jpg
+- 
+  name: Bicycle charm, bronze alloy charm
+  text: |
+    Bicycle charm
+    * bronze
+    * alloy charm
+  price: "0.75"
+  category: Flower
+  product_id: bicycle1
+  quantity: "50"
+  featured_image: dsc00005_1.jpg
+  images: |
+    - dsc00004_1.jpg
+    - dsc00005_1.jpg
+- 
+  name: Double Decker bus charm
+  text: |
+    Double Decker Bus charm
+    * alloy charm
+    * comes in 3 colors: red, pink or green.
+  price: ".75"
+  category: Flower
+  product_id: doublebus
+  quantity: "50"
+  featured_image: dsc00025_1.jpg
+  images: |
+    - dsc00025_1.jpg
+    - dsc00026_1.jpg
+    - dsc00027_1.jpg
 
 ----
 
