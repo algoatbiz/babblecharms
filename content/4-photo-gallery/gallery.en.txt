@@ -6,19 +6,6 @@ Title: Photo Gallery
 
 ----
 
-Gallery-images: 
-
-- 1.png
-- 2.png
-- 3.png
-- 4.png
-- bff.jpg
-- message-charm.png
-- message-charm2.png
-- message-charm3.png
-
-----
-
 Category-descriptions: 
 
 - 

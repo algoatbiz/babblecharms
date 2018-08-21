@@ -77,6 +77,10 @@ body {
 .container {
 	@include container(5rem);
 	@include max-width(83.125rem);
+
+	@include media($mobile) {
+		@include container(1.5rem);
+	}
 }
 
 strong {
@@ -89,6 +93,7 @@ button, .button {
 	height: 2.25rem;
 	padding: 0 2rem;
 	font-weight: $bold;
+	transition: all .15s linear;
 	background: $orange;
 	font-family: $oswald;
 	display: inline-block;
@@ -103,6 +108,9 @@ button, .button {
 		padding: 0 1.5rem;
 		font-size: .875rem;
 		line-height: 1.875rem;
+	}
+	&:hover {
+		background: $blue;
 	}
 }
 
@@ -238,20 +246,26 @@ label {
 }
 
 .product-item {
-	max-width: 16.875rem;
+	width: 100%;
 	margin-bottom: 2rem;
+	max-width: 16.875rem;
 
 	&:not(:nth-child(4n)) {
 		margin-right: 1.875rem;
 	}
 	.product-image {
+		overflow: hidden;
+		position: relative;
 		margin-bottom: 1.25rem;
 
 		&, img {
 			display: block;
+			min-height: 16.875rem;
+			max-height: 16.875rem;
 		}
 		img {
-			width: 100%;
+			width: auto;
+			@include center;
 		}
 	}
 	h3 {
@@ -291,6 +305,50 @@ label {
 		}
 		&.full:before {
 			@include fa('\f005');
+		}
+	}
+}
+
+.pagination {
+	font-size: .875rem;
+
+	&, ul {
+		@include flex;
+	}
+	a {
+		color: inherit;
+	}
+	> a {
+		width: 2.188rem;
+		height: 2.188rem;
+		background: #eee;
+		position: relative;
+
+		&:before {
+			@include center;
+		}
+		&.next:before {
+			@include fa('\f105');
+		}
+		&.prev:before {
+			@include fa('\f104');
+		}
+		&.disabled {
+			cursor: default;
+			background: #d8d9db;
+			pointer-events: none;
+		}
+	}
+	ul {
+		font-weight: $bold;
+		font-family: $oswald;
+		margin: 0 1rem;
+
+		li:not(:last-child) {
+			margin-right: .5rem;
+		}
+		a:hover, a.active {
+			text-decoration: underline;
 		}
 	}
 }
@@ -350,9 +408,105 @@ label {
 		}
 	}
 	.title {
+		color: $blue;
 		font-size: $title;
 		font-weight: $light;
 		font-family: $oswald;
 		text-transform: uppercase;
+	}
+}
+
+/*=============================
+=          Coming Soon        =
+=============================*/
+
+body#coming-soon {
+	height: 100vh;
+	text-align: center;
+
+	.container {
+		position: relative;
+
+		> div {
+			padding: 5rem 3rem 9.5rem;
+			background: none;
+			transform: translateY(20%);
+			@include max-width(56.75rem);
+			border: 3px solid $body-color;
+			background: url('/assets/images/coming-soon-bg.png') no-repeat center/cover;
+
+			> div {
+				position: relative;
+				font-weight: $light;
+				margin-bottom: 3rem;
+				padding-bottom: 3rem;
+
+				&:after {
+					content: '';
+					background: $black;
+					height: 3px;
+					width: 4rem;
+					bottom: 0;
+					@include horizontal-center(50%, absolute);
+				}
+			}
+		}
+	}
+	figure {
+		@include horizontal-center(50%, absolute);
+
+		&:first-of-type {
+			top: -4.375rem;
+			padding: 0 2rem;
+			background: $white;
+		}
+		&:last-of-type {
+			bottom: -2.5rem;
+		}
+		img {
+			display: block;
+		}
+	}
+	h1, h2 {
+		font-family: $oswald;
+	}
+	h1 {
+		font-size: 3.75rem;
+		letter-spacing: .75rem;
+		text-transform: uppercase;
+	}
+	h2 {
+		text-transform: uppercase;
+	}
+	input {
+		height: 2.5rem;
+		@include max-width(25.938rem);
+		margin-top: 1rem;
+		margin-bottom: 1.25rem;
+	}
+	button {
+		color: $black;
+	}
+	.message {
+		margin-bottom: 1.25rem;
+	}
+
+	@include media($mobile) {
+		height: calc(100vh + 2rem);
+
+		.container > div {
+			transform: translateY(77px);
+			padding: 4rem 1.5em 9.5rem;
+
+			> div {
+				margin-bottom: 2rem;
+				padding-bottom: 2rem;
+			}
+		}
+		h1 {
+			line-height: 1.25;
+			font-size: 2.5rem;
+			margin-bottom: 1.25rem;
+		}
 	}
 }

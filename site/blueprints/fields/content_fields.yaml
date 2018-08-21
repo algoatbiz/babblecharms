@@ -11,3 +11,6 @@ fields:
     label: Text
     type: markdown
     required: true
+  background:
+    label: Background Image
+    type: image

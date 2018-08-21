@@ -34,7 +34,7 @@ c::set('language.detect', true);
 
 if(function_exists('panel')) { c::set('MinifyHTML', false); }
 
-c::set('timezone', 'America/New_York');
+c::set('timezone', 'America/Denver');
 
 c::set('panel.stylesheet', 'assets/css/panel.css');
 

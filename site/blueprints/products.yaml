@@ -17,6 +17,8 @@ fields:
       {{category}}<br>
       ${{price}}
     fields:
+      id:
+        type: hidden
       name:
         label: Title
         type: text

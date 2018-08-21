@@ -15,7 +15,7 @@
 	.form-blueprint-products {
 		.field-name-products, .field-name-category_descriptions {
 			.structure-entries.ui-sortable {
-				@include flex;
+				@include flex(flex, inherit);
 				@include flex-space(flex-start);
 
 				> div {

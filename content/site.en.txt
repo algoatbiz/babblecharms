@@ -55,3 +55,18 @@ Social-media:
 ----
 
 Background: default-hero.png
+
+----
+
+Coming-text: 
+
+# Coming Soon
+Quality charms at wholesale prices, we have hundreds of charms to choose from.
+
+----
+
+Bottom-image: coming-soon-bottom-image.png
+
+----
+
+Notify-limit: 10

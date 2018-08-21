@@ -1,6 +1,7 @@
 title: Gallery
 pages: false
 files:
+  sortable: true
   fields:
     category:
       label: Product Category
@@ -9,13 +10,6 @@ files:
       options: url
       url: api/categories.json
 fields:
-  tabImages:
-    label: Images
-    type:  tabs
-    icon: file-text-o
-  gallery_images:
-    label: Images
-    type: images
   tabContent:
     label: Page Content
     type:  tabs

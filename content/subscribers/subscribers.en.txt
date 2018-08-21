@@ -1,0 +1,15 @@
+Subscribers: 
+
+- 
+  email: test@test.com
+  date_created: 2018-08-20 21:00:05
+- 
+  email: agotgoat@gmail.com
+  date_created: 2018-08-20 21:18:59
+- 
+  email: agotgoat1@gmail.com
+  date_created: 2018-08-20 21:20:18
+
+----
+
+Title: Subscribers

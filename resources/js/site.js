@@ -11,6 +11,16 @@ var body = document.body,
 	desktopLinks = document.querySelectorAll('#menu .has-children > a'),
 	main = document.getElementById('main');
 
+function newAx() {
+	return axios.create({
+		headers: {
+			'X-Requested-With':  'XMLHttpRequest'
+		}
+	});
+}
+
+var ax = newAx();
+
 var mobile = isMobile();
 
 body.className += ' ' + (mobile ? 'mobile' : 'desktop');
@@ -97,6 +107,37 @@ if(products.length > 0) {
 }
 
 /*=============================
+=            Gallery          =
+=============================*/
+
+var galleryContainer = document.querySelector('body#photo-gallery #gallery-container');
+if(galleryContainer) {
+	var images = galleryContainer.querySelectorAll('figure');
+
+	for(var i=0; i<images.length; i++) {
+		images[i].addEventListener('click', function() {
+			setBigImage(this);
+		});
+	}
+
+	var nextPrev = galleryContainer.querySelectorAll('.next, .prev');
+
+	for(var i=0; i<nextPrev.length; i++) {
+		nextPrev[i].addEventListener('click', function() {
+			var index = parseInt(galleryContainer.querySelector('.current').dataset.index);
+			index = this.className == 'next' ? (index+1)%images.length : (index == 0 ? images.length - 1 : index-1);
+			setBigImage(images[index]);
+		});
+	}
+}
+
+function setBigImage(figure) {
+	galleryContainer.querySelector('.current').className = '';
+	galleryContainer.querySelector('div:first-child').style.backgroundImage = 'url('+figure.querySelector('img').src+')';
+	figure.className = 'current';
+}
+
+/*=============================
 =          Google Map         =
 =============================*/
 
@@ -120,4 +161,104 @@ function initMap() {
 		position: latLng,
 		map: map,
 	});
+}
+
+/*=============================
+=         Form Process        =
+=============================*/
+
+var forms = document.querySelectorAll('form');
+
+if(forms.length > 0) {
+	for(var i=0; i<forms.length; i++) {
+		forms[i].addEventListener('submit', function(e) {
+			e.preventDefault();
+
+			var form = this,
+				data = getFormValues(form);
+
+			data.c_time = performance.now() >= 7000 ? 0 : 1;
+
+			var formData = new FormData();
+
+			for(var key in data)
+				formData.append(key, data[key]);
+
+			ax.post(form.action, formData)
+			.then(function(r) {
+				form.querySelector('.message').innerHTML = r.data.message;
+				// var content = document.querySelector('#top .content');
+
+				// Velocity(content, 'scroll', {
+				// 	duration: 400,
+				// 	offset: -(header.offsetHeight)
+				// });
+			 // 	Velocity(content, 'slideUp', {
+			 // 		progress: function(el, complete) {
+			 // 			el[0].style.opacity = 1 - complete;
+			 // 		},
+			 // 		duration: 450,
+			 // 		complete: function(el) {
+			 // 			el[0].innerHTML = r.data.message;
+			 // 			Velocity(el[0], 'slideDown', {
+			 // 				progress: function(el, complete) {
+			 // 					el[0].style.opacity = complete;
+			 // 				},
+			 // 				delay: 350,
+			 // 				duration: 450
+			 // 			});
+			 // 		}
+			 // 	});
+			})
+			.catch(function(e) {
+				clearErrors(form);
+			 	setErrors(form, e.response.data);
+			});
+		});
+	}
+}
+
+function getFormValues(form) {
+	var data = {};
+	var types = ['INPUT', 'TEXTAREA', 'SELECT'];
+
+	for(var i=0; i<types.length; i++)
+		getInputValues(form, data, types[i]);
+
+	return data;
+}
+
+function getInputValues(form, data, type) {
+
+	var inputs = form.getElementsByTagName(type);
+
+	for(var i=inputs.length-1; i>=0; i--) {
+		if(inputs[i].name.length)
+			data[inputs[i].name] = inputs[i].value;
+	}
+
+	return data;
+}
+
+function clearErrors(form) {
+
+	var errors = form.getElementsByClassName('error');
+
+	for(var e=errors.length - 1; e>=0; e--)
+		errors[e].className = errors[e].className.replace(' error', '');
+}
+
+function setErrors(form, responseData) {
+
+	Velocity(document.querySelector('form'), 'scroll', {
+		offset: -(header.offsetHeight + 16),
+		duration: 400
+	});
+
+	for(var key in responseData.errors) {
+		var field = form.querySelector('#'+key);
+
+		if(field)
+			field.parentNode.className += ' error';
+	}
 }

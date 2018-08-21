@@ -30,7 +30,7 @@
 					<div>
 						<ul>
 							<?php foreach($site->productCategories(true) as $cat): ?>
-								<li class="<?= isset($category) && $category == $cat['uri'] ? 'active' : false ?>">
+								<li class="<?= $page->template() == 'products' && isset($category) && $category == $cat['uri'] ? 'active' : false ?>">
 									<a href="<?= $cat['link'] ?>" data-image="<?= $cat['image'] ?>"><?= $cat['name'] ?></a>
 								</li>
 							<?php endforeach; ?>

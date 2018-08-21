@@ -1,0 +1,21 @@
+title: Email Subscribers
+pages: false
+deletable: false
+fields:
+  subscribers:
+    label: Subscribers
+    type: structure
+    style: table
+    modalsize: large
+    fields:
+      email:
+        label: Email
+        type: email
+        required: true
+      date_created:
+        label: Date Created
+        type: datetime
+        required: true
+        default:
+          date: now
+          time: now

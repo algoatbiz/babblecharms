@@ -13,14 +13,66 @@ main {
 	> div {
 		&:first-child {
 			@include bg;
+			position: relative;
 			padding-bottom: 47.009%;
+			border-bottom: 1px solid $white;
 		}
 		&:last-child {
 			@include flex;
+			@include flex-space;
+			flex-wrap: no-wrap;
 
+			figure, img {
+				min-width: 12.125rem;
+				min-height: 6.875rem;
+			}
+			figure {
+				cursor: pointer;
+				overflow: hidden;
+				position: relative;
+				max-width: 12.125rem;
+
+				&:not(:last-child) {
+					margin-right: 1.5px;
+				}
+			}
 			img {
-				width: 16.66%;
-				display: block;
+				width: auto;
+				height: auto;
+				@include center;
+			}
+		}
+		.next, .prev {
+			opacity: 0;
+			width: 50%;
+			height: 100%;
+			cursor: pointer;
+			position: absolute;
+			transition: all .3s;
+
+			&:before {
+				color: $white;
+				font-size: 2.5rem;
+				@include vertical-center(50%, absolute);
+			}
+			&:hover {
+				opacity: 1;
+			}
+		}
+		.next {
+			right: 0;
+
+			&:before {
+				right: 2rem;
+				@include fa('\f105');
+			}
+		}
+		.prev {
+			left: 0;
+
+			&:before {
+				left: 2rem;
+				@include fa('\f104');
 			}
 		}
 	}

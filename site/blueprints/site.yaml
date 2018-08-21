@@ -10,6 +10,9 @@ fields:
   background:
     label: Default Background
     type: image
+  notify_limit:
+    label: Low Stock Count
+    type: number
   tabForm:
     label: Form
     type:  tabs
@@ -53,3 +56,15 @@ fields:
         label: Link
         type: url
         required: true
+  tabComingSoon:
+    label: Coming Soon
+    type:  tabs
+    icon: file-text-o
+  coming_text:
+    label: Text
+    type: markdown
+    required: true
+  bottom_image:
+    label: Bottom Image
+    type: image
+    required: true

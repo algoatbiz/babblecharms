@@ -7,17 +7,16 @@ class GalleryPage extends ProductsPage {
 		$images = '';
 		$i = 0;
 
-		foreach($this->gallery_images()->yaml() as $img) {
-			$image = $this->image($img);
-			if($image->category() == $category) {
-				$images.= brick('img', false, ['src'=>$image->url()]);
+		foreach($this->images()->sortBy('sort') as $img) {
+			if($img->category() == $category) {
+				$images.= brick('figure', brick('img', '', ['src'=>$img->url()]), ['class'=>r($i==0, 'current'), 'data-index'=>$i]);
 
 				if($i++ == 0)
-					$firstImage = $image->url();
+					$firstImage = $img->url();
 			}
 		}
 
-		return brick('div', brick('div', false, ['style'=>'background-image: url('.$firstImage.')']).brick('div', $images), ['id'=>'gallery-container']);
+		return brick('div', brick('div', brick('span', '', ['class'=>'prev']).brick('span', '', ['class'=>'next']), ['style'=>'background-image: url('.$firstImage.')']).brick('div', $images), ['id'=>'gallery-container']);
 	}
 
 }

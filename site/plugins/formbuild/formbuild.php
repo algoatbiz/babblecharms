@@ -1,5 +1,15 @@
 <?php
 
+// kirby()->routes([
+// 	[
+// 		'pattern' => 'form-process',
+// 		'method'  => 'GET',
+// 		'action'  => function() {
+			
+// 		}
+// 	]
+// ]);
+
 class FormBuild {
 
 	public static function text($field, $label, $value=null, $required=false, $type='text', $max=false, $min=false) {

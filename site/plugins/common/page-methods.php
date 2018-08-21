@@ -64,12 +64,11 @@ page::$methods['productList'] = function($site, $category = false, $limit = fals
 		$products = $products->limit($limit);
 
 	if($category) {
-		$categoryProducts = [];
+		$categoryProducts = new Structure();
 
-		foreach($products as $product) {
-			if(strtolower($product->category()) == $category) {
-				$categoryProducts[] = $product;
-			}
+		foreach($products as $key => $product) {
+			if(strtolower($product->category()) == $category)
+				$categoryProducts->append($key, $product);
 		}
 
 		$products = $categoryProducts;
@@ -107,7 +106,7 @@ page::$methods['buildProductList'] = function($site, $products) {
 	$page = $site->productsPage();
 
 	$content = '';
-	foreach($products as $product) {
+	foreach($products = $products->paginate(16) as $product) {
 		$productUrl = url('products/'.strtolower($product->category()).'/'.str::slug($product->name()));
 		$image = brick('a', brick('img', false, ['src'=>$page->file($product->featured_image())->url(), 'alt'=>$product->name()]), ['href'=>$productUrl, ['class'=>'product-image']]);
 		$details = brick('h3', brick('a', $product->name(), ['href'=>$productUrl]));
@@ -118,7 +117,24 @@ page::$methods['buildProductList'] = function($site, $products) {
 		$content.= brick('div', $image.brick('div', $details, ['class'=>'details']), ['class'=>'product-item']);
 	}
 
-	return $content;
+	return $content.$site->pagination($products);
+
+};
+
+page::$methods['pagination'] = function($site, $products) {
+
+	$pagination = $products->pagination();
+
+	$pages = '';
+	foreach($pagination->range(3) as $p) {
+		$pages.= brick('li', brick('a', $p, ['href' => $pagination->pageURL($p), 'class'=>r($pagination->page() == $p, 'active')]));
+	}
+
+	$content = brick('a', '', ['href'=>$pagination->prevPageUrl(), 'class'=>'prev'.r(!$pagination->hasPrevPage(), ' disabled')]);
+	$content.= brick('ul', $pages, ['class'=>'pages']);
+	$content.= brick('a', '', ['href'=>$pagination->nextPageUrl(), 'class'=>'next'.r(!$pagination->hasNextPage(), ' disabled')]);
+
+	return r($pagination->hasPrevPage() || $pagination->hasNextPage(), brick('div', $content, ['class'=>'pagination']));
 
 };
 
