@@ -7,6 +7,7 @@ Icon
 /node_modules/
 error_log
 panel/error_log
+dev/
 
 # Temporary files
 # ---------------
