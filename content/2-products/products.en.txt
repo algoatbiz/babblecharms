@@ -3484,6 +3484,908 @@ Products:
   quantity: "50"
   featured_image: dsc00229.jpg
   images: dsc00229.jpg
+- 
+  name: Pineapple charm, fruit charm, pineapple
+  text: |
+    These cute pineapple charms are adorable and perfect to add to a  project...
+    
+    Item includes 1 piece.
+    
+    These charms are made from a zinc alloy metal which is lead and nickel free.
+    
+    Perfect for bracelets, necklaces, earrings, keychains & more...!
+    
+    All of our charms are lead and nickel safe.
+    
+    *Due to the small size of this item it is not intended for small children.
+  price: "0.50"
+  category: Message
+  product_id: pineapple1
+  quantity: "100"
+  featured_image: dsc00349.jpg
+  images: |
+    - dsc00349.jpg
+    - dsc00348.jpg
+- 
+  name: Cupcake charm, cupcake, food charm
+  text: |
+    These cute cup cake charms are adorable and perfect to add to a  project...
+    
+    Item includes 1 piece.
+    
+    These charms are made from a zinc alloy metal which is lead and nickel free.
+    
+    Perfect for bracelets, necklaces, earrings, keychains & more...!
+    
+    All of our charms are lead and nickel safe.
+    
+    *Due to the small size of this item it is not intended for small children.
+  price: "0.50"
+  category: Message
+  product_id: cupcake 1
+  quantity: "50"
+  featured_image: dsc00353.jpg
+  images: dsc00353.jpg
+- 
+  name: >
+    Lollipop charm, sucker charm, lollipop,
+    candy charm
+  text: |
+    These cute lollipop charms are adorable and perfect to add to a  project...
+    
+    Item includes 1 piece.
+    
+    These charms are made from a zinc alloy metal which is lead and nickel free.
+    
+    Perfect for bracelets, necklaces, earrings, keychains & more...!
+    
+    All of our charms are lead and nickel safe.
+    
+    *Due to the small size of this item it is not intended for small children.
+  price: "0.50"
+  category: Message
+  product_id: lollipop
+  quantity: "50"
+  featured_image: dsc00354.jpg
+  images: |
+    - dsc00354.jpg
+    - dsc00355.jpg
+- 
+  name: >
+    Candy charm, taffy charm, candy, food
+    charm
+  text: |
+    These cute candy charms are adorable and perfect to add to a  project...
+    
+    Item includes 1 piece.
+    
+    These charms are made from a zinc alloy metal which is lead and nickel free.
+    
+    Perfect for bracelets, necklaces, earrings, keychains & more...!
+    
+    All of our charms are lead and nickel safe.
+    
+    *Due to the small size of this item it is not intended for small children.
+  price: "0.50"
+  category: Message
+  product_id: candy
+  quantity: "50"
+  featured_image: dsc00358.jpg
+  images: |
+    - dsc00356.jpg
+    - dsc00357.jpg
+- 
+  name: Spoon charm, spoon, utensil charm
+  text: |
+    These cute spoon charms are adorable and perfect to add to a  project...
+    
+    Item includes 1 piece.
+    
+    These charms are made from a zinc alloy metal which is lead and nickel free.
+    
+    Perfect for bracelets, necklaces, earrings, keychains & more...!
+    
+    All of our charms are lead and nickel safe.
+    
+    *Due to the small size of this item it is not intended for small children.
+  price: "0.25"
+  category: Message
+  product_id: spoon
+  quantity: "50"
+  featured_image: dsc00358.jpg
+  images: |
+    - dsc00358.jpg
+    - dsc00359.jpg
+- 
+  name: >
+    Baby Spoon charm, baby spoon, utensil
+    charm
+  text: |
+    These cute baby spoon charms are adorable and perfect to add to a  project...
+    
+    Item includes 1 piece.
+    
+    These charms are made from a zinc alloy metal which is lead and nickel free.
+    
+    Perfect for bracelets, necklaces, earrings, keychains & more...!
+    
+    All of our charms are lead and nickel safe.
+    
+    *Due to the small size of this item it is not intended for small children.
+  price: "0.50"
+  category: Message
+  product_id: baby spoon
+  quantity: "50"
+  featured_image: dsc00360.jpg
+  images: |
+    - dsc00360.jpg
+    - dsc00361.jpg
+- 
+  name: >
+    Wine Glass charm, wine charm, glass
+    charm, cup charm
+  text: |
+    These cute wine glass charms are adorable and perfect to add to a  project...
+    
+    Item includes 1 piece.
+    
+    These charms are made from a zinc alloy metal which is lead and nickel free.
+    
+    Perfect for bracelets, necklaces, earrings, keychains & more...!
+    
+    All of our charms are lead and nickel safe.
+    
+    *Due to the small size of this item it is not intended for small children.
+  price: "0.50"
+  category: Message
+  product_id: wineglass
+  quantity: "50"
+  featured_image: dsc00362.jpg
+  images: |
+    - dsc00362.jpg
+    - dsc00363.jpg
+- 
+  name: Cup charm, glass charm, cheers
+  text: |
+    These cute cup charms are adorable and perfect to add to a  project...
+    
+    Item includes 1 piece.
+    
+    These charms are made from a zinc alloy metal which is lead and nickel free.
+    
+    Perfect for bracelets, necklaces, earrings, keychains & more...!
+    
+    All of our charms are lead and nickel safe.
+    
+    *Due to the small size of this item it is not intended for small children.
+  price: "0.50"
+  category: Message
+  product_id: glass
+  quantity: "50"
+  featured_image: dsc00364.jpg
+  images: dsc00364.jpg
+- 
+  name: >
+    Watermelon charm, fruit charm,
+    watermelon
+  text: |
+    These cute watermelon charms are adorable and perfect to add to a  project...
+    
+    Item includes 1 piece.
+    
+    These charms are made from a zinc alloy metal which is lead and nickel free.
+    
+    Perfect for bracelets, necklaces, earrings, keychains & more...!
+    
+    All of our charms are lead and nickel safe.
+    
+    *Due to the small size of this item it is not intended for small children.
+  price: "0.50"
+  category: Message
+  product_id: watermelon
+  quantity: "50"
+  featured_image: dsc00366.jpg
+  images: |
+    - dsc00365.jpg
+    - dsc00366.jpg
+- 
+  name: Lollipop charm, lollipop, sucker charm
+  text: |
+    These cute lollipop charms are adorable and perfect to add to a  project...
+    
+    Item includes 1 piece.
+    
+    These charms are made from a zinc alloy metal which is lead and nickel free.
+    
+    Perfect for bracelets, necklaces, earrings, keychains & more...!
+    
+    All of our charms are lead and nickel safe.
+    
+    *Due to the small size of this item it is not intended for small children.
+  price: "0.50"
+  category: Message
+  product_id: lollipop2
+  quantity: "50"
+  featured_image: dsc00369.jpg
+  images: |
+    - dsc00369.jpg
+    - dsc00370.jpg
+- 
+  name: >
+    Utensil charm, utensils, fork, knife,
+    spoon , charms
+  text: |
+    These cute utensil set charms are adorable and perfect to add to a  project...
+    
+    Item includes 1 piece.
+    
+    These charms are made from a zinc alloy metal which is lead and nickel free.
+    
+    Perfect for bracelets, necklaces, earrings, keychains & more...!
+    
+    All of our charms are lead and nickel safe.
+    
+    *Due to the small size of this item it is not intended for small children.
+  price: "0.50"
+  category: Message
+  product_id: utensil
+  quantity: "25"
+  featured_image: dsc00371.jpg
+  images: |
+    - dsc00371.jpg
+    - dsc00372.jpg
+- 
+  name: >
+    Cup cake char, cupcake charm, cupcakes,
+    muffin charm
+  text: |
+    These cute cupcake charms are adorable and perfect to add to a  project...
+    
+    Item includes 1 piece.
+    
+    These charms are made from a zinc alloy metal which is lead and nickel free.
+    
+    Perfect for bracelets, necklaces, earrings, keychains & more...!
+    
+    All of our charms are lead and nickel safe.
+    
+    *Due to the small size of this item it is not intended for small children.
+  price: "0.50"
+  category: Message
+  product_id: cupcake 2
+  quantity: "50"
+  featured_image: dsc00374.jpg
+  images: |
+    - dsc00373.jpg
+    - dsc00374.jpg
+- 
+  name: >
+    Ice Cream Cone charm, Ice cream charm,
+    ice cream, food charm
+  text: |
+    These cute ice cream charms are adorable and perfect to add to a  project...
+    
+    Item includes 1 piece.
+    
+    These charms are made from a zinc alloy metal which is lead and nickel free.
+    
+    Perfect for bracelets, necklaces, earrings, keychains & more...!
+    
+    All of our charms are lead and nickel safe.
+    
+    *Due to the small size of this item it is not intended for small children.
+  price: "0.50"
+  category: Message
+  product_id: ice cream
+  quantity: "50"
+  featured_image: 1.png
+  images: |
+    - dsc00378.jpg
+    - dsc00379.jpg
+- 
+  name: >
+    Pineapple charm, pineapple, fruit charm,
+    food charm
+  text: |
+    These cute pineapple charms are adorable and perfect to add to a  project...
+    
+    Item includes 1 piece.
+    
+    These charms are made from a zinc alloy metal which is lead and nickel free.
+    
+    Perfect for bracelets, necklaces, earrings, keychains & more...!
+    
+    All of our charms are lead and nickel safe.
+    
+    *Due to the small size of this item it is not intended for small children.
+  price: "0.50"
+  category: Message
+  product_id: pineapple2
+  quantity: "50"
+  featured_image: dsc00382.jpg
+  images: |
+    - dsc00382.jpg
+    - dsc00383.jpg
+- 
+  name: >
+    Cute Pineapple charm, pineapple charm,
+    fruit charm, food charm
+  text: |
+    These cute pineapple charms are adorable and perfect to add to a  project...
+    
+    Item includes 1 piece.
+    
+    These charms are made from a zinc alloy metal which is lead and nickel free.
+    
+    Perfect for bracelets, necklaces, earrings, keychains & more...!
+    
+    All of our charms are lead and nickel safe.
+    
+    *Due to the small size of this item it is not intended for small children.
+  price: "050"
+  category: Message
+  product_id: pineapple3
+  quantity: "50"
+  featured_image: dsc00386.jpg
+  images: |
+    - dsc00386.jpg
+    - dsc00387.jpg
+- 
+  name: >
+    Coffe cup charm, coffee charm, coffee
+    charm
+  text: |
+    These cute coffee cup charms are adorable and perfect to add to a  project...
+    
+    Item includes 1 piece.
+    
+    These charms are made from a zinc alloy metal which is lead and nickel free.
+    
+    Perfect for bracelets, necklaces, earrings, keychains & more...!
+    
+    All of our charms are lead and nickel safe.
+    
+    *Due to the small size of this item it is not intended for small children.
+  price: "0.50"
+  category: Message
+  product_id: coffee cup
+  quantity: "50"
+  featured_image: dsc00388.jpg
+  images: |
+    - dsc00388.jpg
+    - dsc00389.jpg
+- 
+  name: Cupcake charm, cupcake, muffin charm
+  text: |
+    These cute cup cake charms are adorable and perfect to add to a  project...
+    
+    Item includes 1 piece.
+    
+    These charms are made from a zinc alloy metal which is lead and nickel free.
+    
+    Perfect for bracelets, necklaces, earrings, keychains & more...!
+    
+    All of our charms are lead and nickel safe.
+    
+    *Due to the small size of this item it is not intended for small children.
+  price: "0.50"
+  category: Message
+  product_id: cupcake4
+  quantity: "50"
+  featured_image: dsc00393.jpg
+  images: dsc00393.jpg
+- 
+  name: >
+    tea pot charm, tea pot, blue tea pot
+    charm
+  text: |
+    These cute blue tea pot charms are adorable and perfect to add to a  project...
+    
+    Item includes 1 piece.
+    
+    These charms are made from a zinc alloy metal which is lead and nickel free.
+    
+    Perfect for bracelets, necklaces, earrings, keychains & more...!
+    
+    All of our charms are lead and nickel safe.
+    
+    *Due to the small size of this item it is not intended for small children.
+  price: "0.50"
+  category: Message
+  product_id: teapot
+  quantity: "50"
+  featured_image: dsc00401.jpg
+  images: |
+    - dsc00400.jpg
+    - dsc00401.jpg
+- 
+  name: Cupcake charm, cup cake charm, cup cake
+  text: |
+    These cute cup cake charms are adorable and perfect to add to a  project...
+    
+    Item includes 1 piece.
+    
+    These charms are made from a zinc alloy metal which is lead and nickel free.
+    
+    Perfect for bracelets, necklaces, earrings, keychains & more...!
+    
+    All of our charms are lead and nickel safe.
+    
+    *Due to the small size of this item it is not intended for small children.
+  price: "0.50"
+  category: Message
+  product_id: cup cake 5
+  quantity: "50"
+  featured_image: dsc00405.jpg
+  images: |
+    - dsc00405.jpg
+    - dsc00406.jpg
+- 
+  name: Luck charm, good luck, good luck charm
+  text: |
+    These cute luck charms are adorable and perfect to add to a  project...
+    
+    Item includes 1 piece.
+    
+    These charms are made from a zinc alloy metal which is lead and nickel free.
+    
+    Perfect for bracelets, necklaces, earrings, keychains & more...!
+    
+    All of our charms are lead and nickel safe.
+    
+    *Due to the small size of this item it is not intended for small children.
+  price: "0.50"
+  category: Message
+  product_id: luck
+  quantity: "50"
+  featured_image: dsc00485.jpg
+  images: dsc00485.jpg
+- 
+  name: Cat charm, cute cat charm, feline charm
+  text: |
+    These cute cat charms are adorable and perfect to add to a  project...
+    
+    Item includes 1 piece.
+    
+    These charms are made from a zinc alloy metal which is lead and nickel free.
+    
+    Perfect for bracelets, necklaces, earrings, keychains & more...!
+    
+    All of our charms are lead and nickel safe.
+    
+    *Due to the small size of this item it is not intended for small children.
+  price: "0.50"
+  category: Message
+  product_id: cats
+  quantity: "50"
+  featured_image: dsc00486.jpg
+  images: |
+    - dsc00486.jpg
+    - dsc00487.jpg
+- 
+  name: Baby feet charm, heart charm, feet charm
+  text: |
+    These cute baby feet heart charms are adorable and perfect to add to a  project...
+    
+    Item includes 1 piece.
+    
+    These charms are made from a zinc alloy metal which is lead and nickel free.
+    
+    Perfect for bracelets, necklaces, earrings, keychains & more...!
+    
+    All of our charms are lead and nickel safe.
+    
+    *Due to the small size of this item it is not intended for small children.
+  price: "0.50"
+  category: Message
+  product_id: baby feet
+  quantity: "50"
+  featured_image: dsc00488.jpg
+  images: |
+    - dsc00488.jpg
+    - dsc00489.jpg
+- 
+  name: Feet charm, feet, cute feet charm
+  text: |
+    These cute feet charms are adorable and perfect to add to a  project...
+    
+    Item includes 1 piece.
+    
+    These charms are made from a zinc alloy metal which is lead and nickel free.
+    
+    Perfect for bracelets, necklaces, earrings, keychains & more...!
+    
+    All of our charms are lead and nickel safe.
+    
+    *Due to the small size of this item it is not intended for small children.
+  price: "0.50"
+  category: Message
+  product_id: feet
+  quantity: "50"
+  featured_image: dsc00493.jpg
+  images: |
+    - dsc00492.jpg
+    - dsc00493.jpg
+- 
+  name: Bronze hook charm, hook charm, hook
+  text: |
+    These cute bronze hook charms are adorable and perfect to add to a  project...
+    
+    Item includes 1 piece.
+    
+    These charms are made from a zinc alloy metal which is lead and nickel free.
+    
+    Perfect for bracelets, necklaces, earrings, keychains & more...!
+    
+    All of our charms are lead and nickel safe.
+    
+    *Due to the small size of this item it is not intended for small children.
+  price: "0.50"
+  category: Message
+  product_id: bronze hook
+  quantity: "50"
+  featured_image: dsc00495.jpg
+  images: dsc00495.jpg
+- 
+  name: >
+    Bronze spiral charm, spiral charm, swirl
+    charm, swirl
+  text: |
+    These cute bronze spiral charms are adorable and perfect to add to a  project...
+    
+    Item includes 1 piece.
+    
+    These charms are made from a zinc alloy metal which is lead and nickel free.
+    
+    Perfect for bracelets, necklaces, earrings, keychains & more...!
+    
+    All of our charms are lead and nickel safe.
+    
+    *Due to the small size of this item it is not intended for small children.
+  price: "0.50"
+  category: Message
+  product_id: bronzespiral
+  quantity: "50"
+  featured_image: dsc00496.jpg
+  images: dsc00496.jpg
+- 
+  name: Hook charm, small hook charm, hook
+  text: |
+    These cute hook charms are adorable and perfect to add to a  project...
+    
+    Item includes 1 piece.
+    
+    These charms are made from a zinc alloy metal which is lead and nickel free.
+    
+    Perfect for bracelets, necklaces, earrings, keychains & more...!
+    
+    All of our charms are lead and nickel safe.
+    
+    *Due to the small size of this item it is not intended for small children.
+  price: "0.50"
+  category: Message
+  product_id: hookcharm
+  quantity: "50"
+  featured_image: dsc00499.jpg
+  images: dsc00499.jpg
+- 
+  name: Baby feet charms, feet charm, baby feet
+  text: |
+    These cute baby feet charms are adorable and perfect to add to a  project...
+    
+    Item includes 1 piece.
+    
+    These charms are made from a zinc alloy metal which is lead and nickel free.
+    
+    Perfect for bracelets, necklaces, earrings, keychains & more...!
+    
+    All of our charms are lead and nickel safe.
+    
+    *Due to the small size of this item it is not intended for small children.
+  price: "0.50"
+  category: Message
+  product_id: baby feet2
+  quantity: "50"
+  featured_image: dsc00501.jpg
+  images: |
+    - dsc00501.jpg
+    - dsc00502.jpg
+- 
+  name: >
+    Gun charm, pistol charm, gun charms,
+    revolver charm
+  text: |
+    These cute gun charms are adorable and perfect to add to a  project...
+    
+    Item includes 1 piece.
+    
+    These charms are made from a zinc alloy metal which is lead and nickel free.
+    
+    Perfect for bracelets, necklaces, earrings, keychains & more...!
+    
+    All of our charms are lead and nickel safe.
+    
+    *Due to the small size of this item it is not intended for small children.
+  price: "0.50"
+  category: Message
+  product_id: guncharm
+  quantity: "50"
+  featured_image: dsc00503.jpg
+  images: |
+    - dsc00503.jpg
+    - dsc00504.jpg
+- 
+  name: >
+    Cake charm, wedding cake charm, birthday
+    cake charm, cake
+  text: |
+    These cute cake charms are adorable and perfect to add to a  project...
+    
+    Item includes 1 piece.
+    
+    These charms are made from a zinc alloy metal which is lead and nickel free.
+    
+    Perfect for bracelets, necklaces, earrings, keychains & more...!
+    
+    All of our charms are lead and nickel safe.
+    
+    *Due to the small size of this item it is not intended for small children.
+  price: "0.50"
+  category: Message
+  product_id: cake1
+  quantity: "50"
+  featured_image: dsc00505.jpg
+  images: |
+    - dsc00505.jpg
+    - dsc00506.jpg
+- 
+  name: >
+    Happy Birthday cake charm, happy
+    birthday charm, cake charm
+  text: |
+    These cute pineapple charms are adorable and perfect to add to a  project...
+    
+    Item includes 1 piece.
+    
+    These charms are made from a zinc alloy metal which is lead and nickel free.
+    
+    Perfect for bracelets, necklaces, earrings, keychains & more...!
+    
+    All of our charms are lead and nickel safe.
+    
+    *Due to the small size of this item it is not intended for small children.
+  price: "0.50"
+  category: Message
+  product_id: cake2
+  quantity: "25"
+  featured_image: dsc00508.jpg
+  images: |
+    - dsc00507.jpg
+    - dsc00508.jpg
+- 
+  name: Star charm, bronze star, star
+  text: |
+    These cute star charms are adorable and perfect to add to a  project...
+    
+    Item includes 1 piece.
+    
+    These charms are made from a zinc alloy metal which is lead and nickel free.
+    
+    Perfect for bracelets, necklaces, earrings, keychains & more...!
+    
+    All of our charms are lead and nickel safe.
+    
+    *Due to the small size of this item it is not intended for small children.
+  price: "0.50"
+  category: Message
+  product_id: star1
+  quantity: "50"
+  featured_image: dsc00509.jpg
+  images: |
+    - dsc00509.jpg
+    - dsc00510.jpg
+- 
+  name: Star charm, star
+  text: |
+    These cute star charms are adorable and perfect to add to a  project...
+    
+    Item includes 1 piece.
+    
+    These charms are made from a zinc alloy metal which is lead and nickel free.
+    
+    Perfect for bracelets, necklaces, earrings, keychains & more...!
+    
+    All of our charms are lead and nickel safe.
+    
+    *Due to the small size of this item it is not intended for small children.
+  price: "0.50"
+  category: Message
+  product_id: star2
+  quantity: "50"
+  featured_image: dsc00512.jpg
+  images: dsc00512.jpg
+- 
+  name: >
+    Butterfly charm, blue butterfly,
+    butterflies
+  text: |
+    These cute blue butterflies charms are adorable and perfect to add to a  project...
+    
+    Item includes 1 piece.
+    
+    These charms are made from a zinc alloy metal which is lead and nickel free.
+    
+    Perfect for bracelets, necklaces, earrings, keychains & more...!
+    
+    All of our charms are lead and nickel safe.
+    
+    *Due to the small size of this item it is not intended for small children.
+  price: "0.50"
+  category: Message
+  product_id: bluebutterfly
+  quantity: "50"
+  featured_image: dsc00514.jpg
+  images: |
+    - dsc00514.jpg
+    - dsc00513.jpg
+- 
+  name: Hook charm, hook me charm, hook
+  text: |
+    These cute hook charms are adorable and perfect to add to a  project...
+    
+    Item includes 1 piece.
+    
+    These charms are made from a zinc alloy metal which is lead and nickel free.
+    
+    Perfect for bracelets, necklaces, earrings, keychains & more...!
+    
+    All of our charms are lead and nickel safe.
+    
+    *Due to the small size of this item it is not intended for small children.
+  price: "0.50"
+  category: Message
+  product_id: hookme
+  quantity: "50"
+  featured_image: dsc00515.jpg
+  images: |
+    - dsc00515.jpg
+    - dsc00516.jpg
+- 
+  name: >
+    Cancer ribbon charm, cancer charm,
+    ribbon charm
+  text: |
+    These cute cancer ribbon charms are adorable and perfect to add to a  project...
+    
+    Item includes 1 piece.
+    
+    These charms are made from a zinc alloy metal which is lead and nickel free.
+    
+    Perfect for bracelets, necklaces, earrings, keychains & more...!
+    
+    All of our charms are lead and nickel safe.
+    
+    *Due to the small size of this item it is not intended for small children.
+  price: "0.50"
+  category: Message
+  product_id: cancerribbon
+  quantity: "50"
+  featured_image: dsc00518.jpg
+  images: |
+    - dsc00517.jpg
+    - dsc00518.jpg
+- 
+  name: Flower charm, flower, nature charm
+  text: |
+    These cute flower charms are adorable and perfect to add to a  project...
+    
+    Item includes 1 piece.
+    
+    These charms are made from a zinc alloy metal which is lead and nickel free.
+    
+    Perfect for bracelets, necklaces, earrings, keychains & more...!
+    
+    All of our charms are lead and nickel safe.
+    
+    *Due to the small size of this item it is not intended for small children.
+  price: "0.50"
+  category: Message
+  product_id: flower1
+  quantity: "50"
+  featured_image: dsc00551.jpg
+  images: |
+    - dsc00551.jpg
+    - dsc00552.jpg
+- 
+  name: >
+    Fairy charm, fairy on a moon charm, moon
+    charm
+  text: |
+    These cute fairy charms are adorable and perfect to add to a  project...
+    
+    Item includes 1 piece.
+    
+    These charms are made from a zinc alloy metal which is lead and nickel free.
+    
+    Perfect for bracelets, necklaces, earrings, keychains & more...!
+    
+    All of our charms are lead and nickel safe.
+    
+    *Due to the small size of this item it is not intended for small children.
+  price: "0.50"
+  category: Message
+  product_id: fairy1
+  quantity: "50"
+  featured_image: dsc00523.jpg
+  images: |
+    - dsc00523.jpg
+    - dsc00524.jpg
+- 
+  name: Moon charm, moon, cute moon charm
+  text: |
+    These cute moon charms are adorable and perfect to add to a  project...
+    
+    Item includes 1 piece.
+    
+    These charms are made from a zinc alloy metal which is lead and nickel free.
+    
+    Perfect for bracelets, necklaces, earrings, keychains & more...!
+    
+    All of our charms are lead and nickel safe.
+    
+    *Due to the small size of this item it is not intended for small children.
+  price: "0.50"
+  category: Message
+  product_id: moon2
+  quantity: "50"
+  featured_image: dsc00525.jpg
+  images: dsc00525.jpg
+- 
+  name: Sun charm, sunshine charm, sunshine, sun
+  text: |
+    These cute sun charms are adorable and perfect to add to a  project...
+    
+    Item includes 1 piece.
+    
+    These charms are made from a zinc alloy metal which is lead and nickel free.
+    
+    Perfect for bracelets, necklaces, earrings, keychains & more...!
+    
+    All of our charms are lead and nickel safe.
+    
+    *Due to the small size of this item it is not intended for small children.
+  price: "0.50"
+  category: Message
+  product_id: sun1
+  quantity: "50"
+  featured_image: dsc00533.jpg
+  images: |
+    - dsc00532.jpg
+    - dsc00533.jpg
+- 
+  name: >
+    Just Married charm, just married car,
+    car charm, married charm
+  text: |
+    These cute just married charms are adorable and perfect to add to a  project...
+    
+    Item includes 1 piece.
+    
+    These charms are made from a zinc alloy metal which is lead and nickel free.
+    
+    Perfect for bracelets, necklaces, earrings, keychains & more...!
+    
+    All of our charms are lead and nickel safe.
+    
+    *Due to the small size of this item it is not intended for small children.
+  price: "0.50"
+  category: Message
+  product_id: justmarried
+  quantity: "50"
+  featured_image: dsc00534.jpg
+  images: |
+    - dsc00534.jpg
+    - dsc00535.jpg
 
 ----
 
@@ -3509,3 +4411,7 @@ Category-descriptions:
   category: Bracelet
   text: Bracelet Lorem Ipsum
   featured_image: 4.png
+
+----
+
+Background: 
