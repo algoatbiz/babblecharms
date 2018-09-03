@@ -1,0 +1,164 @@
+@import "bourbon";
+@import "neat";
+@import "../mixins";
+@import "../vars";
+
+#hero {
+	height: 12.5rem;
+
+	.container {
+		@include center;
+		text-align: center;
+
+		> div {
+			max-width: 100%;
+		}
+	}
+	h1 {
+		margin-bottom: 0;
+	}
+}
+
+main .container {
+	@include flex(flex, flex-start);
+	@include flex-space;
+	padding-top: 4rem;
+	padding-bottom: 7rem;
+}
+
+#build-container {
+	width: 74.103%;
+	max-width: 54.188rem;
+	// width: 867px;
+}
+
+#steps a, aside > div:first-child {
+	height: 3.75rem;
+	font-size: .813rem;
+	font-weight: $bold;
+	text-align: center;
+	background: #f7f7f7;
+	letter-spacing: 1px;
+	line-height: 3.75rem;
+	font-family: $oswald;
+	text-transform: uppercase;
+}
+
+#steps, aside > div:first-child {
+	margin-bottom: 3rem;
+}
+
+#steps {
+	@include flex;
+	overflow: hidden;
+
+	a {
+		width: 33.33%;
+		color: inherit;
+		display: block;
+
+		&.current {
+			color: $white;
+			background: $blue;
+
+			&:after {
+				background: $blue;
+				border-top: 2px solid $blue !important;
+				border-right: 2px solid $blue !important;
+			}
+		}
+		&:not(:last-child) {
+			position: relative;
+
+			&:after {
+				content: '';
+				top: 0;
+				z-index: 1;
+				width: 3.75rem;
+				height: 3.75rem;
+				right: -1.125rem;
+				position: absolute;
+				transform: rotate(45deg);
+				border-top: 2px solid $white;
+				border-right: 2px solid $white;
+			}
+		}
+	}
+}
+
+#canvas {
+	height: 298px;
+	position: relative;
+	border: 1px solid $border2;
+
+	.bracelet {
+		@include bg;
+		@include center;
+		width: 41.25rem;
+		padding-bottom: 6.59%;
+		background-size: 100% auto;
+	}
+}
+
+#product-select-container {
+	@include flex;
+	@include flex-space;
+
+	a {
+		width: 50%;
+		display: block;
+		border-bottom: 1px solid $border;
+
+		&:not(.bracelet) {
+			display: none;
+
+			span:first-child {
+				padding-bottom: 25%;
+			}
+		}
+		&.bracelet {
+			padding: 2rem 0;
+
+			span:first-child {
+				padding-bottom: 15%;
+				background-size: 100% auto;
+			}
+		}
+	}
+	span {
+		&:first-child {
+			@include bg;
+			display: block;
+		}
+		&:last-child {
+			display: none;
+		}
+	}
+}
+
+aside {
+	width: 23.077%;
+	max-width: 16.875rem;
+
+	.subtotal {
+		@include flex;
+		@include flex-space;
+		color: $white;
+		height: 3.125rem;
+		font-size: .813rem;
+		padding: 0 1.75rem;
+		letter-spacing: 1px;
+		background: $orange;
+		font-family: $oswald;
+		font-weight: $medium;
+		margin-bottom: 1.5rem;
+		text-transform: uppercase;
+	}
+	.button {
+		display: block;
+		height: 3.313rem;
+		text-align: center;
+		font-size: 1.125rem;
+		line-height: 3.313rem;
+	}
+}

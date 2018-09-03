@@ -93,11 +93,11 @@ button, .button {
 	height: 2.25rem;
 	padding: 0 2rem;
 	font-weight: $bold;
-	transition: all .15s linear;
 	background: $orange;
 	font-family: $oswald;
 	display: inline-block;
 	text-transform: uppercase;
+	transition: all .15s linear;
 
 	&.big {
 		height: 3.125rem;
@@ -236,6 +236,10 @@ label {
 	margin-bottom: .5rem;
 }
 
+.error {
+	border-color: $red;
+}
+
 /*=============================
 =         Product Item        =
 =============================*/
@@ -250,15 +254,25 @@ label {
 	margin-bottom: 2rem;
 	max-width: 16.875rem;
 
-	&:not(:nth-child(4n)) {
+	&:not(:nth-of-type(4n)) {
 		margin-right: 1.875rem;
+	}
+	&:not(.bracelet) .product-image {
+		&, img {
+			display: block;
+			min-height: 16.875rem;
+			max-height: 16.875rem;
+		}
+	}
+	&.bracelet .product-image img {
+		width: 100%;
 	}
 	.product-image {
 		overflow: hidden;
 		position: relative;
 		margin-bottom: 1.25rem;
 
-		&, img {
+		& {
 			display: block;
 			min-height: 16.875rem;
 			max-height: 16.875rem;

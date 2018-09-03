@@ -114,7 +114,7 @@ page::$methods['buildProductList'] = function($site, $products) {
 		$details.= brick('div', '$'.$product->price(), ['class'=>'price']);
 		$details.= $site->getRatings();
 		$details.= brick('a', 'Add to bag', ['href'=>'#', 'class'=>'button small add-bag']);
-		$content.= brick('div', $image.brick('div', $details, ['class'=>'details']), ['class'=>'product-item']);
+		$content.= brick('div', $image.brick('div', $details, ['class'=>'details']), ['class'=>'product-item '.strtolower($product->category())]);
 	}
 
 	return $content.$site->pagination($products);

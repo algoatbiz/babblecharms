@@ -2,6 +2,7 @@
 	<ul id="menu">
 	<?php
 		$pages = $site->pages()->visible();
+		$bab = page('build-a-bracelet');
 	?>
 	<?php foreach($pages as $pg): ?>
 		<li class="top<?= r($pg->hasMenuPages() || $pg->template() == 'products', ' has-children') ?><?= r($pg->isOpen(), ' active') ?>">
@@ -37,8 +38,8 @@
 							<li class="<?= r($pg->isActive() && (!isset($category) || !$category), 'active') ?>">
 								<a href="<?= $pg->url() ?>" data-image="<?= $pg->file($pg->menu_image())->url() ?>">All <?= $pg->title() ?></a>
 							</li>
-							<li>
-								<a href="#" data-image="<?= $pg->file($pg->menu_image())->url() ?>">Build a Bracelet</a>
+							<li class="<?= r($bab->isActive(), 'active') ?>">
+								<a href="<?= $bab->url() ?>" data-image="<?= $bab->file($bab->menu_image())->url() ?>">Build a Bracelet</a>
 							</li>
 						</ul>
 						<div class="product-image" style="background-image: url('<?= $pg->file($pg->menu_image())->url() ?>')"></div>

@@ -24,7 +24,7 @@ kirby()->routes([
 							<div>'.$site->coming_text()->kt().'</div>
 							<form action="form-process">
 								<h2>Sign Up For Updates</h2>
-								<input type="email" name="email" placeholder="Enter your email" aria-required="true">
+								<input type="email" name="email"  id="email" placeholder="Enter your email" aria-required="true">
 								<div class="message"></div>
 								<button>Submit</button>
 							</form>
@@ -53,8 +53,13 @@ kirby()->routes([
 		'action'  => function() use($site) {
 			$subscribers = site()->find('subscribers');
 			$existing = $subscribers->content()->get('subscribers')->yaml();
+			$errors = [];
 
-			if(!$subscribers->subscribers()->toStructure()->findBy('email', get('email'))) {
+			if(!get('email')) {
+				$message = 'Please enter your email address';
+				$errors['email'] = $message;
+			}
+			else if(!$subscribers->subscribers()->toStructure()->findBy('email', get('email'))) {
 				$existing[] = ['email' => get('email'), 'date_created'=>date('Y-m-d H:i:s')];
 				$subscribers->update([
 					'subscribers' => yaml::encode($existing)
@@ -64,7 +69,8 @@ kirby()->routes([
 			else {
 				$message = 'This email is already subscribed.';
 			}
-			return response::json(['message'=>$message]);
+
+			return response::json(['message'=>$message, 'errors'=>$errors], (count($errors) ? 400 : 200));
 		}
 	]
 ]);

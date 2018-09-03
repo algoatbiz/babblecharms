@@ -53,7 +53,7 @@ body.product {
 			position: relative;
 			max-width: 36.5rem;
 			padding-bottom: 33.8462%;
-			border: 1px solid #c2c2c2;
+			border: 1px solid $border2;
 			// width: 584px;
 			// height: 398px;
 
@@ -67,7 +67,7 @@ body.product {
 				display: block;
 				cursor: pointer;
 				width: 4.438rem;
-				border: 1px solid #c2c2c2;
+				border: 1px solid $border2;
 
 				&:not(:last-child) {
 					margin-bottom: .75rem;

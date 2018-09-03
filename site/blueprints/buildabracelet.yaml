@@ -1,0 +1,7 @@
+title: Build A Bracelet
+fields:
+  content_fields: content_fields
+  menu_image:
+    label: Menu Image
+    type: image
+    required: true

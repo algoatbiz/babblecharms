@@ -4386,6 +4386,60 @@ Products:
   images: |
     - dsc00534.jpg
     - dsc00535.jpg
+- 
+  name: Bracelet 1
+  text: ""
+  price: "0.50"
+  category: Bracelet
+  product_id: bracelet1
+  quantity: "50"
+  featured_image: bracelet1.png
+  images: ""
+- 
+  name: Bracelet 2
+  text: ""
+  price: "0.50"
+  category: Bracelet
+  product_id: bracelet2
+  quantity: "50"
+  featured_image: bracelet2.png
+  images: ""
+- 
+  name: Bracelet 3
+  text: ""
+  price: "0.50"
+  category: Bracelet
+  product_id: bracelet3
+  quantity: "50"
+  featured_image: bracelet3.png
+  images: ""
+- 
+  name: Bracelet 4
+  text: ""
+  price: "0.50"
+  category: Bracelet
+  product_id: bracelet4
+  quantity: "50"
+  featured_image: bracelet4.png
+  images: ""
+- 
+  name: Bracelet 5
+  text: ""
+  price: "0.50"
+  category: Bracelet
+  product_id: bracelet5
+  quantity: "50"
+  featured_image: bracelet5.png
+  images: ""
+- 
+  name: Bracelet 6
+  text: ""
+  price: "0.50"
+  category: Bracelet
+  product_id: bracelet6
+  quantity: "50"
+  featured_image: bracelet6.png
+  images: ""
 
 ----
 
@@ -4398,19 +4452,19 @@ Category-descriptions:
 - 
   category: Message
   text: Message Lorem Ipsum
-  featured_image: 1.png
+  featured_image: dsc00010.jpg
 - 
   category: Flower
   text: Flower Lorem Ipsum
-  featured_image: 2.png
+  featured_image: dsc09626.jpg
 - 
   category: Animal
-  text: 'Animal Lorem  Ipsum'
-  featured_image: 3.png
+  text: 'Animal Lorem Ipsum'
+  featured_image: dsc08183.jpg
 - 
   category: Bracelet
   text: Bracelet Lorem Ipsum
-  featured_image: 4.png
+  featured_image: bracelet1.png
 
 ----
 

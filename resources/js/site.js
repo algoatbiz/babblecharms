@@ -213,6 +213,7 @@ if(forms.length > 0) {
 			.catch(function(e) {
 				clearErrors(form);
 			 	setErrors(form, e.response.data);
+			 	form.querySelector('.message').innerHTML = e.response.data.message;
 			});
 		});
 	}
@@ -250,15 +251,16 @@ function clearErrors(form) {
 
 function setErrors(form, responseData) {
 
-	Velocity(document.querySelector('form'), 'scroll', {
-		offset: -(header.offsetHeight + 16),
-		duration: 400
-	});
+	// Velocity(document.querySelector('form'), 'scroll', {
+	// 	offset: -(header.offsetHeight + 16),
+	// 	duration: 400
+	// });
 
 	for(var key in responseData.errors) {
 		var field = form.querySelector('#'+key);
 
 		if(field)
-			field.parentNode.className += ' error';
+			field.className += ' error';
+			// field.parentNode.className += ' error';
 	}
 }

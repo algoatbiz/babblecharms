@@ -55,7 +55,7 @@ class ProductsPage extends DefaultPage {
 				$content = brick('div', brick('div', $images), ['class'=>'photo-container', 'style'=>'background-image: url('.$featuredImage.')']).
 						   brick('div', brick('div', $p->text()->kt()).brick('div', $reviews, ['class'=>'reviews-container']).
 						   brick('div', '$'.$p->price(), ['class'=>'price']).
-						   brick('div', brick('a', 'Add to Bag', ['class'=>'button', 'href'=>'#']).brick('div', brick('select', $qtyOptions), ['class'=>'select-container']), ['class'=>'buy-container']));
+						   brick('div', brick('a', 'Add to Bag', ['class'=>'button add-bag', 'href'=>'#']).brick('div', brick('select', $qtyOptions), ['class'=>'select-container']), ['class'=>'buy-container']));
 			}
 		}
 		return $header.brick('div', $content, ['class'=>'product-details']);

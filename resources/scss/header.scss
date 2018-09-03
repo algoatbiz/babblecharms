@@ -111,7 +111,7 @@ nav {
 		top: 2.5rem;
 		display: none;
 		position: absolute;
-		border: 1px solid #c2c2c2;
+		border: 1px solid $border2;
 		box-shadow: 5px 5px 10px 0 rgba($black,.2);
 
 		a {
@@ -149,7 +149,7 @@ nav {
 			&:hover {
 				&:after {
 					right: -.5rem;
-					color: #c2c2c2;
+					color: $border2;
 					font-size: 2rem;
 					@include fa('\f105');
 					@include vertical-center(50%, absolute);
@@ -158,9 +158,11 @@ nav {
 		}
 	}
 	.product-image {
-		@include bg;
 		min-width: 15rem;
 		background: $white;
-		border-left: 1px solid #c2c2c2;
+		border-left: 1px solid $border2;
+		background-size: cover !important;
+		background-position: center !important;
+		background-repeat: no-repeat !important;
 	}
 }

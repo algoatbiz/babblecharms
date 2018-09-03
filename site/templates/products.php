@@ -1,6 +1,6 @@
 <?php snippet('header') ?>
-<?= $hero ?>
-<?= $productNavigation ?>
+	<?= $hero ?>
+	<?= $productNavigation ?>
 	<main>
 		<div class="container">
 			<?= $content ?>
