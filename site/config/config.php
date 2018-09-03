@@ -8,6 +8,8 @@ c::set('google-api-key', EnvHelper::env('GOOGLE_API_KEY', null));
 c::set('cache', false);
 c::set('cache.driver', 'memcached');
 
+c::set('cache.ignore', []);
+
 c::set('languages', [
     [
       'code'    => 'en',
