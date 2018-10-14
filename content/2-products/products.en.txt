@@ -4440,6 +4440,20 @@ Products:
   quantity: "50"
   featured_image: bracelet6.png
   images: ""
+- 
+  name: Stainless steel CZ Flower charm
+  text: >
+    Stainless Steel Cubic Zirconium Flower
+    charm.
+  price: "5"
+  category: Message
+  product_id: CZ flower
+  quantity: "25"
+  featured_image: 8647.jpg
+  images: |
+    - 8647.jpg
+    - 8647_20180903185310524.jpg
+    - dsc006831.jpg
 
 ----
 
@@ -4459,7 +4473,7 @@ Category-descriptions:
   featured_image: dsc09626.jpg
 - 
   category: Animal
-  text: 'Animal Lorem Ipsum'
+  text: Animal Lorem Ipsum
   featured_image: dsc08183.jpg
 - 
   category: Bracelet

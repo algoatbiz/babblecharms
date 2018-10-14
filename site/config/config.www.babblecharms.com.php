@@ -6,4 +6,4 @@ c::set('debug', false);
 
 c::set('live', true);
 
-c::set('cache', true);
+#c::set('cache', true);
