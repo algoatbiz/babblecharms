@@ -134,9 +134,12 @@ body.gallery #product-navigation {
 	}
 	.title, h1 {
 		font-size: 3rem;
-		margin-bottom: 1rem;
 		letter-spacing: 2.5px;
 		text-transform: uppercase;
+
+		&:not(:last-child) {
+			margin-bottom: 1rem;
+		}
 	}
 }
 
@@ -178,6 +181,15 @@ body.default #hero h2 {
 =             Form            =
 =============================*/
 
+form {
+	.row {
+		margin-bottom: 1rem;
+	}
+	label {
+		font-size: .813rem;
+	}
+}
+
 button {
 	border: 0;
 	cursor: pointer;
@@ -193,14 +205,14 @@ button, input, select, textarea {
 	appearance: none;
 }
 
-input, select, textarea {
+input:not([type=radio]), select, textarea {
 	width: 100%;
 	display: block;
 	font-size: 1rem;
   	border-radius: 3px;
+	transition: .3s all;
 	font-family: $roboto;
 	border: 2px solid #e1e1e1;
-	transition: .3s all;
 
  //  	&.error {
  //  		border-color: $red !important;
@@ -210,12 +222,12 @@ input, select, textarea {
 	}
 }
 
-input, select {
+input:not([type=radio]), select {
 	height: 2rem;
 	padding: 0 .5rem;
 }
 
-.select-container {
+.select-wrapper {
 	position: relative;
 
 	&:after {
@@ -234,6 +246,26 @@ textarea {
 label {
 	display: block;
 	margin-bottom: .5rem;
+}
+
+.radio-container {
+	> div {
+		@include flex(flex, flex-start);
+
+		&:not(:last-child) {
+			margin-bottom: 1.5rem;
+		}
+	}
+	input {
+		width: .75rem;
+		height: .75rem;
+		border-radius: 50%;
+		margin: .175rem 1rem 0 0;
+		border: 2px solid $body-color;
+	}
+	label {
+		margin-bottom: 0;
+	}
 }
 
 .error {
@@ -431,6 +463,59 @@ label {
 }
 
 /*=============================
+=           Default           =
+=============================*/
+
+body.default main section {
+	position: relative;
+
+	&:nth-of-type(odd) > div {
+		&:first-child > div {
+			padding-right: 3rem;
+		}
+		&:last-child {
+			right: 0;
+		}
+	}
+	&:nth-of-type(even) > div {
+		&:first-child {
+			overflow: auto;
+
+			> div {
+				float: right;
+				padding-left: 3rem;
+			}
+		}
+		&:last-child {
+			left: 0;
+		}
+	}
+	> div {
+		&:first-child {
+			line-height: 1.75;
+			padding-top: 3rem;
+			padding-bottom: 3rem;
+
+			> div {
+				width: 50%;
+
+				> *:not(:last-child) {
+					margin-bottom: 2rem;
+				}
+			}
+		}
+		&:last-child {
+			@include bg;
+			top: 0;
+			width: 50%;
+			height: 100%;
+			position: absolute;
+			background-attachment: fixed;
+		}
+	}
+}
+
+/*=============================
 =          Coming Soon        =
 =============================*/
 
@@ -521,6 +606,49 @@ body#coming-soon {
 			line-height: 1.25;
 			font-size: 2.5rem;
 			margin-bottom: 1.25rem;
+		}
+	}
+}
+
+/*=============================
+=             Steps           =
+=============================*/
+
+#steps {
+	@include flex;
+	overflow: hidden;
+
+	a {
+		width: 33.33%;
+		color: inherit;
+		display: block;
+
+		&:not(:last-child) {
+			position: relative;
+
+			&:after {
+				content: '';
+				top: 0;
+				z-index: 1;
+				width: 3.75rem;
+				height: 3.75rem;
+				right: -1.125rem;
+				position: absolute;
+				background: #f7f7f7;
+				transform: rotate(45deg);
+				border-top: 2px solid $white;
+				border-right: 2px solid $white;
+			}
+		}
+		&.current {
+			color: $white;
+			background: $blue;
+
+			&:after {
+				background: $blue;
+				border-top: 2px solid $blue;
+				border-right: 2px solid $blue;
+			}
 		}
 	}
 }

@@ -27,10 +27,10 @@ c::set('kirbytext.snippets.pre', [
   'domain' => url()
 ]);
 
-c::set('kirbytext.snippets.post',array(
+c::set('kirbytext.snippets.post', [
   '{' => '(',
   '}' => ')'
-));
+]);
 
 c::set('language.detect', true);
 
@@ -40,7 +40,37 @@ c::set('timezone', 'America/Denver');
 
 c::set('panel.stylesheet', 'assets/css/panel.css');
 
-c::set('routes', array(
+c::set('shipping-methods', [
+  'standard' => 'Standard (Within 5-7 Business Days) $2.50',
+  'expedited' => 'Expedited (Within 2-3 Business Days) $10.00',
+  'next-day' => 'Next Day (Within 1-2 Business Days) $15.00'
+]);
+
+c::set('states', [
+  'Outside of US',
+  'AL', 'AK', 'AZ',
+  'AR', 'CA', 'CO',
+  'CT', 'DE', 'FL',
+  'GA', 'HI', 'ID',
+  'IL', 'IN', 'IA',
+  'KS', 'KY', 'LA',
+  'ME', 'MD', 'MA',
+  'MI', 'MN', 'MS',
+  'MO', 'MT', 'NE',
+  'NV', 'NH', 'NJ',
+  'NM', 'NY', 'NC',
+  'ND', 'OH', 'OK',
+  'OR', 'PA', 'RI',
+  'SC', 'SD', 'TN',
+  'TX', 'UT', 'VT',
+  'VA', 'WA', 'WV',
+  'WI', 'WY', 'AS',
+  'DC', 'FM', 'GU',
+  'MH', 'MP', 'PW',
+  'PR', 'VI'
+]);
+
+c::set('routes', [
   [
     'pattern' => 'products/(:any)',
     'method' => 'GET',
@@ -88,4 +118,4 @@ c::set('routes', array(
       return response::json($data);
     }
   ]
-));
+]);

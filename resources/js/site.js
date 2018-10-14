@@ -167,7 +167,7 @@ function initMap() {
 =         Form Process        =
 =============================*/
 
-var forms = document.querySelectorAll('form');
+var forms = document.querySelectorAll('form:not(#search)');
 
 if(forms.length > 0) {
 	for(var i=0; i<forms.length; i++) {
@@ -263,4 +263,17 @@ function setErrors(form, responseData) {
 			field.className += ' error';
 			// field.parentNode.className += ' error';
 	}
+}
+
+/*=============================
+=            Search           =
+=============================*/
+
+var search = document.getElementById('search');
+if(search) {
+	search.addEventListener('submit', function(e) {
+		var input = this.querySelector('input');
+		if(input.value === '')
+			e.preventDefault();
+	})
 }

@@ -1,0 +1,337 @@
+@import "bourbon";
+@import "neat";
+@import "../mixins";
+@import "../vars";
+
+#hero {
+	height: 9.375rem;
+
+	.container {
+		@include center;
+	}
+}
+
+main {
+	.header, aside > div:nth-last-child(2),
+	#subtotal, #total {
+		@include flex;
+		height: 3.125rem;
+	}
+	aside > div:nth-last-child(2), #subtotal, #total {
+		color: $white;
+		background: $orange;
+	}
+	#subtotal, #total span {
+		font-size: 1.5rem;
+		font-family: $oswald;
+	}
+	.header, aside > div:nth-last-child(2) *,
+	#cart-list > div:last-child, #total {
+		font-size: .813rem;
+		font-weight: $bold;
+		letter-spacing: 1px;
+		font-family: $oswald;
+		text-transform: uppercase;
+	}
+	form > div {
+		@include flex(flex, inherit);
+
+		> div:first-child {
+			width: 70%;
+		}
+		&:last-child > div, aside {
+			width: 30%;
+		}
+	}
+	h3, .price, .quantity {
+		font-size: 1.5rem;
+		font-family: $oswald;
+	}
+	h3 {
+		line-height: 1.4;
+		font-weight: $light;
+		text-transform: uppercase;
+	}
+}
+
+#form-cart > div:last-child {
+	padding: 2.25rem 0;
+    justify-content: flex-end;
+
+    .button {
+    	color: inherit;
+    	height: 2.75rem;
+    	background: none;
+    	line-height: 2.5rem;
+    	border: 2px solid $black;
+    }
+}
+
+#cart-list {
+	.header {
+		position: relative;
+		margin-bottom: 1.5rem;
+
+		&:after {
+			content: '';
+			bottom: 0;
+			height: 1px;
+			width: 100%;
+			background: #eee;
+			position: absolute;
+		}
+	}
+	.header, ul li {
+		padding-right: 2.5%;
+	}
+	.header > div, ul li > div {
+		&:first-child {
+			width: 70%;
+		}
+		&:nth-child(n+2) {
+			width: 15%;
+			text-align: center;
+		}
+	}
+	ul {
+		li {
+			@include flex(flex, inherit);
+			padding-top: 1rem;
+			padding-bottom: 1rem;
+			border-bottom: 1px solid $border2;
+
+			> div {
+				&:first-child {
+					@include flex(flex, inherit);
+
+					> div:last-child {
+						width: 55%;
+						flex-direction: column;
+						@include flex(flex, flex-start);
+
+						> * {
+							width: 100%;
+						}
+						> div:last-child {
+							margin-top: auto;
+							align-self: flex-end;
+							@include flex;
+							@include flex-space;
+						}
+					}
+				}
+				&:nth-child(2) {
+					@include flex;
+					@include flex-space;
+					flex-direction: column;
+				}
+			}
+			> .price {
+				color: $blue;
+				align-self: flex-end;
+			}
+		}
+		.image {
+			@include bg;
+			width: 31%;
+			margin-right: 6.5%;
+			max-width: 10.5rem;
+			padding-bottom: 29.7%;
+			border: 1px solid $border2;
+		}
+		h3 {
+			margin-bottom: .25rem;
+		}
+		.remove {
+			color: inherit;
+			padding-top: .65rem;
+			text-decoration: underline;
+		}
+		.divider {
+			line-height: 1;
+			margin: .5rem 0 .25rem 0;
+		}
+		.quantity-buttons {
+			line-height: 1.25;
+
+			a {
+				color: inherit;
+				font-size: 1.25rem;
+			}
+			.add:before {
+				@include fa('\f196');
+			}
+			.decrease:before {
+				@include fa('\f147');
+			}
+		}
+	}
+	> div:last-child {
+		@include flex;
+		@include flex-space;
+		padding-right: 6.5%;
+		height: calc(3.125rem - 1px);
+		border-bottom: 1px solid $border2;
+
+		a {
+			color: inherit;
+
+			&:before {
+				@include fa('\f104');
+				margin-right: .75rem;
+			}
+		}
+	}
+}
+
+aside {
+	position: relative;
+	background: #fbfbfb;
+
+	> * {
+		padding: 0 2rem;
+
+		&:nth-child(2) {
+			margin: 2.5rem 0 3rem;
+		}
+		&:nth-last-child(2) {
+			margin-bottom: 0;
+
+			label {
+				margin-bottom: 0;
+				white-space: nowrap;
+			}
+			input {
+				border: 0;
+				color: $white;
+				background: none;
+			}
+		}
+	}
+	.header:first-child {
+		color: $white;
+		background: #4a4c57;
+	}
+	.radio-container {
+		font-size: .813rem;
+		font-weight: $bold;
+		text-transform: uppercase;
+	}
+}
+
+#subtotal {
+	bottom: 0;
+	width: 100%;
+	position: absolute;
+}
+
+/*=============================
+=           Checkout          =
+=============================*/
+
+body#checkout main {
+	padding-bottom: 4rem;
+
+	form {
+		.button, button {
+			height: 3.125rem;
+			text-align: center;
+			min-width: 23.125rem;
+		}
+		.button {
+			line-height: 3.125rem;
+		}
+		button {
+			display: none;
+		}
+		.half, .three, .four {
+			@include flex;
+
+			> div:not(:first-child) {
+				margin-left: 2rem;
+			}
+		}
+		.half > div {
+			width: calc(50% - 1rem);
+		}
+		.three > div {
+			width: calc(33.33% - 1.33rem);
+		}
+		.four > div {
+			width: calc(25% - 1.5rem);
+		}
+		> div:last-child {
+			margin-top: 3rem;
+		}
+	}
+	aside {
+		font-size: .875rem;
+
+		> div:nth-child(4) {
+			margin-bottom: 1px;
+		}
+		ul li {
+			@include flex;
+			padding-top: 1rem;
+			padding-bottom: 1rem;
+			border-bottom: 1px solid $border2;
+
+			.image {
+				@include bg;
+				width: 40%;
+				max-width: 5.5rem;
+				margin-right: 6.5%;
+				padding-bottom: 29.97%;
+				border: 1px solid $border2;
+			}
+			.item-price {
+				font-weight: $bold;
+			}
+		}
+	}
+}
+
+#checkout-list {
+	padding-top: 3.125rem;
+
+	> div {
+		padding-right: 5.97%;
+
+		> div > div:last-child .row {
+			margin-bottom: 0;
+		}
+	}
+	h3 {
+		margin-bottom: 1rem;
+	}
+}
+
+#steps {
+	margin-bottom: 2rem;
+
+	a {
+		height: 3.75rem;
+		font-size: .813rem;
+		font-weight: $bold;
+		text-align: center;
+		background: #f7f7f7;
+		letter-spacing: 1px;
+		line-height: 3.75rem;
+		font-family: $oswald;
+		text-transform: uppercase;
+	}
+}
+
+#other-fees {
+	font-weight: $bold;
+	margin-bottom: 3rem;
+
+	span {
+		font-weight: $medium;
+	}
+}
+
+#total span {
+	margin-left: .5rem;
+	letter-spacing: normal;
+}

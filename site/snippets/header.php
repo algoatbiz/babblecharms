@@ -33,9 +33,9 @@
 					</div>
 					<a href="<?= url() ?>" class="logo"><img src="/assets/images/babble-charms-logo.png" alt="Babble Charms Logo"></a>
 					<div>
-						<div class="search">Search</div>
+						<form id="search"><input type="text" id="search-input" name="search-input" placeholder="Search"></form>
 						<span class="divider"></span>
-						<a href="#" class="shopping-bag">Shopping Bag (0)</a>
+						<a href="<?= url('cart') ?>" class="shopping-bag">Shopping Bag (<span>0</span>)</a>
 					</div>
 				</div>
 			</div>

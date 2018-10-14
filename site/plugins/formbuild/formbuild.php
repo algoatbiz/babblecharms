@@ -1,19 +1,9 @@
 <?php
 
-// kirby()->routes([
-// 	[
-// 		'pattern' => 'form-process',
-// 		'method'  => 'GET',
-// 		'action'  => function() {
-			
-// 		}
-// 	]
-// ]);
-
 class FormBuild {
 
-	public static function text($field, $label, $value=null, $required=false, $type='text', $max=false, $min=false) {
-		$label = brick('label', $label, ['for'=>$field, 'class'=>r($required, 'required')]);
+	public static function text($field, $label, $required=false, $type='text', $max=false, $min=false, $value=null) {
+		$label = $label ? brick('label', $label, ['for'=>$field, 'class'=>r($required, 'required')]) : '';
 		$field = brick('input', false, [
 			'type' => $type,
 			'name' => $field,
@@ -27,12 +17,12 @@ class FormBuild {
 		return brick('div', $label.$field, ['class'=>'row']);
 	}
 
-	public static function select($field, $label, $value=null, $required=false, $options) {
-		$label = brick('label', $label, ['for'=>$field, 'class'=>r($required, 'required')]);
+	public static function select($field, $label, $options, $required=false, $value=null) {
+		$label = $label ? brick('label', $label, ['for'=>$field, 'class'=>r($required, 'required')]) : '';
 		$choices = '';
-		foreach($options as $val => $text) {
-			$choices.= '<option value="'.$val.'">'.$text.'</option>';
-		}
+		foreach($options as $val => $text)
+			$choices.= brick('option', $text, ['value'=>($text ? $text : $val)]);
+
 		$field = brick('select', $choices, [
 			'name' => $field,
 			'id' => $field,
@@ -45,14 +35,29 @@ class FormBuild {
 		return brick('div', $content, ['class'=>'row']);
 	}
 
-	public static function textarea($field, $label, $value=null, $required=false, $rows=4) {
-		$label = brick('label', $label, ['for'=>$field, 'class'=>r($required, 'required')]);
+	public static function radio($field, $label, $options, $required=false, $value=null) {
+		$label = $label ? brick('label', $label, ['for'=>$field, 'class'=>r($required, 'required')]) : '';
+		$choices = '';
+		foreach($options as $val => $text)
+			$choices.= brick('div', '<input type="radio" name="'.$field.'" value="'.$val.'" aria-required="'.r($required, 'true').'">'.brick('label', $text, ['for'=>$val]));
+
+		$field = brick('div', $choices, [
+			'id' => $field,
+			'class' => 'radio-container',
+		]);
+
+		return brick('div', $label.$field, ['class'=>'row']);
+	}
+
+	public static function textarea($field, $label, $required=false, $rows=4, $value=null) {
+		$label = $label ? brick('label', $label, ['for'=>$field, 'class'=>r($required, 'required')]) : '';
 		$field = brick('textarea', $value, [
 			'name' => $field,
 			'id' => $field,
 			'aria-required' => r($required, 'true'),
 			'rows' => $rows
 		]);
+
 		return brick('div', $label.$field, ['class'=>'row']);
 	}
 

@@ -3,17 +3,12 @@
 class BuildabraceletPage extends DefaultPage {
 
 	public function buildABracelet() {
-		$stepLinks = '';
-		$i = 0;
 		$steps = [
 			'bracelet' => 'Select A Bracelet',
 			'charm' => 'Select Charms',
 			'clasp' => 'Select Clasps'
 		];
-		foreach($steps as $step => $text)
-			$stepLinks.= brick('a', $text, ['href'=>'#', 'class'=>r($i++ == 0, 'current'), 'data-step'=>$step]);
-
-		$content = brick('div', $stepLinks, ['id'=>'steps']);
+		$content = $this->buildSteps($steps);
 		$content.= brick('div', brick('div', '', ['class'=>'bracelet']), ['id'=>'canvas']);
 
 		$page = site()->productsPage();

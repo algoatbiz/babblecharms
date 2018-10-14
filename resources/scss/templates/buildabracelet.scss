@@ -14,9 +14,6 @@
 			max-width: 100%;
 		}
 	}
-	h1 {
-		margin-bottom: 0;
-	}
 }
 
 main .container {
@@ -46,44 +43,6 @@ main .container {
 
 #steps, aside > div:first-child {
 	margin-bottom: 3rem;
-}
-
-#steps {
-	@include flex;
-	overflow: hidden;
-
-	a {
-		width: 33.33%;
-		color: inherit;
-		display: block;
-
-		&.current {
-			color: $white;
-			background: $blue;
-
-			&:after {
-				background: $blue;
-				border-top: 2px solid $blue !important;
-				border-right: 2px solid $blue !important;
-			}
-		}
-		&:not(:last-child) {
-			position: relative;
-
-			&:after {
-				content: '';
-				top: 0;
-				z-index: 1;
-				width: 3.75rem;
-				height: 3.75rem;
-				right: -1.125rem;
-				position: absolute;
-				transform: rotate(45deg);
-				border-top: 2px solid $white;
-				border-right: 2px solid $white;
-			}
-		}
-	}
 }
 
 #canvas {

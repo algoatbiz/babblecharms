@@ -9,14 +9,15 @@ header {
 	z-index: 2;
 	width: 100%;
 	position: fixed;
+}
+
+header, #search-input {
 	font-weight: $medium;
 	font-family: $oswald;
 	text-transform: uppercase;
 }
 
 #topbar {
-	color: #999;
-	font-size: .875rem;
 	position: relative;
 
 	&:after {
@@ -42,7 +43,7 @@ header {
 	a {
 		color: inherit;
 	}
-	.welcome, .search, .shopping-bag {
+	.welcome, #search, .shopping-bag {
 		@include flex;
 
 		&:before {
@@ -53,7 +54,7 @@ header {
 		@include fa('\f007');
 		margin-top: .1rem;
 	}
-	.search:before {
+	#search:before {
 		@include fa('\f002');
 	}
 	.shopping-bag:before {
@@ -65,6 +66,17 @@ header {
 		background: #999;
 		margin: 0 2rem;
 	}
+}
+
+#topbar, #search-input {
+	color: #999;
+	font-size: .875rem;
+}
+
+#search-input {
+	border: 0;
+	padding: 0;
+	max-width: 2.75rem;
 }
 
 nav {
@@ -108,7 +120,7 @@ nav {
 	}
 	.has-children > ul, .product-submenu {
 		left: 1.25rem;
-		top: 2.5rem;
+		top: 2.563rem;
 		display: none;
 		position: absolute;
 		border: 1px solid $border2;
