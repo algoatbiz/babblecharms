@@ -27,6 +27,7 @@
 								<?= FormBuild::text('country', 'Country', true) ?>
 							</div>
 						</div>
+						<button>Continue</button>
 					</div>
 					<div id="payment-details">
 						<h3>Payment Details</h3>
@@ -53,6 +54,7 @@
 								</div>
 							</div>
 						</div>
+						<button>Submit</button>
 					</div>
 				</div>
 				<aside>
@@ -77,12 +79,6 @@
 					<?= FormBuild::text('promo_code', 'Promo Code:') ?>
 					<div id="total">Total: <span>$1952.00</span></div>
 				</aside>
-			</div>
-			<div>
-				<div>
-					<a href="#" class="button">Continue</a>
-					<button>Submit</button>
-				</div>
 			</div>
 		</form>
 	</main>

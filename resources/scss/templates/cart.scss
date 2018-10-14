@@ -39,7 +39,7 @@ main {
 		> div:first-child {
 			width: 70%;
 		}
-		&:last-child > div, aside {
+		&:nth-child(2) > div, aside {
 			width: 30%;
 		}
 	}
@@ -233,16 +233,11 @@ body#checkout main {
 	padding-bottom: 4rem;
 
 	form {
-		.button, button {
+		button {
 			height: 3.125rem;
+			margin-top: 2.5rem;
 			text-align: center;
 			min-width: 23.125rem;
-		}
-		.button {
-			line-height: 3.125rem;
-		}
-		button {
-			display: none;
 		}
 		.half, .three, .four {
 			@include flex;
@@ -259,9 +254,6 @@ body#checkout main {
 		}
 		.four > div {
 			width: calc(25% - 1.5rem);
-		}
-		> div:last-child {
-			margin-top: 3rem;
 		}
 	}
 	aside {
@@ -297,6 +289,9 @@ body#checkout main {
 	> div {
 		padding-right: 5.97%;
 
+		&:nth-child(n+3) {
+			display: none;
+		}
 		> div > div:last-child .row {
 			margin-bottom: 0;
 		}

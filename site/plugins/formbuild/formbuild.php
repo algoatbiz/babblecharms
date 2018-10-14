@@ -30,7 +30,7 @@ class FormBuild {
 			'aria-required' => r($required, 'true')
 		]);
 
-		$content = $label.brick('div', $field, ['class'=>'select-wrapper']);
+		$content = $label.brick('div', $field, ['class'=>'select-container']);
 
 		return brick('div', $content, ['class'=>'row']);
 	}
@@ -39,7 +39,7 @@ class FormBuild {
 		$label = $label ? brick('label', $label, ['for'=>$field, 'class'=>r($required, 'required')]) : '';
 		$choices = '';
 		foreach($options as $val => $text)
-			$choices.= brick('div', '<input type="radio" name="'.$field.'" value="'.$val.'" aria-required="'.r($required, 'true').'">'.brick('label', $text, ['for'=>$val]));
+			$choices.= brick('div', '<input type="radio" name="'.$field.'" value="'.$val.'" id="'.$val.'" aria-required="'.r($required, 'true').'">'.brick('label', $text, ['for'=>$val]));
 
 		$field = brick('div', $choices, [
 			'id' => $field,

@@ -197,7 +197,7 @@ button {
 	vertical-align: middle;
 }
 
-button, input, select, textarea {
+button, input:not([type=radio]), select, textarea {
   	outline: none !important;
 	box-sizing: border-box;
 	-webkit-appearance: none;
@@ -227,7 +227,7 @@ input:not([type=radio]), select {
 	padding: 0 .5rem;
 }
 
-.select-wrapper {
+.select-container {
 	position: relative;
 
 	&:after {
@@ -257,11 +257,7 @@ label {
 		}
 	}
 	input {
-		width: .75rem;
-		height: .75rem;
-		border-radius: 50%;
 		margin: .175rem 1rem 0 0;
-		border: 2px solid $body-color;
 	}
 	label {
 		margin-bottom: 0;
@@ -379,11 +375,13 @@ label {
 		&.prev:before {
 			@include fa('\f104');
 		}
-		&.disabled {
-			cursor: default;
-			background: #d8d9db;
-			pointer-events: none;
-		}
+	}
+	.disabled, .active {
+		cursor: default;
+		pointer-events: none;
+	}
+	.disabled {
+		background: #d8d9db;
 	}
 	ul {
 		font-weight: $bold;
