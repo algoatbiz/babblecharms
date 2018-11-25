@@ -34,8 +34,11 @@ class ProductsPage extends DefaultPage {
 
 	public function buildProduct($productUri) {
 		$products = site()->productsPage()->products()->toStructure();
+		$cartIds = cart(true);
+
 		foreach($products as $p) {
 			if($productUri == str::slug($p->name())) {
+				$id = $p->product_id()->value();
 				$category = $p->category() == 'Bracelet' ? 'Bracelet' : $p->category().' Charms';
 				$header = brick('div', brick('h1', $p->name()).brick('div', brick('strong', 'Category: ').brick('a', $category, ['href'=>url('products/'.strtolower($p->category()))])));
 
@@ -55,7 +58,7 @@ class ProductsPage extends DefaultPage {
 				$content = brick('div', brick('div', $images), ['class'=>'photo-container', 'style'=>'background-image: url('.$featuredImage.')']).
 						   brick('div', brick('div', $p->text()->kt()).brick('div', $reviews, ['class'=>'reviews-container']).
 						   brick('div', '$'.$p->price(), ['class'=>'price']).
-						   brick('div', brick('a', 'Add to Bag', ['class'=>'button add-bag', 'href'=>'#']).brick('div', brick('select', $qtyOptions), ['class'=>'select-container']), ['class'=>'buy-container']));
+						   brick('div', brick('a', 'Add'.r(in_array($id, $cartIds), 'ed').' to bag', ['class'=>'button add-bag'.r(in_array($id, $cartIds), ' added'), 'href'=>'#', 'product-id'=>$id]).brick('div', brick('select', $qtyOptions), ['class'=>'select-container']), ['class'=>'buy-container']));
 			}
 		}
 		return $header.brick('div', $content, ['class'=>'product-details']);

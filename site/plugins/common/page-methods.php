@@ -27,15 +27,13 @@ page::$methods['ancestor'] = function($page) {
 
 };
 
-page::$methods['menuPages'] = function($page)
-{
+page::$methods['menuPages'] = function($page) {
 
 	return $page->children()->visible()->filterBy('template', 'not in', ['contact', 'post', 'landing']);
 
 };
 
-page::$methods['hasMenuPages'] = function($page)
-{
+page::$methods['hasMenuPages'] = function($page) {
 
 	return ($page->menuPages()->count() > 0) ? true : false;
 
@@ -104,16 +102,20 @@ page::$methods['productCategories'] = function($site, $menu = false, $template =
 page::$methods['buildProductList'] = function($site, $products) {
 
 	$page = $site->productsPage();
+	$cartIds = cart(true);
 
 	$content = '';
 	foreach($products = $products->paginate(16) as $product) {
+		$id = $product->product_id()->value();
 		$productUrl = url('products/'.strtolower($product->category()).'/'.str::slug($product->name()));
 		$image = brick('a', brick('img', false, ['src'=>$page->file($product->featured_image())->url(), 'alt'=>$product->name()]), ['href'=>$productUrl, ['class'=>'product-image']]);
+
 		$details = brick('h3', brick('a', $product->name(), ['href'=>$productUrl]));
 		$details.= $product->short_description()->kt();
 		$details.= brick('div', '$'.$product->price(), ['class'=>'price']);
 		$details.= $site->getRatings();
-		$details.= brick('a', 'Add to bag', ['href'=>'#', 'class'=>'button small add-bag']);
+		$details.= brick('a', 'Add'.r(in_array($id, $cartIds), 'ed').' to bag', ['href'=>'#', 'class'=>'button small add-bag'.r(in_array($id, $cartIds), ' added'), 'product-id'=>$id]);
+
 		$content.= brick('div', $image.brick('div', $details, ['class'=>'details']), ['class'=>'product-item '.strtolower($product->category())]);
 	}
 

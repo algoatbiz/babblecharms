@@ -19,6 +19,8 @@
 		<?= $page->extraCSS() ?>
 		<?= css('@auto') ?>
 
+		<script src='https://www.google.com/recaptcha/api.js'></script>
+
 	</head>
 
 	<body id="<?= $product ?? $page->slug() ?>" class="<?= isset($product) ? 'product' : $page->template() ?>">
@@ -31,11 +33,11 @@
 						<span class="divider"></span>
 						<div class="account">Account</div>
 					</div>
-					<a href="<?= url() ?>" class="logo"><img src="/assets/images/babble-charms-logo.png" alt="Babble Charms Logo"></a>
+					<a href="<?= url() ?>" class="logo"><img src="<?= url('assets/images/babble-charms-logo.png') ?>" alt="Babble Charms Logo"></a>
 					<div>
 						<form id="search"><input type="text" id="search-input" name="search-input" placeholder="Search"></form>
 						<span class="divider"></span>
-						<a href="<?= url('cart') ?>" class="shopping-bag">Shopping Bag (<span>0</span>)</a>
+						<a href="<?= url('cart') ?>" id="shopping-bag">Shopping Bag (<span><?= getCartCount() ?></span>)</a>
 					</div>
 				</div>
 			</div>

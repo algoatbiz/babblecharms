@@ -33,9 +33,6 @@ body:not(.home):not(.default):not(.contact) #footer-contact {
 	.row:last-child {
 		margin-bottom: 0;
 	}
-	button {
-		margin-top: 2rem;
-	}
 	a {
 		color: inherit;
 	}
@@ -72,7 +69,7 @@ body:not(.home):not(.default):not(.contact) #footer-contact {
 		}
 	}
 	#map {
-		height: 15rem;
+		height: 20rem;
 
 		.gm-style > div:nth-of-type(2),
 		.gm-style-cc {
@@ -91,7 +88,7 @@ body:not(.contact) #footer-contact {
 	}
 }
 
-body.contact #footer-contact{
+body.contact #footer-contact {
 	> div {
 		&:first-of-type {
 			width: 60%
@@ -100,12 +97,12 @@ body.contact #footer-contact{
 			width: 40%;
 		}
 	}
-
 	form {
 		right: 3.5rem; // may need to adjust
 		max-width: 45rem;
 
-		> div {
+		> div:not(.button-message-container) {
+			margin-bottom: 1.25rem;
 			@include flex(flex, flex-start);
 		}
 		.half {
@@ -115,9 +112,12 @@ body.contact #footer-contact{
 				margin-right: 2rem;
 			}
 		}
-		button {
+		.button-message-container > * {
 			width: calc(50% - 1rem);
 		}
+	}
+	#map {
+		height: 15rem;
 	}
 }
 

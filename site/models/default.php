@@ -38,21 +38,24 @@ class DefaultPage extends Page {
 
 	public function buildForm() {
 		if($this->template() == 'contact') {
-			$half = brick('div', FormBuild::text('first_name', 'First Name', true).FormBuild::text('last_name', 'Last Name', true).FormBuild::text('email', 'Email', true, 'email'), ['class'=>'half']);
+			$half = brick('div', FormBuild::text('first', 'First Name', true).FormBuild::text('last', 'Last Name', true).FormBuild::text('email', 'Email', true, 'email'), ['class'=>'half']);
 			$half.= brick('div', FormBuild::text('phone', 'Phone').FormBuild::textarea('message', 'Message'), ['class'=>'half']);
 			$content = brick('div', $half);
+			$id = 'contact-form';
 		}
 		else {
 			$content = brick('div', site()->form_title(), ['class'=>'title']);
-			$content.= FormBuild::text('first_name', 'First Name', true);
-			$content.= FormBuild::text('last_name', 'Last Name', true);
+			$content.= FormBuild::text('first', 'First Name', true);
+			$content.= FormBuild::text('last', 'Last Name', true);
 			$content.= FormBuild::text('email', 'Email', true, 'email');
 			$content.= FormBuild::text('phone', 'Phone');
+			$id = 'sign-up-form';
 		}
 
-		$content.= brick('button', 'Submit');
+		// $content.= brick('div', '', ['class'=>'g-recaptcha', 'data-sitekey'=>'6LeeIHcUAAAAAJcYq2yEyyBfnaou3sXGsBfSepKm']);
+		$content.= brick('div', brick('button', 'Submit').brick('div', '', ['id'=>'form-message']), ['class'=>'button-message-container']);
 
-		return brick('form', $content);
+		return brick('form', $content, ['id'=>$id, 'action'=>'contact-form-process', 'method'=>'POST']);
 	}
 
 	public function buildSteps($steps) {

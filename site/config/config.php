@@ -40,12 +40,6 @@ c::set('timezone', 'America/Denver');
 
 c::set('panel.stylesheet', 'assets/css/panel.css');
 
-c::set('shipping-methods', [
-  'standard' => 'Standard (Within 5-7 Business Days) $2.50',
-  'expedited' => 'Expedited (Within 2-3 Business Days) $10.00',
-  'next-day' => 'Next Day (Within 1-2 Business Days) $15.00'
-]);
-
 c::set('states', [
   'Outside of US',
   'AL', 'AK', 'AZ',

@@ -70,3 +70,26 @@ Bottom-image: coming-soon-bottom-image.png
 ----
 
 Notify-limit: 10
+
+----
+
+Shipping-methods: 
+
+- 
+  shipping_id: standard
+  text: >
+    Standard (Within 5-7 Business Days)
+    $2.50
+  price: "2.5"
+- 
+  shipping_id: expedited
+  text: >
+    Expedited (Within 2-3 Business Days)
+    $10.00
+  price: "10"
+- 
+  shipping_id: next-day
+  text: >
+    Next Day (Within 1-2 Business Days)
+    $15.00
+  price: "15"

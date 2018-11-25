@@ -9,8 +9,8 @@
 						<h3>Shipping Information</h3>
 						<div>
 							<div class="half">
-								<?= FormBuild::text('first_name', 'First Name', true) ?>
-								<?= FormBuild::text('last_name', 'Last Name', true) ?>
+								<?= FormBuild::text('first', 'First Name', true) ?>
+								<?= FormBuild::text('last', 'Last Name', true) ?>
 							</div>
 							<div class="half">
 								<?= FormBuild::text('email', 'Email', true, 'email') ?>
@@ -33,8 +33,8 @@
 						<h3>Payment Details</h3>
 						<div>
 							<div class="half">
-								<?= FormBuild::text('billing_first_name', 'Billing First Name', true) ?>
-								<?= FormBuild::text('billing_last_name', 'Billing Last Name', true) ?>
+								<?= FormBuild::text('billing_first', 'Billing First Name', true) ?>
+								<?= FormBuild::text('billing_last', 'Billing Last Name', true) ?>
 							</div>
 							<div class="half">
 								<?= FormBuild::text('billing_address1', 'Billing Address 1', true) ?>
@@ -59,21 +59,11 @@
 				</div>
 				<aside>
 					<div class="header">Your Orders</div>
-					<ul>
-						<?php foreach($site->productsPage()->products()->toStructure()->limit(4) as $item): ?>
-							<li>
-								<div style="background-image: url('<?= $site->productsPage()->image($item->featured_image())->url() ?>')" class="image"></div>
-								<div>
-									<h4><?= $item->name() ?></h4>
-									<div class="item-price">$<?= $item->price() ?> x <span>1</span></div>
-								</div>
-							</li>
-						<?php endforeach ?>
-					</ul>
+					<?= $orders ?>
 					<div id="other-fees">
 						<div id="discount">Discount: <span></span></div>
-						<div id="sub-total">Subtotal: <span></span></div>
-						<div id="shipping-method">Shipping Method: <span><?= c::get('shipping-methods')['standard'] ?></span></div>
+						<div id="sub-total">Subtotal: <span><?= $subtotal ?></span></div>
+						<div id="shipping-method">Shipping Method: <span><?= $shipping_method ?></span></div>
 						<div id="state-tax">State Tax: <span></span></div>
 					</div>
 					<?= FormBuild::text('promo_code', 'Promo Code:') ?>

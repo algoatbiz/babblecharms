@@ -43,7 +43,7 @@ header, #search-input {
 	a {
 		color: inherit;
 	}
-	.welcome, #search, .shopping-bag {
+	.welcome, #search, #shopping-bag {
 		@include flex;
 
 		&:before {
@@ -57,7 +57,7 @@ header, #search-input {
 	#search:before {
 		@include fa('\f002');
 	}
-	.shopping-bag:before {
+	#shopping-bag:before {
 		@include fa('\f290');
 	}
 	.divider {
@@ -119,8 +119,8 @@ nav {
 		}
 	}
 	.has-children > ul, .product-submenu {
+		top: 2.5rem;
 		left: 1.25rem;
-		top: 2.563rem;
 		display: none;
 		position: absolute;
 		border: 1px solid $border2;

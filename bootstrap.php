@@ -87,7 +87,7 @@ class EnvHelper {
 if(!class_exists('email')):
   $classes = ['obj', 'a', 'v', 'remote', 'email'];
   foreach($classes as $c)
-    require_once(__DIR__ . '/public/kirby/vendor/getkirby/toolkit/lib/'.$c.'.php');
+    require_once(__DIR__ . '/kirby/vendor/getkirby/toolkit/lib/'.$c.'.php');
 endif;
 
 /**

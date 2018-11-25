@@ -20,12 +20,12 @@ kirby()->routes([
 				<body id="coming-soon">
 					<div class="container">
 						<div>
-							'.kirbytag(['image'=>'/assets/images/babble-charms-logo.png', 'alt'=>'Babble Charms Logo']).'
+							'.kirbytag(['image'=>url('assets/images/babble-charms-logo.png'), 'alt'=>'Babble Charms Logo']).'
 							<div>'.$site->coming_text()->kt().'</div>
-							<form action="form-process">
+							<form action="coming-soon-process" method="POST">
 								<h2>Sign Up For Updates</h2>
-								<input type="email" name="email"  id="email" placeholder="Enter your email" aria-required="true">
-								<div class="message"></div>
+								<input type="email" name="email" id="email" placeholder="Enter your email" aria-required="true">
+								<div id="form-message"></div>
 								<button>Submit</button>
 							</form>
 							'.kirbytag(['image'=>$site->image($site->bottom_image())->url(), 'alt'=>'Babble Charms Logo']).'
@@ -43,15 +43,12 @@ kirby()->routes([
 			echo $content;
 
 		}
-	]
-]);
-
-kirby()->routes([
+	],
 	[
-		'pattern' => 'form-process',
+		'pattern' => 'coming-soon-process',
 		'method'  => 'POST',
 		'action'  => function() use($site) {
-			$subscribers = site()->find('subscribers');
+			$subscribers = $site->find('subscribers');
 			$existing = $subscribers->content()->get('subscribers')->yaml();
 			$errors = [];
 
@@ -68,9 +65,10 @@ kirby()->routes([
 			}
 			else {
 				$message = 'This email is already subscribed.';
+				$errors['email'] = $message;
 			}
 
-			return response::json(['message'=>$message, 'errors'=>$errors], (count($errors) ? 400 : 200));
+			return response::json(compact('message', 'errors'), (count($errors) ? 400 : 200));
 		}
 	]
 ]);

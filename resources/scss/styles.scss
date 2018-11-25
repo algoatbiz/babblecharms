@@ -109,6 +109,10 @@ button, .button {
 		font-size: .875rem;
 		line-height: 1.875rem;
 	}
+	&.added {
+		background: $blue;
+		pointer-events: none;
+	}
 	&:hover {
 		background: $blue;
 	}
@@ -187,6 +191,20 @@ form {
 	}
 	label {
 		font-size: .813rem;
+
+		&.required:after {
+			content: ' *';
+			color: $red;
+		}
+	}
+}
+
+.button-message-container {
+	@include flex;
+	margin-top: 2rem;
+
+	> *:first-child {
+		margin-right: 2rem;
 	}
 }
 
@@ -195,6 +213,11 @@ button {
 	cursor: pointer;
 	display: inline-block;
 	vertical-align: middle;
+
+	&.disable {
+		pointer-events: none;
+		background-color: rgba($orange, .7);
+	}
 }
 
 button, input:not([type=radio]), select, textarea {
@@ -214,9 +237,9 @@ input:not([type=radio]), select, textarea {
 	font-family: $roboto;
 	border: 2px solid #e1e1e1;
 
- //  	&.error {
- //  		border-color: $red !important;
- //  	}
+  	&.error {
+  		border-color: $red !important;
+  	}
 	&:focus {
 		border-color: $blue !important;
 	}
@@ -584,8 +607,15 @@ body#coming-soon {
 	button {
 		color: $black;
 	}
-	.message {
+	#form-message {
 		margin-bottom: 1.25rem;
+
+		&.error {
+			color: $red;
+		}
+		&.success {
+			color: $green;
+		}
 	}
 
 	@include media($mobile) {
