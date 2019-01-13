@@ -21,18 +21,45 @@ Subscribers:
 - 
   email: Lile63340@hotmail.com
   date_created: 2018-10-03 20:18:48
--
+- 
   email: alicarlile@gmail.com
   date_created: 2018-11-02 14:37:34
--
+- 
   email: kylesjmd@gmail.com
   date_created: 2018-11-03 20:27:50
--
+- 
   email: 40289Kuanoni@hotmail.com
   date_created: 2018-11-10 14:10:57
--
+- 
   email: 58750Warrender@hotmail.com
   date_created: 2018-11-17 05:02:16
+- 
+  email: gerilee7@gmail.com
+  date_created: 2018-11-29 13:13:03
+- 
+  email: terriiverson@yahoo.com
+  date_created: 2018-12-02 11:18:39
+- 
+  email: Brattany42@hotmail.com
+  date_created: 2018-12-03 08:46:17
+- 
+  email: jntnewport@gmail.com
+  date_created: 2018-12-04 13:56:57
+- 
+  email: dgblack311@gmail.com
+  date_created: 2018-12-08 20:42:19
+- 
+  email: thelivingwest@gmail.com
+  date_created: 2018-12-14 19:09:16
+- 
+  email: dance.ashley01@gmail.com
+  date_created: 2018-12-17 18:56:30
+- 
+  email: ellysawaters15@gmail.com
+  date_created: 2018-12-19 15:56:34
+- 
+  email: babblecharms.com@domstates.su
+  date_created: 2018-12-31 21:45:40
 
 ----
 

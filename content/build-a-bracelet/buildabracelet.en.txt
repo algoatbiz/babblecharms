@@ -9,7 +9,7 @@ Title: Build a Bracelet
 Text: 
 
 # Build Your Own Bracelet
-Praesent varius, diam quis rutrum tempor, purus turpis congue libero, a eleifend augue augue vel justo proin vel feugiat
+Click here to build your own custom bracelet!!
 
 ----
 

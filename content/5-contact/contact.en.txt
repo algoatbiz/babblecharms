@@ -9,4 +9,8 @@ Title: Contact Us
 Text: 
 
 # Contact Us
-Praesent varius, diam quis rutrum tempor, purus turpis congue libero, a eleifend augue augue vel justo proin vel feugiat
+Have Questions? Please contact us. babblecharms1@gmail.com
+
+----
+
+Background: cta.png

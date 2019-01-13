@@ -1,0 +1,13 @@
+Title: cart
+
+----
+
+Text: Thank you for shopping with Babble charms!!
+
+----
+
+Background: 
+
+----
+
+Sections: 

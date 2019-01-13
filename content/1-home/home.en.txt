@@ -2,7 +2,7 @@ Title: Home
 
 ----
 
-Menu-title: 
+Menu-title: Babble Charms
 
 ----
 
@@ -10,19 +10,19 @@ Sliders:
 
 - 
   slider_image: banner.jpg
-  slider_title: Vestibulum nunc
-  slider_text: |
-    Praesent varius, diam quis rutrum tempor, purus turpis congue libero, a eleifend augue augue vel justo proin vel feugiat
-    
-    (link: # text: Learn More class: button big)
+  slider_title: Welcome to Babble Charms!!
+  slider_text: Charms! Charms! and more Charms!!
 
 ----
 
-Collections-text: Phasellus quis ligula cursus sapien tincidunt lacinia ut sit amet est. Donec sit amet augue lorem. Donec sed egestas eros. Aliquam volutpat vestibulum justo vel vestibulum.
+Collections-text: 
+
+Welcome to Babble Charms!! We specialize in wholesale charms and findings!
+Check out all or Charms!!
 
 ----
 
-Featured-text: Morbi non turpis non arcu blandit molestie. Donec mattis sapien ac magna elementum ultrices. Praesent sit amet ultrices arcu. Morbi suscipit erat ac hendrerit sodales. Praesent mattis a eros eget tristique.
+Featured-text: Welcome to Babble Charms! All our charms are high quality! We have Animals, Word charms, Pendants and more...
 
 ----
 
@@ -33,8 +33,7 @@ Cta-image: cta.png
 Cta-text: 
 
 ## About Babble Charms
-Donec eget lacus varius, tempor lacus ultricies, ultrices justo. Vivamus ac pharetra nulla. Morbi eleifend arcu quam,
-eu viverra elit pharetra ac.
+Babble Charms is a wholesale charm company, we specialize in wholesale charms and more...
 
 (link: about text: Learn More class: button)
 
@@ -45,21 +44,21 @@ Collections-cards:
 - 
   card_text: |
     ### What's Hot
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus aliquet risus eget rutrum semper.
+    Word Charms are very popular right now, check them out!
   card_image: whats-hot.png
   link_text: Show Now
   card_link: products
 - 
   card_text: |
     ### New Arrivals
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus aliquet risus eget rutrum semper.
+    We add new products every week check out what's new!!
   card_image: new-arrivals.png
   link_text: See All New Arrivals
   card_link: products
 - 
   card_text: |
     ### Mother's Day Specials
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus aliquet risus eget rutrum semper.
+    Mother's Day is a Big day we have many Mom charms, and charms that Mom will love!!
   card_image: mothers-day.png
   link_text: Show Now
   card_link: products

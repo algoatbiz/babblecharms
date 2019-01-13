@@ -1,0 +1,13 @@
+Title: checkout
+
+----
+
+Text: Thank you for shopping with Babble Charms!!
+
+----
+
+Background: 
+
+----
+
+Sections: 
