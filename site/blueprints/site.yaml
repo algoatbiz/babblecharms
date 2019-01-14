@@ -13,25 +13,25 @@ fields:
   notify_limit:
     label: Low Stock Count
     type: number
-  shipping_methods:
-    label: Shipping Methods
-    type: structure
-    modalsize: large
-    style: table
-    fields:
-      shipping_id:
-        label: ID
-        type: text
-        required: true
-      text:
-        label: Text
-        type: Text
-        required: true
-      price:
-        label: Price
-        type: number
-        step: .01
-        required: true
+  # shipping_methods:
+  #   label: Shipping Methods
+  #   type: structure
+  #   modalsize: large
+  #   style: table
+  #   fields:
+  #     shipping_id:
+  #       label: ID
+  #       type: text
+  #       required: true
+  #     text:
+  #       label: Text
+  #       type: Text
+  #       required: true
+  #     price:
+  #       label: Price
+  #       type: number
+  #       step: .01
+  #       required: true
   tabForm:
     label: Form
     type:  tabs

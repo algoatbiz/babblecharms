@@ -34,7 +34,8 @@ class ProductsPage extends DefaultPage {
 
 	public function buildProduct($productUri) {
 		$products = site()->productsPage()->products()->toStructure();
-		$cartIds = cart(true);
+		$cart = cart();
+		$cartIds = array_keys($cart);
 
 		foreach($products as $p) {
 			if($productUri == str::slug($p->name())) {
@@ -53,12 +54,12 @@ class ProductsPage extends DefaultPage {
 
 				$qtyOptions = '<option value="">Quantity</option>';
 				for($i=1; $i<=$p->quantity()->value(); $i++)
-					$qtyOptions.= brick('option', $i, ['value'=>$i]);
+					$qtyOptions.= brick('option', $i, ['value'=>$i, 'selected'=>(isset($cart[$id]) && $cart[$id] == $i)]);
 
 				$content = brick('div', brick('div', $images), ['class'=>'photo-container', 'style'=>'background-image: url('.$featuredImage.')']).
 						   brick('div', brick('div', $p->text()->kt()).brick('div', $reviews, ['class'=>'reviews-container']).
 						   brick('div', '$'.$p->price(), ['class'=>'price']).
-						   brick('div', brick('a', 'Add'.r(in_array($id, $cartIds), 'ed').' to bag', ['class'=>'button add-bag'.r(in_array($id, $cartIds), ' added'), 'href'=>'#', 'product-id'=>$id]).brick('div', brick('select', $qtyOptions), ['class'=>'select-container']), ['class'=>'buy-container']));
+						   brick('div', brick('a', r(in_array($id, $cartIds), 'Update', 'Add to').' bag', ['class'=>'button single add-bag'.r(in_array($id, $cartIds), ' update'), 'href'=>'#', 'product-id'=>$id]).brick('div', brick('select', $qtyOptions), ['class'=>'select-container']), ['class'=>'buy-container']));
 			}
 		}
 		return $header.brick('div', $content, ['class'=>'product-details']);

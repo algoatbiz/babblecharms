@@ -19,9 +19,14 @@ class ProcessForm {
             'password' => EnvHelper::env('DB_PASS')
         ]);
 
-        if(r::method()=='POST') {
+        if(isset($this->data['credit_card']))
+            $this->data['credit_card'] = substr($this->data['credit_card'], -4);
+
+        if(r::method() == 'POST') {
             $this->logInfo();
-            $this->saveToDb();
+
+            if(empty($this->errorFields))
+                $this->saveToDb();
         }
 
 	}
@@ -85,8 +90,6 @@ class ProcessForm {
             if(!$id = $table->insert($formData))
                 throw new Exception($this->db->lastError());
 
-            $this->dbID = $id;
-
         } catch (Exception $e) {
 
             exit(var_dump($e));
@@ -111,18 +114,21 @@ class ProcessForm {
 			$insert_array[$key] = $value;
 		}
 
-		if(!$id = $table->insert($insert_array)) {
-		    throw new Exception($db->lastError());
-		}
-		else {
-		    $return = [
-				'success' => true,
-				'message' => 'Inserted to database successfully.'
-			];
-		}
+        if(s::get('customer_id', false)) {
+            $insert_array['updated_at'] = date('Y-m-d H:i:s');
+            $table->where('id', '=', s::get('customer_id'))->update($insert_array);
+        }
 
-		return $return;
+		else if(!$id = $table->insert($insert_array))
+		    throw new Exception($this->db->lastError());
 
+        if(isset($id))
+            s::set('customer_id', $id);
+
+		return [
+			'success' => true,
+			'message' => 'Inserted to database successfully.'
+		];
 	}
 
     public function showErrors() {

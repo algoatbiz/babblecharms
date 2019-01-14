@@ -5,6 +5,7 @@
         "vlucas/phpdotenv": "^2.4",
         "robmorgan/phinx": "^0.8.1",
         "mobiledetect/mobiledetectlib": "^2.8",
-        "nesbot/carbon": "^1.22"
+        "nesbot/carbon": "^1.22",
+        "square/connect": "^2.20181205"
     }
 }

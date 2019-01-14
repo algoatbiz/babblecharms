@@ -6,10 +6,12 @@ return function($site, $pages, $page) {
 
 	$cartItems = $page->cartItems($shoppingBag);
 
-	$subtotal = '$'.priceFormat($cartItems['subtotal'] + $site->shipping_methods()->toStructure()->first()->price()->value());
+	$subtotal = priceFormat($cartItems['subtotal']);
+
+	$total = getCartTotal($subtotal);
 
 	$cartItems = $cartItems['html'];
 
-	return compact('shoppingBag', 'cartItems', 'subtotal');
+	return compact('shoppingBag', 'cartItems', 'subtotal', 'total');
 
 };

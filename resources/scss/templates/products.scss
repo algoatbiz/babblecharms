@@ -14,10 +14,11 @@ main {
 body.product {
 	main {
 		h1 {
+			color: $blue;
 			font-size: $title;
 			font-weight: $light;
-			font-family: $oswald;
 			margin-bottom: 1rem;
+			font-family: $oswald;
 		}
 		a:not(.button) {
 			color: inherit;

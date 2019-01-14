@@ -67,4 +67,8 @@ class DefaultPage extends Page {
 		return brick('div', $stepLinks, ['id'=>'steps']);
 	}
 
+	public function loading() {
+		return brick('div', brick('div', brick('div').brick('div').brick('div').brick('div')), ['id'=>'loading']);
+	}
+
 }

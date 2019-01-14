@@ -16,7 +16,9 @@ return function($site, $pages, $page) {
 		}
 	}
 
-	$subtotal = '$'.priceFormat($cartItems['subtotal'] + $shipping_price);
+	$subtotal = '$'.priceFormat($cartItems['subtotal']);
+
+	$total = '$'.priceFormat($cartItems['subtotal'] + $shipping_price);
 
 	$orders = $cartItems['html'];
 
@@ -28,6 +30,6 @@ return function($site, $pages, $page) {
 
 	$steps = $page->buildSteps($steps);
 
-	return compact('steps', 'orders', 'subtotal', 'shipping_method');
+	return compact('steps', 'orders', 'subtotal', 'shipping_method', 'total');
 
 };

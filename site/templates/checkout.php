@@ -1,11 +1,11 @@
 <?php snippet('header') ?>
 	<?= $page->buildHero() ?>
 	<main>
-		<form id="form-checkout" class="container">
+		<div class="container">
 			<div>
 				<div id="checkout-list">
 					<?= $steps ?>
-					<div id="shipping-information">
+					<form id="shipping-information" action="checkout-process" method="POST">
 						<h3>Shipping Information</h3>
 						<div>
 							<div class="half">
@@ -28,10 +28,14 @@
 							</div>
 						</div>
 						<button>Continue</button>
-					</div>
-					<div id="payment-details">
+					</form>
+					<form id="payment-details" novalidate action="checkout-process" method="POST">
 						<h3>Payment Details</h3>
 						<div>
+							<div class="row checkbox-container">
+								<input type="checkbox" id="use-shipping" name="use-shipping">
+								<label for="use-shipping">Use shipping information</label>
+							</div>
 							<div class="half">
 								<?= FormBuild::text('billing_first', 'Billing First Name', true) ?>
 								<?= FormBuild::text('billing_last', 'Billing Last Name', true) ?>
@@ -47,15 +51,17 @@
 								<?= FormBuild::text('billing_country', 'Billing Country', true) ?>
 							</div>
 							<div class="half">
-								<?= FormBuild::text('credit_card', 'Credit Card Number', true) ?>
+								<?= FormBuild::text('credit_card', 'Credit Card Number', true, 'number') ?>
 								<div class="half">
-									<?= FormBuild::text('expiration_date', 'Expiration Date', true) ?>
-									<?= FormBuild::text('csv', 'CSV', true) ?>
+									<?= FormBuild::text('expiration_date', 'Expiration Date (MM/YY)', true) ?>
+									<?= FormBuild::text('csv', 'CSV', true, 'number') ?>
 								</div>
 							</div>
 						</div>
 						<button>Submit</button>
-					</div>
+						<input type="hidden" id="square-application-id" name="square-application-id" value="<?= c::get('square-application-id') ?>">
+						<input type="hidden" id="card-nonce" name="nonce">
+					</form>
 				</div>
 				<aside>
 					<div class="header">Your Orders</div>
@@ -67,9 +73,10 @@
 						<div id="state-tax">State Tax: <span></span></div>
 					</div>
 					<?= FormBuild::text('promo_code', 'Promo Code:') ?>
-					<div id="total">Total: <span>$1952.00</span></div>
+					<div id="total">Total: <span><?= $total ?></span></div>
 				</aside>
 			</div>
-		</form>
+		</div>
+		<?= $page->loading() ?>
 	</main>
 <?php snippet('footer') ?>

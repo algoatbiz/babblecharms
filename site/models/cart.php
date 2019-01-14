@@ -15,7 +15,7 @@ class CartPage extends DefaultPage {
 						$image = brick('div', '', ['class'=>'image', 'style'=>'background-image: url('.site()->productsPage()->image($p->featured_image())->url().')']);
 
 						$content = brick('h3', $p->name()).brick('div', $p->text()).brick('div', '-', ['class'=>'divider']);
-						$content.= brick('div', brick('div', '$'.$price, ['class'=>'price']).brick('a', 'Remove', ['href'=>'#', 'class'=>'remove']));
+						$content.= brick('div', brick('div', '$'.$price, ['class'=>'price']).brick('a', 'Remove', ['href'=>'#', 'class'=>'remove', 'data-product-id'=>$id]));
 
 						$details = brick('div', $image.brick('div', $content));
 

@@ -46,7 +46,7 @@ Collections-cards:
     ### What's Hot
     Word Charms are very popular right now, check them out!
   card_image: whats-hot.png
-  link_text: Show Now
+  link_text: Shop Now
   card_link: products
 - 
   card_text: |
@@ -60,5 +60,5 @@ Collections-cards:
     ### Mother's Day Specials
     Mother's Day is a Big day we have many Mom charms, and charms that Mom will love!!
   card_image: mothers-day.png
-  link_text: Show Now
+  link_text: Shop Now
   card_link: products

@@ -34,3 +34,9 @@ function priceFormat($price) {
 	return number_format((float)$price, 2, '.', '');
 
 }
+
+function getCartTotal($subtotal) {
+
+	return priceFormat($subtotal + ($subtotal * c::get('sales_tax')) + c::get('shipping_fee'));
+
+}

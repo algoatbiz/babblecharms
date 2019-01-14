@@ -199,6 +199,15 @@ form {
 	}
 }
 
+#form-message {
+	&.success {
+		color: $green;
+	}
+	&.error {
+		color: $red;
+	}
+}
+
 .button-message-container {
 	@include flex;
 	margin-top: 2rem;
@@ -220,7 +229,7 @@ button {
 	}
 }
 
-button, input:not([type=radio]), select, textarea {
+button, input:not([type=radio]):not([type=checkbox]), .sq-input, select, textarea {
   	outline: none !important;
 	box-sizing: border-box;
 	-webkit-appearance: none;
@@ -228,7 +237,7 @@ button, input:not([type=radio]), select, textarea {
 	appearance: none;
 }
 
-input:not([type=radio]), select, textarea {
+input:not([type=radio]):not([type=checkbox]), .sq-input, select, textarea {
 	width: 100%;
 	display: block;
 	font-size: 1rem;
@@ -245,9 +254,13 @@ input:not([type=radio]), select, textarea {
 	}
 }
 
-input:not([type=radio]), select {
+input:not([type=radio]):not([type=checkbox]), .sq-input, select {
 	height: 2rem;
 	padding: 0 .5rem;
+}
+
+.sq-input {
+	font-size: 1rem;
 }
 
 .select-container {
@@ -282,6 +295,14 @@ label {
 	input {
 		margin: .175rem 1rem 0 0;
 	}
+	label {
+		margin-bottom: 0;
+	}
+}
+
+.checkbox-container {
+	@include flex;
+
 	label {
 		margin-bottom: 0;
 	}
@@ -609,13 +630,6 @@ body#coming-soon {
 	}
 	#form-message {
 		margin-bottom: 1.25rem;
-
-		&.error {
-			color: $red;
-		}
-		&.success {
-			color: $green;
-		}
 	}
 
 	@include media($mobile) {

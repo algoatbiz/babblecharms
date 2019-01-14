@@ -58,9 +58,6 @@ page::$methods['productList'] = function($site, $category = false, $limit = fals
 
 	$products = $site->productsPage()->products()->toStructure();
 
-	if($limit)
-		$products = $products->limit($limit);
-
 	if($category) {
 		$categoryProducts = new Structure();
 
@@ -71,6 +68,9 @@ page::$methods['productList'] = function($site, $category = false, $limit = fals
 
 		$products = $categoryProducts;
 	}
+
+	if($limit)
+		$products = $products->limit($limit);
 
 	return $site->buildProductList($products);
 

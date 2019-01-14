@@ -40,8 +40,9 @@ c::set('timezone', 'America/Denver');
 
 c::set('panel.stylesheet', 'assets/css/panel.css');
 
+c::set('square-application-id', EnvHelper::env('SQUARE_APPLICATION_ID', null));
+
 c::set('states', [
-  'Outside of US',
   'AL', 'AK', 'AZ',
   'AR', 'CA', 'CO',
   'CT', 'DE', 'FL',
@@ -61,8 +62,13 @@ c::set('states', [
   'WI', 'WY', 'AS',
   'DC', 'FM', 'GU',
   'MH', 'MP', 'PW',
-  'PR', 'VI'
+  'PR', 'VI',
+  'Outside of US'
 ]);
+
+c::set('shipping_fee', 3.99);
+
+c::set('sales_tax', .068);
 
 c::set('routes', [
   [

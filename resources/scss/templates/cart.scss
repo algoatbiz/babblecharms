@@ -13,17 +13,13 @@
 
 main {
 	.header, aside > div:nth-last-child(2),
-	#subtotal, #total {
+	#total {
 		@include flex;
 		height: 3.125rem;
 	}
-	aside > div:nth-last-child(2), #subtotal, #total {
+	aside > div:nth-last-child(2), #total {
 		color: $white;
 		background: $orange;
-	}
-	#subtotal, #total span {
-		font-size: 1.5rem;
-		font-family: $oswald;
 	}
 	.header, aside > div:nth-last-child(2) *,
 	#cart-list > div:last-child, #total {
@@ -39,7 +35,7 @@ main {
 		> div:first-child {
 			width: 70%;
 		}
-		&:nth-child(2) > div, aside {
+		&:nth-child(2) > form, aside {
 			width: 30%;
 		}
 	}
@@ -65,11 +61,11 @@ main {
 	}
 }
 
-body#cart .container > div:last-child {
+body#cart main .container > div:last-child {
 	padding: 2.25rem 0;
     justify-content: flex-end;
 
-    .button {
+    button {
     	color: inherit;
     	height: 2.75rem;
     	background: none;
@@ -204,6 +200,7 @@ body#cart .container > div:last-child {
 }
 
 aside {
+	font-size: .875rem;
 	position: relative;
 	background: #fbfbfb;
 
@@ -221,9 +218,9 @@ aside {
 				white-space: nowrap;
 			}
 			input {
-				border: 0;
 				color: $white;
 				background: none;
+				border: 0 !important;
 			}
 		}
 	}
@@ -238,10 +235,17 @@ aside {
 	}
 }
 
-#subtotal {
+#total {
 	bottom: 0;
 	width: 100%;
 	position: absolute;
+
+	span {
+		font-size: 1.5rem;
+		margin-left: .5rem;
+		font-family: $oswald;
+		letter-spacing: normal;
+	}
 }
 
 /*=============================
@@ -276,8 +280,6 @@ body#checkout main {
 		}
 	}
 	aside {
-		font-size: .875rem;
-
 		> div:nth-child(4) {
 			margin-bottom: 1px;
 		}
@@ -307,7 +309,7 @@ body#checkout main {
 #checkout-list {
 	padding-top: 3.125rem;
 
-	> div {
+	> * {
 		padding-right: 5.97%;
 
 		&:nth-child(n+3) {
@@ -319,6 +321,9 @@ body#checkout main {
 	}
 	h3 {
 		margin-bottom: 1rem;
+	}
+	a {
+		pointer-events: none;
 	}
 }
 
@@ -345,11 +350,6 @@ body#checkout main {
 	span {
 		font-weight: $medium;
 	}
-}
-
-#total span {
-	margin-left: .5rem;
-	letter-spacing: normal;
 }
 
 /*=============================
