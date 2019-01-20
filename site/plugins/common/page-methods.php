@@ -54,14 +54,23 @@ page::$methods['productsPage'] = function($site) {
 
 };
 
-page::$methods['productList'] = function($site, $category = false, $limit = false) {
+page::$methods['productList'] = function($site, $category = false, $limit = false, $productUri = false, $search = false) {
 
 	$products = $site->productsPage()->products()->toStructure();
+
+	if($search) {
+		$products = $products->filter(function($p) use($search) {
+			return stripos($p->name()->value(), $search) !== false || stripos($p->text()->value(), $search) !== false || stripos($p->category()->value(), $search) !== false;
+		});
+	}
 
 	if($category) {
 		$categoryProducts = new Structure();
 
 		foreach($products as $key => $product) {
+			if($productUri && $productUri == str::slug($product->name()))
+				continue;
+
 			if(strtolower($product->category()) == $category)
 				$categoryProducts->append($key, $product);
 		}

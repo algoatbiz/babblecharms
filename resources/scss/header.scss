@@ -42,6 +42,10 @@ header, #search-input {
 	}
 	a {
 		color: inherit;
+
+		&:hover {
+			color: $blue;
+		}
 	}
 	.welcome, #search, #shopping-bag {
 		@include flex;
@@ -82,8 +86,12 @@ header, #search-input {
 nav {
 	background-color: #4a4c57;
 
-	a {
+	a:not(.button) {
 		color: $white;
+
+		&:hover {
+			color: $white;
+		}
 	}
 }
 

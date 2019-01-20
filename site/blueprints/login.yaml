@@ -1,0 +1,24 @@
+title: Login
+pages: false
+fields:
+  tabContent:
+    label: Page Content
+    type:  tabs
+    icon: file-text-o
+  title:
+    label: Title
+    type:  text
+  login_text:
+    label: Login Text
+    type: markdown
+    required: true
+  login_bg:
+    label: Login Background Image
+    type: image
+  signup_text:
+    label: Sign Up Text
+    type: markdown
+    required: true
+  signup_bg:
+    label: Sign Up Background Image
+    type: image

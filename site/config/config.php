@@ -92,6 +92,14 @@ c::set('routes', [
     }
   ],
   [
+    'pattern' => 'search-results',
+    'method' => 'GET',
+    'action' => function() {
+      site()->visit('products');
+      return ['products', ['keyword'=>get('search-input')]];
+    }
+  ],
+  [
     'pattern' => 'photo-gallery/(:any)',
     'method' => 'GET',
     'action' => function($category) {

@@ -42,23 +42,22 @@ Babble Charms is a wholesale charm company, we specialize in wholesale charms an
 Collections-cards: 
 
 - 
-  card_text: |
-    ### What's Hot
-    Word Charms are very popular right now, check them out!
+  card_text: >
+    Word Charms are very popular right now,
+    check them out!
   card_image: whats-hot.png
   link_text: Shop Now
   card_link: products
+  card_title: "What's Hot"
 - 
-  card_text: |
-    ### New Arrivals
-    We add new products every week check out what's new!!
+  card_text: "We add new products every week check out what's new!!"
   card_image: new-arrivals.png
   link_text: See All New Arrivals
   card_link: products
+  card_title: New Arrivals
 - 
-  card_text: |
-    ### Mother's Day Specials
-    Mother's Day is a Big day we have many Mom charms, and charms that Mom will love!!
+  card_text: "Mother's Day is a Big day we have many Mom charms, and charms that Mom will love!!"
   card_image: mothers-day.png
   link_text: Shop Now
   card_link: products
+  card_title: "Mother's Day Specials"

@@ -1,4 +1,4 @@
-Title: checkout
+Title: Checkout
 
 ----
 

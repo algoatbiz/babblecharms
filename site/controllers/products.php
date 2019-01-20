@@ -2,15 +2,19 @@
 
 return function($site, $pages, $page, $args = false) {
 
-	$category = $args ? $args['category'] : false;
-	$product = $args && isset($args['product']) ? $args['product'] : false;
-	$hero = !$product ? $page->buildHero() : '';
+	$category = $args['category'] ?? false;
+	$product = $args['product'] ?? false;
+	$search = $args['keyword'] ?? false;
 
-	$productNavigation = $product ? '' : $page->productNavigation($category);
-	$content = $product ? $page->buildProduct($product) : $page->categoryContent($category);
-	$productList = $product ? brick('h2', 'Related Products').$site->productList($category, 4) : $site->productList($category);
-	$otherProductList = $product ? brick('h2', 'Goes Well With These Products').$site->productList($category, 4) : '';
+	$productList = $product ? brick('h2', 'Related Products').$site->productList($category, 4, $product) : $site->productList($category, false, false, $search);
 
-	return compact('hero', 'productNavigation', 'content', 'productList', 'otherProductList');
+	$heroText = $search ? brick('h1', r(!$productList, 'No ').'Results for: "'.$search.'"') : false;
+	$hero = !$product ? $page->buildHero($heroText) : '';
+
+	$productNavigation = $product || $search ? '' : $page->productNavigation($category);
+	$content = $product ? $page->buildProduct($product) : ($search ? '' : $page->categoryContent($category));
+	$otherProductList = $product ? brick('h2', 'Goes Well With These Products').$site->productList($category, 4, $product) : '';
+
+	return compact('hero', 'productNavigation', 'content', 'productList', 'otherProductList', 'search');
 
 };

@@ -29,13 +29,15 @@
 			<div id="topbar">
 				<div class="container">
 					<div>
-						<div class="welcome">Welcome User</div>
+						<!-- <div class="welcome">Welcome User</div> -->
+						<a href="<?= url('login') ?>">Login</a>
 						<span class="divider"></span>
-						<div class="account">Account</div>
+						<!-- <div class="account">Account</div> -->
+						<a href="#" class="signup-link">Sign Up</a>
 					</div>
 					<a href="<?= url() ?>" class="logo"><img src="<?= url('assets/images/babble-charms-logo.png') ?>" alt="Babble Charms Logo"></a>
 					<div>
-						<form id="search"><input type="text" id="search-input" name="search-input" placeholder="Search"></form>
+						<form id="search" action="/search-results"><input type="text" id="search-input" name="search-input" placeholder="Search" autocomplete="off"></form>
 						<span class="divider"></span>
 						<a href="<?= url('cart') ?>" id="shopping-bag">Shopping Bag (<span><?= getCartCount() ?></span>)</a>
 					</div>

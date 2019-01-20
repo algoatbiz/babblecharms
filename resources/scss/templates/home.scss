@@ -108,6 +108,7 @@ h3 {
 		max-width: 23rem;
 	}
 	.image {
+		display: block;
 		padding-bottom: 81.522%;
 	}
 	.text {
@@ -121,17 +122,25 @@ h3 {
 		&:not(:last-of-type) {
 			margin-bottom: 1.5rem;
 		}
-	}
-	a:not(.image) {
-		color: $orange;
-		text-transform: uppercase;
+		a {
+			color: $orange;
+			text-transform: uppercase;
 
-		span {
-			text-decoration: underline;
-		}
-		&:after {
-			@include fa('\f101');
-			padding-left: .75rem;
+			span {
+				text-decoration: underline;
+			}
+			&:after {
+				@include fa('\f101');
+				padding-left: .75rem;
+				transition: .15s padding-left;
+			}
+			&:hover {
+				color: $blue;
+
+				&:after {
+					padding-left: 1rem;
+				}
+			}
 		}
 	}
 }

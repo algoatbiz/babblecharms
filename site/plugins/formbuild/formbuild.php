@@ -2,8 +2,7 @@
 
 class FormBuild {
 
-	public static function text($field, $label, $required=false, $type='text', $max=false, $min=false, $value=null) {
-		$label = $label ? brick('label', $label, ['for'=>$field, 'class'=>r($required, 'required')]) : '';
+	public static function text($field, $label, $required=false, $type='text', $max=false, $min=false, $value=null, $noLabel=false) {
 		$field = brick('input', false, [
 			'type' => $type,
 			'name' => $field,
@@ -11,8 +10,14 @@ class FormBuild {
 			'value' => $value,
 			'aria-required' => r($required, 'true'),
 			'min' => $min,
-			'max' => $max
+			'max' => $max,
+			'placeholder' => r($noLabel, $label)
 		]);
+
+		if($noLabel)
+			return $field;
+
+		$label = $label ? brick('label', $label, ['for'=>$field, 'class'=>r($required, 'required')]) : '';
 
 		return brick('div', $label.$field, ['class'=>'row']);
 	}
@@ -47,6 +52,20 @@ class FormBuild {
 		]);
 
 		return brick('div', $label.$field, ['class'=>'row']);
+	}
+
+	public static function yesno($field, $text, $required=false, $value=null) {
+		$label = brick('label', $text, ['for'=>$field]);
+		$checkbox = brick('input', false, [
+			'type' => 'checkbox',
+			'name' => $field,
+			'id' => $field,
+			'value' => 'Yes',
+			'aria-required' => r($required, 'true'),
+			'checked' => r($value == 'Yes', true)
+		]);
+
+		return brick('div', $checkbox.$label, ['class'=>'yesno-wrapper']);
 	}
 
 	public static function textarea($field, $label, $required=false, $rows=4, $value=null) {

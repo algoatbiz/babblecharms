@@ -2,14 +2,14 @@
 
 class DefaultPage extends Page {
 
-	public function buildHero() {
+	public function buildHero($search = false) {
 		$options = [
 			'id' => 'hero',
-			'class' => r(in_array($this->template(), ['contact', 'gallery', 'products']), 'short')
+			'class' => r($search, 'search', r(in_array($this->template(), ['contact', 'gallery', 'products']), 'short'))
 		];
 		$content = brick('div', false, ['style'=>'background-image: url("'.$this->bg().'")']);
 
-		$text = $this->template() == 'cart' ? brick('h1', 'Shopping Bag') : ($this->template() == 'checkout' ? brick('h1', 'Checkout') : $this->text()->kt());
+		$text = $search ?: ($this->template() == 'cart' ? brick('h1', 'Shopping Bag') : ($this->template() == 'checkout' ? brick('h1', 'Checkout') : $this->text()->kt()));
 		$content.= brick('div', brick('div', $text), ['class'=>'container']);
 		return brick('section', $content, $options);
 	}
@@ -69,6 +69,26 @@ class DefaultPage extends Page {
 
 	public function loading() {
 		return brick('div', brick('div', brick('div').brick('div').brick('div').brick('div')), ['id'=>'loading']);
+	}
+
+	public function signupForm() {
+		$content = brick('a', '', ['href'=>'#', 'class'=>'close']).
+				   brick('img', '', ['src'=>url('assets/images/babble-charms-logo.png'), 'alt'=>'Babble Charms Logo']).
+				   brick('div', 'Create An Account', ['class'=>'title']);
+
+		$form = FormBuild::text('first', 'First Name', true, 'text', false, false, null, true).
+				FormBuild::text('last', 'Last Name', true, 'text', false, false, null, true).
+				FormBuild::text('dob', 'Date of Birth', true, 'date', false, false, null, true).
+				FormBuild::text('email', 'Email', true, 'email', false, false, null, true).
+				FormBuild::text('password', 'Password', true, 'password', false, false, null, true).
+				FormBuild::text('confirm_password', 'Confirm Password', true, 'password', false, false, null, true).
+				FormBuild::yesno('nl_signup', 'Receive Updates and Special Offers').
+				FormBuild::yesno('accept_pp', "I've read and accept Babble Charms' ".brick('a', 'Privacy Policy', ['href'=>url('privacy-policy')]), true).
+				brick('button', 'Create An Account', ['class'=>'big']);
+
+		$content.= brick('form', $form, ['id'=>'signup-form', 'action'=>'signup-form-process', 'method'=>'POST']);
+
+		return brick('div', brick('div', $content), ['id'=>'popup-signup']);
 	}
 
 }

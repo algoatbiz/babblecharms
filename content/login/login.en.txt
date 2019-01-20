@@ -1,0 +1,25 @@
+Tabcontent: 
+
+----
+
+Title: Login
+
+----
+
+Login-text: ## Login
+
+----
+
+Login-bg: login-bg.png
+
+----
+
+Signup-text: 
+
+## Customer Sign Up
+Quality charms at wholesale prices, 
+we have hundreds of charms to choose from.
+
+----
+
+Signup-bg: 

@@ -30,6 +30,8 @@
 			</div>
 		</footer>
 
+		<?= $page->signupForm() ?>
+
 		<?= js([
 			'https://cdn.jsdelivr.net/npm/vue',
 			'https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.2/axios.min.js',

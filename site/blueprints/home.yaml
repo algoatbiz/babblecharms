@@ -38,6 +38,10 @@ fields:
     type: structure
     modalsize: large
     fields:
+      card_title:
+        label: Title
+        type: text
+        required: true
       card_text:
         label: Text
         type: markdown
@@ -47,7 +51,7 @@ fields:
         type: text
       card_link:
         label: Link
-        type: text
+        type: page
       card_image:
         label: Image
         type: image

@@ -25,9 +25,13 @@ class HomePage extends DefaultPage {
 
 		$content = '';
 		foreach($collections as $collection) {
-			$image = brick('div', '', ['class'=>'image', 'style'=>'background-image: url("'.$this->file($collection->card_image())->url().'")']);
-			$link = brick('p', brick('a', brick('span', $collection->link_text()), ['href'=>page($collection->card_link())->url()]));
-			$content.= brick('div', $image.brick('div', $collection->card_text()->kt().$link, ['class'=>'text']), ['class'=>'card']);
+			$url = page($collection->card_link())->url();
+
+			$title = brick('h3', brick('a', $collection->card_title(), ['href'=>$url]));
+			$image = brick('a', '', ['href'=> $url, 'class'=>'image', 'style'=>'background-image: url("'.$this->file($collection->card_image())->url().'")']);
+			$link = brick('p', brick('a', brick('span', $collection->link_text()), ['href'=>$url]));
+
+			$content.= brick('div', $image.brick('div', $title.$collection->card_text()->kt().$link, ['class'=>'text']), ['class'=>'card']);
 		}
 
 		return brick('div', $content);

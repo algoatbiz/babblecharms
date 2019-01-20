@@ -504,3 +504,31 @@ if(useShippingCheckbox) {
 
 	});
 }
+
+/*=============================
+=         Sign Up Form        =
+=============================*/
+
+var signup_links = document.querySelectorAll('.signup-link'),
+	signup_popup = document.getElementById('popup-signup');
+
+if(signup_links.length > 0)
+	for(var i=0; i<signup_links.length; i++)
+		signup_links[i].addEventListener('click', togglePopup);
+
+body.addEventListener('click', function(e) {
+	var container = document.querySelector('#popup-signup > div'),
+		close = document.querySelector('#popup-signup .close');
+
+	if(signup_popup && window.getComputedStyle(signup_popup).display==='block' && (e.target == close || !container.contains(e.target)))
+		togglePopup(e);
+});
+
+function togglePopup(e) {
+	e.preventDefault();
+
+	var style = window.getComputedStyle(signup_popup),
+		options = {duration: 250, display: (style.display==='none' ? 'block' : 'none')};
+			
+	Velocity(signup_popup, {opacity: (style.display==='none' ? [1,0] : [0,1])}, options);
+}

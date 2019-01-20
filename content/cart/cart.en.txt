@@ -1,4 +1,4 @@
-Title: cart
+Title: Cart
 
 ----
 

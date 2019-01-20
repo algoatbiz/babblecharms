@@ -87,6 +87,15 @@ strong {
 	font-weight: $bold;
 }
 
+a:not(.button) {
+	color: inherit;
+	transition: all .15s;
+
+	&:hover {
+		color: $blue;
+	}
+}
+
 button, .button {
 	color: $white;
 	font-size: 1rem;
@@ -123,11 +132,13 @@ button, .button {
 }
 
 #slider, #hero, body.product main,
-body.gallery #product-navigation {
+body.gallery #product-navigation,
+body.login main {
 	margin-top: 11.875rem;
 }
 
-#slider .slide, #hero {
+#slider .slide, #hero,
+#login-container {
 	color: $white;
 	font-weight: $light;
 	font-family: $oswald;
@@ -136,7 +147,7 @@ body.gallery #product-navigation {
 		width: 100%;
 		@include horizontal-center(50%, absolute);
 	}
-	.title, h1 {
+	.title, h1, .half-container h2 {
 		font-size: 3rem;
 		letter-spacing: 2.5px;
 		text-transform: uppercase;
@@ -155,6 +166,13 @@ body.gallery #product-navigation {
 
 		.container {
 			top: 4rem;
+		}
+	}
+	&.search {
+		height: 9.375rem;
+
+		.container {
+			@include center;
 		}
 	}
 	> div:first-of-type {
@@ -229,7 +247,7 @@ button {
 	}
 }
 
-button, input:not([type=radio]):not([type=checkbox]), .sq-input, select, textarea {
+button, input:not([type=radio]), select, textarea {
   	outline: none !important;
 	box-sizing: border-box;
 	-webkit-appearance: none;
@@ -237,7 +255,7 @@ button, input:not([type=radio]):not([type=checkbox]), .sq-input, select, textare
 	appearance: none;
 }
 
-input:not([type=radio]):not([type=checkbox]), .sq-input, select, textarea {
+input:not([type=radio]):not([type=checkbox]), select, textarea {
 	width: 100%;
 	display: block;
 	font-size: 1rem;
@@ -254,13 +272,9 @@ input:not([type=radio]):not([type=checkbox]), .sq-input, select, textarea {
 	}
 }
 
-input:not([type=radio]):not([type=checkbox]), .sq-input, select {
+input:not([type=radio]):not([type=checkbox]), select {
 	height: 2rem;
 	padding: 0 .5rem;
-}
-
-.sq-input {
-	font-size: 1rem;
 }
 
 .select-container {
@@ -300,11 +314,38 @@ label {
 	}
 }
 
-.checkbox-container {
+.checkbox-container, .yesno-wrapper {
 	@include flex;
 
 	label {
 		margin-bottom: 0;
+	}
+}
+
+.yesno-wrapper {
+	position: relative;
+
+	label {
+		font-size: 1rem;
+		font-weight: $normal;
+		margin-left: 1.75rem;
+	}
+}
+
+input[type=checkbox] {
+	margin: 0;
+	line-height: 1;
+	@include vertical-center(50%, absolute);
+
+	&:before {
+		@include fa('\f096');
+		font-size: 1rem;
+	}
+	&:not(:checked):focus:before {
+		color: $blue;
+	}
+	&:checked:before {
+		@include fa('\f046');
 	}
 }
 
@@ -621,9 +662,9 @@ body#coming-soon {
 	}
 	input {
 		height: 2.5rem;
-		@include max-width(25.938rem);
 		margin-top: 1rem;
 		margin-bottom: 1.25rem;
+		@include max-width(25.938rem);
 	}
 	button {
 		color: $black;
@@ -692,5 +733,197 @@ body#coming-soon {
 				border-right: 2px solid $blue;
 			}
 		}
+	}
+}
+
+/*=============================
+=            Login            =
+=============================*/
+
+body#login {
+	main#login-container {
+		color: $white;
+		@include flex(flex, inherit);
+
+		> div {
+			width: 50%;
+			padding: 3.5rem 0;
+			text-align: center;
+			@include bg;
+
+			&:nth-child(2) {
+				&, > div {
+					position: relative;
+				}
+				&:before {
+					content: '';
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					position: absolute;
+					background: rgba($black, .2);
+				}
+				> div {
+					z-index: 1;
+				}
+				p:last-child {
+					margin-top: 5rem;
+				}
+				.button {
+			    	background: none;
+			    	line-height: 3rem;
+					border: 2px solid $white;
+
+					&:hover {
+						background: $blue;
+						border-color: $blue;
+					}
+				}
+			}
+			> div {
+				@include max-width(21.875rem);
+			}
+			h2 {
+				line-height: 1.25;
+				@include max-width(15rem);
+
+				&:not(:last-child) {
+					margin-bottom: 1.25rem;
+				}
+			}
+			p {
+				line-height: 1.5;
+				font-family: $roboto;
+			}
+			a:not(.button) {
+				font-size: .875rem;
+				font-style: italic;
+				font-family: $roboto;
+				text-decoration: underline;
+			}
+			.button, button {
+				width: 15.375rem;
+			}
+			button {
+				margin-top: 3rem;
+
+				&:hover {
+					color: $blue;
+					background: $white;
+				}
+			}
+			form {
+				margin-top: 3rem;
+			}
+			input {
+				border: 0;
+				color: $white;
+				background: none;
+				border-radius: 0;
+				text-align: center;
+				border-bottom: 2px solid $white;
+
+				&::placeholder {
+					color: $white;
+				}
+				&:focus {
+					border-color: $orange !important;
+				}
+				&:first-child {
+					margin-bottom: 1.75rem;
+				}
+			}
+		}
+	}
+}
+
+/*=============================
+=           Sign Up           =
+=============================*/
+
+#popup-signup {
+	top: 0;
+	left: 0;
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+	display: none;
+	position: fixed;
+	background: rgba($black, .8);
+
+	> div {
+		width: 75%;
+		background: $white;
+		max-width: 35.375rem;
+		border: 2px solid $blue;
+		padding: 2rem 3.5rem 2.75rem;
+		@include center;
+	}
+	.close {
+		top: 0;
+		line-height: 1;
+		right: -1.75rem;
+		position: absolute;
+
+		&:before {
+			@include fa('\f00d');
+			color: $white;
+			font-size: 1.25rem;
+		}
+	}
+	img {
+		display: block;
+		margin: 0 auto 1.5rem;
+	}
+	.title {
+		color: $blue;
+		font-size: $title;
+		text-align: center;
+		font-weight: $light;
+		font-family: $oswald;
+		margin-bottom: 1.5rem;
+		text-transform: uppercase;
+	}
+	input:not([type=checkbox]) {
+		border: 0;
+		padding: 0;
+		background: none;
+		border-radius: 0;
+		border-bottom: 2px solid $body-color;
+
+		&::placeholder {
+			color: $body-color;
+		}
+		&[type=date] {
+			&:before {
+				content: attr(placeholder)':';
+				color: $body-color;
+				margin-right: .5rem;
+			}
+			&:focus:before {
+				display: none !important;
+			}
+		}
+		&:not(:last-child) {
+			margin-bottom: 1.25rem;
+		}
+	}
+	.yesno-wrapper {
+		&:not(:first-child):first-of-type {
+			margin-top: 1.75rem;
+		}
+		&:not(:last-child) {
+			margin-bottom: .5rem;
+		}
+		a {
+			text-decoration: underline;
+		}
+	}
+	button {
+		width: 100%;
+		display: block;
+		margin-top: 2.5rem;
+		@include max-width(15.625rem);
 	}
 }
