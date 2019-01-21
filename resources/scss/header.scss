@@ -80,7 +80,12 @@ header, #search-input {
 #search-input {
 	border: 0;
 	padding: 0;
+	color: $body-color;
 	max-width: 2.75rem;
+
+	&::placeholder {
+		color: #999;
+	}
 }
 
 nav {
