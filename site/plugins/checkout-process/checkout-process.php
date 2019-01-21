@@ -49,7 +49,7 @@ kirby()->routes([
                     'idempotency_key' => uniqid(),
                     'merchant_support_email' => EnvHelper::env('SUPPORT_EMAIL'),
                     'ask_for_shipping_address' => true,
-                    // 'redirect_url' => url(), // change to custom thank you page IF sends email
+                    'redirect_url' => url('thank-you'),
                     'order' => [
                         'line_items' => $line_items
                     ]

@@ -1,0 +1,21 @@
+Tabcontent: 
+
+----
+
+Title: Thank You
+
+----
+
+Text: 
+
+# Thank You!
+
+Thank you for your order. An email confirmation was sent to you at test@test.com. If you have questions about your order, please contact us at (email: support@babblecharms.com).
+
+----
+
+Background: 
+
+----
+
+Sections: 
