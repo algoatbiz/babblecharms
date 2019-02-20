@@ -3,9 +3,10 @@
 	<div style="background-image: url('<?= $login_bg ?>')" class="half-container">
 		<div>
 			<?= $page->login_text()->kt() ?>
-			<form action="/login">
-				<input type="text" name="email" type="email" placeholder="Email">
-				<input type="password" name="password" type="password" placeholder="Password">
+			<form id="login-form" action="login-process" method="POST">
+				<div id="form-message"></div>
+				<input type="email" id="email" name="email" placeholder="Email">
+				<input type="password" id="password" name="password" placeholder="Password">
 
 				<a href="#">Forgot password?</a>
 

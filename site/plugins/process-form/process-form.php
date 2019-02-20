@@ -12,12 +12,10 @@ class ProcessForm {
 
         $this->errorFields = $this->missing($this->data, array_values(a::get($options, 'required', [])));
 
-        $this->db = new Database([
-            'host'     => EnvHelper::env('DB_HOST', 'localhost'),
-            'database' => EnvHelper::env('DB_NAME'),
-            'user'     => EnvHelper::env('DB_USER'),
-            'password' => EnvHelper::env('DB_PASS')
-        ]);
+        $this->errorMessages = '';
+
+        if($id == 'signup-form')
+            $this->validateUserData();
 
         if(isset($this->data['credit_card']))
             $this->data['credit_card'] = substr($this->data['credit_card'], -4);
@@ -42,15 +40,55 @@ class ProcessForm {
             elseif(is_array($array[$r])) {
                 $hasValues = false;
 
-                foreach ($array[$r] as $value)
+                foreach($array[$r] as $value)
                     $hasValues |= $value !== '';
 
-                if (!$hasValues)
+                if(!$hasValues)
                     $missing[] = $r;
             }
         }
 
         return $missing;
+
+    }
+
+    protected function validateUserData() {
+
+        $errors = [];
+        $password = $this->data['password'];
+
+        $messages = [];
+
+        if(!v::minLength($password, 8)) {
+            $errors[] = 'password';
+            $messages[] = 'Password must be at least 8 characters';
+        }
+
+        if(!v::match($password, '@[A-Z]@') || !v::match($password, '@[a-z]@') || !v::match($password, '@[0-9]@')) {
+            $errors[] = 'password';
+            $messages[] = 'Password must contain at least 1 number, uppercase and lowercase letters';
+        }
+
+        if(v::different($password, $this->data['confirm_password'])) {
+            $errors[] = 'confirm_password';
+            $messages[] = 'Passwords do not match';
+        }
+
+        if($this->data['accept_pp'] == 'No') {
+            $errors[] = 'accept_pp';
+            $messages[] = 'Please read and accept our Privacy Policy';
+        }
+
+        if(db::select('users', 'email', ['email'=>$this->data['email']])->first()) {
+            $errors[] = 'email';
+            $messages[] = 'This email already exists';
+        }
+
+        $this->errorFields = array_unique(array_merge($this->errorFields, $errors));
+
+        $i = 0;
+        foreach($messages as $m)
+            $this->errorMessages.= r($i++, '<br>').$m;
 
     }
 
@@ -85,10 +123,8 @@ class ProcessForm {
                 'successful' => r(empty($this->errorFields),1,0),
             ];
 
-            $table = $this->db->table('form_log');
-
-            if(!$id = $table->insert($formData))
-                throw new Exception($this->db->lastError());
+            if(!$id = db::insert('form_log', $formData))
+                throw new Exception(database::lastError());
 
         } catch (Exception $e) {
 
@@ -100,30 +136,32 @@ class ProcessForm {
 
 	protected function saveToDb() {
 
-		$table = $this->db->table(a::get($this->options, 'table', 'contact_data'));
-
 		$insert_array['referer'] = r::referer();
 
 		foreach($this->data as $key => $value) {
-			if (str::startsWith($key, '_'))
+			if(str::startsWith($key, '_'))
 				continue;
 
-			if (in_array($key, a::get($this->options, 'noInserts', [])))
+			if(in_array($key, a::get($this->options, 'noInserts', [])))
 				continue;
+
+            if($key == 'password')
+                $value = Password::hash($value);
 
 			$insert_array[$key] = $value;
 		}
 
-        if(s::get('customer_id', false)) {
-            $insert_array['updated_at'] = date('Y-m-d H:i:s');
-            $table->where('id', '=', s::get('customer_id'))->update($insert_array);
-        }
+        // if(s::get('customer_id', false)) {
+        //     $insert_array['updated_at'] = date('Y-m-d H:i:s');
+        //     $table->where('id', '=', s::get('customer_id'))->update($insert_array);
+        // }
 
-		else if(!$id = $table->insert($insert_array))
-		    throw new Exception($this->db->lastError());
+        // else if(!$id = $table->insert($insert_array))
+		if(!$id = db::insert(a::get($this->options, 'table', 'contact_data'), $insert_array))
+		    throw new Exception(database::lastError());
 
-        if(isset($id))
-            s::set('customer_id', $id);
+        // if(isset($id))
+            // s::set('customer_id', $id);
 
 		return [
 			'success' => true,
@@ -139,6 +177,12 @@ class ProcessForm {
             $errors[$f] = true;
 
         return $errors;
+
+    }
+
+    public function errorMessages() {
+
+        return $this->errorMessages;
 
     }
 

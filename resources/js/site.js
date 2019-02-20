@@ -181,7 +181,7 @@ if(forms.length > 0) {
 			data.c_time = performance.now() >= 7000 ? 0 : 1;
 			data.form_id = form.id;
 
-			form.querySelector('button').className = 'disable';
+			form.querySelector('button').className += ' disable';
 
 			if(form.id == 'checkout-process')
 				loading(true);
@@ -201,7 +201,7 @@ if(forms.length > 0) {
 
 		 		form.reset();
 
-				form.querySelector('button').className = '';
+				form.querySelector('button').classList.remove('disable');
 			})
 			.catch(function(e) {
 				clearErrors(form);
@@ -212,7 +212,7 @@ if(forms.length > 0) {
 			 		msgContainer.className = 'error';
 			 	}
 
-				form.querySelector('button').className = '';
+				form.querySelector('button').classList.remove('disable');
 			});
 		});
 	}
@@ -242,7 +242,7 @@ function getInputValues(form, data, type) {
 
 	for(var i=inputs.length-1; i>=0; i--) {
 		if(inputs[i].name.length)
-			data[inputs[i].name] = inputs[i].value;
+			data[inputs[i].name] = (inputs[i].type == 'checkbox' && inputs[i].value == 'Yes' && !inputs[i].checked) ? 'No' : inputs[i].value;
 	}
 
 	return data;

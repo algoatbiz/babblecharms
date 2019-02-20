@@ -10,6 +10,11 @@ c::set('cache.driver', 'memcached');
 
 c::set('cache.ignore', []);
 
+c::set('db.host', EnvHelper::env('DB_HOST', 'localhost'));
+c::set('db.user', EnvHelper::env('DB_USER'));
+c::set('db.password', EnvHelper::env('DB_PASS'));
+c::set('db.name', EnvHelper::env('DB_NAME'));
+
 c::set('languages', [
     [
       'code'    => 'en',

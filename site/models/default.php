@@ -44,11 +44,11 @@ class DefaultPage extends Page {
 			$id = 'contact-form';
 		}
 		else {
-			$content = brick('div', site()->form_title(), ['class'=>'title']);
-			$content.= FormBuild::text('first', 'First Name', true);
-			$content.= FormBuild::text('last', 'Last Name', true);
-			$content.= FormBuild::text('email', 'Email', true, 'email');
-			$content.= FormBuild::text('phone', 'Phone');
+			$content = brick('div', site()->form_title(), ['class'=>'title']).
+					   FormBuild::text('first', 'First Name', true).
+					   FormBuild::text('last', 'Last Name', true).
+					   FormBuild::text('email', 'Email', true, 'email').
+					   FormBuild::text('phone', 'Phone');
 			$id = 'sign-up-form';
 		}
 
@@ -76,7 +76,8 @@ class DefaultPage extends Page {
 				   brick('img', '', ['src'=>url('assets/images/babble-charms-logo.png'), 'alt'=>'Babble Charms Logo']).
 				   brick('div', 'Create An Account', ['class'=>'title']);
 
-		$form = FormBuild::text('first', 'First Name', true, 'text', false, false, null, true).
+		$form = brick('div', '', ['id'=>'form-message']).
+				FormBuild::text('first', 'First Name', true, 'text', false, false, null, true).
 				FormBuild::text('last', 'Last Name', true, 'text', false, false, null, true).
 				FormBuild::text('dob', 'Date of Birth', true, 'date', false, false, null, true).
 				FormBuild::text('email', 'Email', true, 'email', false, false, null, true).

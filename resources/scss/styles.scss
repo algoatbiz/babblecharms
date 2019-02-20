@@ -347,6 +347,9 @@ input[type=checkbox] {
 	&:checked:before {
 		@include fa('\f046');
 	}
+	&.error:not(:checked):before {
+		color: $red;
+	}
 }
 
 .error {
@@ -830,10 +833,15 @@ body#login {
 				&:focus {
 					border-color: $orange !important;
 				}
-				&:first-child {
+				&:first-of-type {
 					margin-bottom: 1.75rem;
 				}
 			}
+		}
+	}
+	#form-message {
+		&.error, &.success {
+			margin-bottom: 1rem;
 		}
 	}
 }
@@ -854,10 +862,13 @@ body#login {
 
 	> div {
 		width: 75%;
+		overflow-x: hidden;
+		overflow-y: scroll;
 		background: $white;
+		max-height: 46.25rem;
 		max-width: 35.375rem;
 		border: 2px solid $blue;
-		padding: 2rem 3.5rem 2.75rem;
+		padding: 2rem 3.5rem 2.25rem;
 		@include center;
 	}
 	.close {
@@ -884,6 +895,11 @@ body#login {
 		font-family: $oswald;
 		margin-bottom: 1.5rem;
 		text-transform: uppercase;
+	}
+	#form-message {
+		&.error, &.success {
+			margin-bottom: 1rem;
+		}
 	}
 	input:not([type=checkbox]) {
 		border: 0;
