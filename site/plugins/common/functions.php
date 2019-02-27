@@ -40,3 +40,9 @@ function getCartTotal($subtotal) {
 	return priceFormat($subtotal + ($subtotal * c::get('sales_tax')) + c::get('shipping_fee'));
 
 }
+
+function timestamp() {
+
+	return date('Y-m-d H:i:s');
+
+}

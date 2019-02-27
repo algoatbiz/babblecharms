@@ -47,14 +47,14 @@ header, #search-input {
 			color: $blue;
 		}
 	}
-	.welcome, #search, #shopping-bag {
+	.user, #search, #shopping-bag {
 		@include flex;
 
 		&:before {
 			margin-right: .75rem;
 		}
 	}
-	.welcome:before {
+	.user:before {
 		@include fa('\f007');
 		margin-top: .1rem;
 	}
@@ -89,7 +89,7 @@ header, #search-input {
 }
 
 nav {
-	background-color: #4a4c57;
+	background-color: $body-color;
 
 	a:not(.button) {
 		color: $white;

@@ -198,6 +198,13 @@ if(forms.length > 0) {
 					deleteCookie(bagCookieName); // if successful purchase
 					window.location.href = r.data.checkoutUrl;
 				}
+				if(form.id == 'signup-form') {
+					setTimeout(function() {
+						window.location.reload();
+					}, 300);
+				}
+				if(form.id == 'login-form')
+					window.location.href = '/';
 
 		 		form.reset();
 

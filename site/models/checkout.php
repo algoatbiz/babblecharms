@@ -27,7 +27,7 @@ class CheckoutPage extends DefaultPage {
 				}
 			}
 
-			return ['html'=>brick('ul', $cartItems), 'subtotal'=>array_sum($subtotal)];
+			return ['html'=>brick('ul', $cartItems, ['class'=>'sidebar-products']), 'subtotal'=>array_sum($subtotal)];
 		}
 
 		return false;

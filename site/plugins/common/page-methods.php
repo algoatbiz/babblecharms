@@ -18,12 +18,30 @@ page::$methods['extraJS'] = function($page) {
 
 };
 
+page::$methods['titleTag'] = function($page) {
+
+	return brick('title', $page->title().' | '.site()->title());
+
+};
+
 page::$methods['ancestor'] = function($page) {
 
 	if($page->parents()->last())
 		return $page->parents()->last();
 
 	return $page;
+
+};
+
+page::$methods['headerUserLinks'] = function($site) {
+
+	$user_id = s::get('user_id');
+
+	$content = brick('a', r($user_id, 'Log Out', 'Login'), ['href'=>url('log'.r($user_id, 'out', 'in'))]).
+			   brick('span', '', ['class'=>'divider']).
+			   brick('a', r($user_id, 'Account', 'Sign Up'), ['href'=>r($user_id, url('account'), '#'), 'class'=>r($user_id, 'user', 'signup-link')]);
+
+	return brick('div', $content);
 
 };
 

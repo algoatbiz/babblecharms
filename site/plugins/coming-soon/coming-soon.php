@@ -57,7 +57,7 @@ kirby()->routes([
 				$errors['email'] = $message;
 			}
 			else if(!$subscribers->subscribers()->toStructure()->findBy('email', get('email'))) {
-				$existing[] = ['email' => get('email'), 'date_created'=>date('Y-m-d H:i:s')];
+				$existing[] = ['email' => get('email'), 'date_created'=>timestamp()];
 				$subscribers->update([
 					'subscribers' => yaml::encode($existing)
 				]);
