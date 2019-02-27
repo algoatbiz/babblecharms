@@ -22,7 +22,7 @@ kirby()->routes([
                 foreach(site()->productsPage()->products()->toStructure() as $p) {
                     foreach(json_decode($bag, true) as $id => $qty) {
                         if($p->product_id()->value() == $id) {
-                            $subtotal[] = $p->price()->value();
+                            $subtotal[] = $p->price()->value() * $qty;
 
                             $line_items[] = [
                                 'name' => $p->name()->value(),
