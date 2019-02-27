@@ -62,7 +62,7 @@ kirby()->routes([
 		'pattern' => 'account',
 		'action' => function() {
 
-			return go(s::get('user_id') ? 'account' : 'login');
+			return s::get('user_id') ? site()->visit('account') : go('login');
 
 		}
 	],
