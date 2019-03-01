@@ -194,15 +194,16 @@ if(forms.length > 0) {
 					msgContainer.innerHTML = r.data.message;
 			 		msgContainer.className = 'success';
 				}
-				if(form.id == 'checkout-process') {
-					deleteCookie(bagCookieName); // if successful purchase
+
+				if(form.id == 'checkout-process')
 					window.location.href = r.data.checkoutUrl;
-				}
+
 				if(form.id == 'signup-form') {
 					setTimeout(function() {
 						window.location.reload();
 					}, 300);
 				}
+
 				if(form.id == 'login-form')
 					window.location.href = '/';
 
@@ -322,7 +323,7 @@ function updateCartCookie(id, el) {
 	var bag = getCookie(bagCookieName),
 		products = bag ? JSON.parse(bag) : {};
 
-	selectQty = el && selectQty == el.nextSibling.querySelector('select') ? selectQty : false;
+	selectQty = el && selectQty && selectQty == el.nextSibling.querySelector('select') ? selectQty : false;
 
 	if((el && el.classList.contains('remove')) || (selectQty && selectQty.value === ''))
 		delete products[id];
@@ -337,6 +338,9 @@ function updateCartCookie(id, el) {
 
 	return qty;
 }
+
+if(document.getElementById('thank-you-success'))
+	deleteCookie(bagCookieName);
 
 function deleteCookie(cname) {
 	document.cookie = cname + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
@@ -423,6 +427,8 @@ if(remove.length > 0) {
 				data = {};
 
 			updateCartCookie(productId, this);
+
+			shoppingBag.innerHTML = parseInt(shoppingBag.innerHTML) - 1;
 
 			ax.post('cart-process')
 			.then(function(r) {

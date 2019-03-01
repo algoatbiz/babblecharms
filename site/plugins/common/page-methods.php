@@ -167,6 +167,12 @@ page::$methods['pagination'] = function($site, $products) {
 
 };
 
+page::$methods['isThankYou'] = function($page) {
+
+	return $page->slug() == 'thank-you' && get('checkoutId');
+
+};
+
 page::$methods['getRatings'] = function($site) {
 
 	$rating = 4;

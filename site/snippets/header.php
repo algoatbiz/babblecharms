@@ -25,7 +25,7 @@
 
 	</head>
 
-	<body id="<?= $product ?? $page->slug() ?>" class="<?= isset($product) ? 'product' : $page->template() ?>">
+	<body id="<?= $product ?? $page->slug().r($page->isThankYou(), '-success') ?>" class="<?= isset($product) ? 'product' : $page->template() ?>">
 
 		<header>
 			<div id="topbar">
@@ -35,7 +35,7 @@
 					<div>
 						<form id="search" action="/search-results"><input type="text" id="search-input" name="search-input" placeholder="Search" autocomplete="off"></form>
 						<span class="divider"></span>
-						<a href="<?= url('cart') ?>" id="shopping-bag">Shopping Bag (<span><?= getCartCount() ?></span>)</a>
+						<a href="<?= url('cart') ?>" id="shopping-bag">Shopping Bag (<span><?= $page->isThankYou() ? 0 : getCartCount() ?></span>)</a>
 					</div>
 				</div>
 			</div>
