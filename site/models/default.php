@@ -3,28 +3,29 @@
 class DefaultPage extends Page {
 
 	public function buildHero($search = false) {
+		$tpl = $this->template();
+
 		$options = [
 			'id' => 'hero',
-			'class' => r($search, 'search', r(in_array($this->template(), ['contact', 'gallery', 'products']), 'short'))
+			'class' => r($search || $tpl == 'cart', 'shorter', r(in_array($tpl, ['contact', 'gallery', 'products']), 'short'))
 		];
+
 		$content = brick('div', false, ['style'=>'background-image: url("'.$this->bg().'")']);
 
-		$text = $search ?: ($this->template() == 'cart' ? brick('h1', 'Shopping Bag') : ($this->template() == 'checkout' ? brick('h1', 'Checkout') : $this->text()->kt()));
+		$text = $search ?: ($tpl == 'cart' ? brick('h1', 'Shopping Bag') : ($tpl == 'checkout' ? brick('h1', 'Checkout') : $this->text()->kt()));
 		$content.= brick('div', brick('div', $text), ['class'=>'container']);
+
 		return brick('section', $content, $options);
 	}
 
 	public function bg() {
 		$ancestor = $this->ancestor();
-		if($this->background()->isNotEmpty()) {
+		if($this->background()->isNotEmpty())
 			return $this->file($this->background())->url();
-		}
-		else if($ancestor->background()->isNotEmpty()) {
+		else if($ancestor->background()->isNotEmpty())
 			return $ancestor->file($ancestor->background())->url();
-		}
-		else {
+		else
 			return site()->file(site()->background())->url();
-		}
 	}
 
 	public function buildSections() {

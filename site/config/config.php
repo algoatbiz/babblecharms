@@ -130,5 +130,11 @@ c::set('routes', [
       
       return response::json($data);
     }
+  ],
+  [
+    'pattern' => 'subscribers',
+    'action' => function() {
+      go('error');
+    }
   ]
 ]);

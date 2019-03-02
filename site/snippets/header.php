@@ -7,6 +7,8 @@
 		<meta name="robots" content="noindex, nofollow">
 		<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0" />
 
+		<?= $page->titleTag() ?>
+
 		<link rel="alternate" href="<?= url() ?>" hreflang="en-us" />
 
 		<?= css([
@@ -23,23 +25,17 @@
 
 	</head>
 
-	<body id="<?= $product ?? $page->slug() ?>" class="<?= isset($product) ? 'product' : $page->template() ?>">
+	<body id="<?= $product ?? $page->slug().r($page->isThankYou(), '-success') ?>" class="<?= isset($product) ? 'product' : $page->template() ?>">
 
 		<header>
 			<div id="topbar">
 				<div class="container">
-					<div>
-						<!-- <div class="welcome">Welcome User</div> -->
-						<a href="<?= url('login') ?>">Login</a>
-						<span class="divider"></span>
-						<!-- <div class="account">Account</div> -->
-						<a href="#" class="signup-link">Sign Up</a>
-					</div>
+					<?= $site->headerUserLinks() ?>
 					<a href="<?= url() ?>" class="logo"><img src="<?= url('assets/images/babble-charms-logo.png') ?>" alt="Babble Charms Logo"></a>
 					<div>
 						<form id="search" action="/search-results"><input type="text" id="search-input" name="search-input" placeholder="Search" autocomplete="off"></form>
 						<span class="divider"></span>
-						<a href="<?= url('cart') ?>" id="shopping-bag">Shopping Bag (<span><?= getCartCount() ?></span>)</a>
+						<a href="<?= url('cart') ?>" id="shopping-bag">Shopping Bag (<span><?= $page->isThankYou() ? 0 : getCartCount() ?></span>)</a>
 					</div>
 				</div>
 			</div>

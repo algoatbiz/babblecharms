@@ -14,10 +14,16 @@ kirby()->routes([
             try {
                 $checkout_api = new \SquareConnect\Api\CheckoutApi();
 
+                $bag = $_COOKIE['shopping-bag'];
+
+                $subtotal = [];
+
                 $line_items = [];
                 foreach(site()->productsPage()->products()->toStructure() as $p) {
-                    foreach(json_decode($_COOKIE['shopping-bag'], true) as $id => $qty) {
+                    foreach(json_decode($bag, true) as $id => $qty) {
                         if($p->product_id()->value() == $id) {
+                            $subtotal[] = $p->price()->value() * $qty;
+
                             $line_items[] = [
                                 'name' => $p->name()->value(),
                                 'quantity' => (string)$qty,
@@ -64,8 +70,22 @@ kirby()->routes([
 
             $checkoutUrl = $response->getCheckout()->getCheckoutPageUrl();
 
+            if(!$id = db::insert('transactions', ['checkout_id'=>$response->getCheckout()->getId(), 'bag'=>$bag, 'user_id'=>s::get('user_id'), 'total'=>getCartTotal(array_sum($subtotal))]))
+                throw new Exception(database::lastError());
+
 			return response::json(compact('checkoutUrl'), 200);
 
 		}
-	]
+	],
+    [
+        'pattern' => 'thank-you',
+        'action' => function() {
+
+            if($checkoutId = get('checkoutId'))
+                db::update('transactions', ['transaction_id'=>get('transactionId'), 'updated_at'=>timestamp()], ['checkout_id'=>$checkoutId]);
+
+            return ['thank-you', []];
+
+        }
+    ]
 ]);

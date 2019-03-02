@@ -3,14 +3,6 @@
 @import "../mixins";
 @import "../vars";
 
-#hero {
-	height: 9.375rem;
-
-	.container {
-		@include center;
-	}
-}
-
 main {
 	.header, aside > div:nth-last-child(2),
 	#total {
@@ -226,7 +218,7 @@ aside {
 	}
 	.header:first-child {
 		color: $white;
-		background: #4a4c57;
+		background: $body-color;
 	}
 	.radio-container {
 		font-size: .813rem;
@@ -283,26 +275,31 @@ body#checkout main {
 		> div:nth-child(4) {
 			margin-bottom: 1px;
 		}
-		ul li {
-			@include flex;
-			padding-bottom: 1rem;
-			border-bottom: 1px solid $border2;
+	}
+}
 
-			&:not(:first-child) {
-				padding-top: 1rem;
-			}
-			.image {
-				@include bg;
-				width: 40%;
-				max-width: 5.5rem;
-				margin-right: 6.5%;
-				padding-bottom: 29.97%;
-				border: 1px solid $border2;
-			}
-			.item-price {
-				font-weight: $bold;
-			}
-		}
+
+ul.sidebar-products li {
+	@include flex;
+	padding-bottom: 1rem;
+	border-bottom: 1px solid $border2;
+
+	&:not(:first-child) {
+		padding-top: 1rem;
+	}
+	.image {
+		@include bg;
+		width: 40%;
+		max-width: 5.5rem;
+		margin-right: 6.5%;
+		padding-bottom: 29.97%;
+		border: 1px solid $border2;
+	}
+	> div {
+		width: 53.5%;
+	}
+	.item-price {
+		font-weight: $bold;
 	}
 }
 

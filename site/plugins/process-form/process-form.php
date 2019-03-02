@@ -10,6 +10,8 @@ class ProcessForm {
 
         $this->options = $options;
 
+        $this->db_id = 0;
+
         $this->errorFields = $this->missing($this->data, array_values(a::get($options, 'required', [])));
 
         $this->errorMessages = '';
@@ -126,6 +128,8 @@ class ProcessForm {
             if(!$id = db::insert('form_log', $formData))
                 throw new Exception(database::lastError());
 
+            $this->db_id = $id;
+
         } catch (Exception $e) {
 
             exit(var_dump($e));
@@ -151,17 +155,8 @@ class ProcessForm {
 			$insert_array[$key] = $value;
 		}
 
-        // if(s::get('customer_id', false)) {
-        //     $insert_array['updated_at'] = date('Y-m-d H:i:s');
-        //     $table->where('id', '=', s::get('customer_id'))->update($insert_array);
-        // }
-
-        // else if(!$id = $table->insert($insert_array))
 		if(!$id = db::insert(a::get($this->options, 'table', 'contact_data'), $insert_array))
 		    throw new Exception(database::lastError());
-
-        // if(isset($id))
-            // s::set('customer_id', $id);
 
 		return [
 			'success' => true,
@@ -183,6 +178,12 @@ class ProcessForm {
     public function errorMessages() {
 
         return $this->errorMessages;
+
+    }
+
+    public function getDbId() {
+
+        return $this->db_id;
 
     }
 

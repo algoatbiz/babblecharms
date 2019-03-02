@@ -1,0 +1,97 @@
+@import "bourbon";
+@import "neat";
+@import "../mixins";
+@import "../vars";
+
+main {
+	padding-top: 7rem;
+
+	.container > div {
+		align-items: flex-start;
+	}
+}
+
+#user-menu {
+	width: 17.095%;
+	border: 1px solid $border3;
+
+	> div {
+		&:first-child {
+			padding: .938rem;
+			background: #fbfbfb;
+			border-bottom: 1px solid $border3;
+
+			a {
+				@include bg;
+				display: block;
+				border-radius: 50%;
+				padding-bottom: 98.81%;
+				border: 1px solid $border2;
+			}
+		}
+		&:last-child {
+			padding: .75rem 1.063rem;
+
+			a {
+				display: block;
+				line-height: 2.25;
+				text-align: center;
+				font-family: $oswald;
+
+				&:not(:last-child) {
+					border-bottom: 1px solid $border3;
+				}
+			}
+		}
+	}
+}
+
+#edit-account {
+	width: 52.905%;
+	padding-left: 1rem;
+	padding-bottom: 5rem;
+
+	.title {
+		color: $blue;
+		font-size: 1.5rem;
+		font-weight: $light;
+		font-family: $oswald;
+		margin-bottom: 1.25rem;
+		padding-bottom: .813rem;
+		text-transform: uppercase;
+		border-bottom: 1px solid $border2;
+
+		&:not(:first-child) {
+			margin-top: 2rem;
+		}
+	}
+	.row {
+		padding-right: 12.5%;
+		@include flex(flex, flex-end);
+
+		&:not(:last-child) {
+			margin-bottom: .75rem;
+		}
+		label {
+			width: 18%;
+			font-size: 1rem;
+			margin-bottom: 0;
+			font-family: $oswald;
+		}
+		input {
+			border: 0;
+			width: 82%;
+			padding: 0;
+			height: auto;
+			border-radius: 0;
+			font-size: .875rem;
+			border-bottom: 1px solid rgba($border2, 0.302);
+		}
+	}
+}
+
+aside .header:first-child {
+	color: $body-color;
+	background: #f9dfce;
+	box-shadow: 0px 1px 0px 0px rgba($border2, 0.004);
+}
