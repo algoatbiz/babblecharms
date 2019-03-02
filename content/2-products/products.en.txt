@@ -43,7 +43,9 @@ Products:
   images: ""
 - 
   name: '#momlife charm, alloy charm'
-  text: 'momlife charm, alloy message charm, 20mm.'
+  text: >
+    momlife charm, alloy message charm,
+    20mm.
   price: "2.50"
   category: Message
   product_id: momlife
@@ -90,7 +92,7 @@ Products:
     He Happy Elephant charm.
     Charm is Alloy, 20mm.
   price: "2.50"
-  category: Message
+  category: Animal
   product_id: behappy
   quantity: "20"
   featured_image: dsc00007.jpg
@@ -273,8 +275,7 @@ Products:
   product_id: fossil
   quantity: "50"
   featured_image: dsc00078.jpg
-  images: |
-    - dsc00079.jpg
+  images: '- dsc00079.jpg'
 - 
   name: Silver Good Luck Horse shoe charm
   text: Silver Good Luck Horse shoe charm
@@ -283,8 +284,7 @@ Products:
   product_id: goodluck
   quantity: "50"
   featured_image: dsc00080.jpg
-  images: |
-    - dsc00081.jpg
+  images: '- dsc00081.jpg'
 - 
   name: Pistol Gun Charm
   text: Silver Alloy Pistol gun charm
@@ -293,8 +293,7 @@ Products:
   product_id: pistol
   quantity: "50"
   featured_image: dsc00083.jpg
-  images: |
-    - dsc00085.jpg
+  images: '- dsc00085.jpg'
 - 
   name: Bronze Fossil Charm
   text: Bronze Alloy Fossil charm
@@ -314,8 +313,7 @@ Products:
   product_id: clover
   quantity: "100"
   featured_image: dsc00089.jpg
-  images: |
-    - dsc00092.jpg
+  images: '- dsc00092.jpg'
 - 
   name: Black Sneaker shoe charm
   text: Sterling Silver Black Shoe charm
@@ -372,8 +370,7 @@ Products:
   product_id: flipflops
   quantity: "50"
   featured_image: dsc00109.jpg
-  images: |
-    - dsc00108_20180704131957930.jpg
+  images: '- dsc00108_20180704131957930.jpg'
 - 
   name: Telephone charm, telephone
   text: Telephone alloy charm
@@ -391,18 +388,16 @@ Products:
   product_id: boot
   quantity: "50"
   featured_image: dsc00110.jpg
-  images: |
-    - dsc00111.jpg
+  images: '- dsc00111.jpg'
 - 
   name: Antique Butterfly Alloy charm
   text: Antique Butterfly charm
   price: "0.75"
-  category: Message
+  category: Animal
   product_id: antiquebutterfly
   quantity: "50"
   featured_image: dsc00112_20180704120024119.jpg
-  images: |
-    - dsc00113.jpg
+  images: dsc00113.jpg
 - 
   name: Go with all your heart charm
   text: Go with all your heart 20mm alloy charm
@@ -633,15 +628,11 @@ Products:
   featured_image: dsc00505_20180629130151009.jpg
   images: dsc00512.jpg
 - 
-  name: Blue Lives Matter charm
-  text: |
-    Blue Lives Matter charm
-    * stainless steel
-    * 20mm
-    * laser etched
-  price: "1.50"
-  category: Message
-  product_id: bluelives
+  name: Blue butterfly charm
+  text: Blue butterfly charm
+  price: "1"
+  category: Animal
+  product_id: butterfly
   quantity: "20"
   featured_image: dsc00513.jpg
   images: ""
@@ -689,20 +680,14 @@ Products:
   featured_image: dsc00516.jpg
   images: ""
 - 
-  name: >
-    Feathers appear when Angels are near
-    charm
-  text: |
-    Feathers appear when Angels are near
-    * stainless steel
-    * 20mm
-    * laser etched
-  price: "1.50"
-  category: Message
-  product_id: feathers
+  name: Charm Bracelet
+  text: Charm Bracelet
+  price: "5"
+  category: Bracelet
+  product_id: bracelet
   quantity: "10"
   featured_image: 1.png
-  images: dsc00517.jpg
+  images: ""
 - 
   name: If you can dream it You can do it charm
   text: |
@@ -787,7 +772,7 @@ Products:
   name: Bronze Elephant charm
   text: Bronze alloy elephant charm
   price: "0.50"
-  category: Message
+  category: Animal
   product_id: elephant
   quantity: "50"
   featured_image: dsc08139.jpg
@@ -841,7 +826,7 @@ Products:
   name: Sterling Silver Fish charm
   text: Cute sterling silver fish charm
   price: "5.00"
-  category: Message
+  category: Animal
   product_id: ssfish
   quantity: "25"
   featured_image: dsc09143.jpg
@@ -854,8 +839,7 @@ Products:
   product_id: monkeyss
   quantity: "25"
   featured_image: dsc09144.jpg
-  images: |
-    - dsc09144.jpg
+  images: '- dsc09144.jpg'
 - 
   name: Sterling silver butterfly charm
   text: Sterling Silver Butterfly charm
@@ -885,8 +869,7 @@ Products:
   product_id: steeltree
   quantity: "50"
   featured_image: dsc09148.jpg
-  images: |
-    - dsc09148_20180502212531684.jpg
+  images: '- dsc09148_20180502212531684.jpg'
 - 
   name: >
     Sterling Silver heart charm with cubic
@@ -945,7 +928,7 @@ Products:
   name: Sterling Silver monkey charm
   text: Sterling Silver Monkey Charm
   price: "5.00"
-  category: Message
+  category: Animal
   product_id: ssmonkey1
   quantity: "25"
   featured_image: dsc09157.jpg
@@ -1638,8 +1621,7 @@ Products:
   product_id: bicycle1
   quantity: "50"
   featured_image: dsc00005_1.jpg
-  images: |
-    - dsc00004_1.jpg
+  images: '- dsc00004_1.jpg'
 - 
   name: Double Decker bus charm
   text: |
@@ -1717,8 +1699,7 @@ Products:
   product_id: bronzebike
   quantity: "50"
   featured_image: dsc09998_1.jpg
-  images: |
-    - dsc09997_1.jpg
+  images: '- dsc09997_1.jpg'
 - 
   name: Globe charm, world charm
   text: |
@@ -1738,8 +1719,7 @@ Products:
   product_id: globe
   quantity: "50"
   featured_image: dsc09993_1.jpg
-  images: |
-    - dsc09996_1.jpg
+  images: '- dsc09996_1.jpg'
 - 
   name: Scooter charm, moped charm
   text: |
@@ -1759,8 +1739,7 @@ Products:
   product_id: scooter
   quantity: "50"
   featured_image: dsc09991_1.jpg
-  images: |
-    - dsc09992_1_20180809211737015.jpg
+  images: '- dsc09992_1_20180809211737015.jpg'
 - 
   name: Train charm
   text: |
@@ -1800,8 +1779,7 @@ Products:
   product_id: bike3
   quantity: "50"
   featured_image: dsc09986_1.jpg
-  images: |
-    - dsc09987_1.jpg
+  images: '- dsc09987_1.jpg'
 - 
   name: Bicycle charm, bike charm
   text: |
@@ -1821,8 +1799,7 @@ Products:
   product_id: bike4
   quantity: "50"
   featured_image: dsc09983_1.jpg
-  images: |
-    - dsc09982_2.jpg
+  images: '- dsc09982_2.jpg'
 - 
   name: Eiffel tower charm, paris charm
   text: |
@@ -1882,8 +1859,7 @@ Products:
   product_id: camper
   quantity: "50"
   featured_image: dsc09976_1.jpg
-  images: |
-    - dsc09975_1.jpg
+  images: '- dsc09975_1.jpg'
 - 
   name: Air Plane charm
   text: |
@@ -1903,8 +1879,7 @@ Products:
   product_id: airplane
   quantity: "50"
   featured_image: dsc09972_1.jpg
-  images: |
-    - dsc09973_1.jpg
+  images: '- dsc09973_1.jpg'
 - 
   name: Motorcycle charm
   text: |
@@ -1924,8 +1899,7 @@ Products:
   product_id: motorcycle
   quantity: "50"
   featured_image: dsc09971_1.jpg
-  images: |
-    - dsc00035_1.jpg
+  images: '- dsc00035_1.jpg'
 - 
   name: Bicycle charm, bike charm
   text: |
@@ -1945,8 +1919,7 @@ Products:
   product_id: bike5
   quantity: "50"
   featured_image: dsc09963_1.jpg
-  images: |
-    - dsc09962_1.jpg
+  images: '- dsc09962_1.jpg'
 - 
   name: Cinderella Carriage charm
   text: |
@@ -2008,8 +1981,7 @@ Products:
   product_id: airplane2
   quantity: "40"
   featured_image: dsc09957_1.jpg
-  images: |
-    - dsc09958_1.jpg
+  images: '- dsc09958_1.jpg'
 - 
   name: Hot Air Balloon charm
   text: |
@@ -2049,8 +2021,7 @@ Products:
   product_id: boy
   quantity: "50"
   featured_image: dsc09936.jpg
-  images: |
-    - dsc09937.jpg
+  images: '- dsc09937.jpg'
 - 
   name: Travel suitcase charm
   text: |
@@ -2070,8 +2041,7 @@ Products:
   product_id: suitcase
   quantity: "50"
   featured_image: dsc00011_2.jpg
-  images: |
-    - dsc00010_1.jpg
+  images: '- dsc00010_1.jpg'
 - 
   name: Car charm, cute car charm
   text: |
@@ -2091,8 +2061,7 @@ Products:
   product_id: car3
   quantity: "50"
   featured_image: dsc00014_2.jpg
-  images: |
-    - dsc00013_2.jpg
+  images: '- dsc00013_2.jpg'
 - 
   name: Eiffel Tower charm
   text: |
@@ -2112,8 +2081,7 @@ Products:
   product_id: eiffeltowerG
   quantity: "52"
   featured_image: dsc00019_1.jpg
-  images: |
-    - dsc00016_2.jpg
+  images: '- dsc00016_2.jpg'
 - 
   name: Cinerella Carriage charm
   text: |
@@ -2155,8 +2123,7 @@ Products:
   product_id: lpn
   quantity: "50"
   featured_image: dsc00040_1.jpg
-  images: |
-    - dsc00041_1.jpg
+  images: '- dsc00041_1.jpg'
 - 
   name: I love to cook charm
   text: |
@@ -2284,8 +2251,7 @@ Products:
   product_id: BSN
   quantity: "50"
   featured_image: dsc00060_1.jpg
-  images: |
-    - dsc00061_1.jpg
+  images: '- dsc00061_1.jpg'
 - 
   name: MA charm, medical assistant charm
   text: |
@@ -2327,8 +2293,7 @@ Products:
   product_id: muffin
   quantity: "50"
   featured_image: dsc00065_1.jpg
-  images: |
-    - dsc00066_1.jpg
+  images: '- dsc00066_1.jpg'
 - 
   name: Hand of god charm
   text: |
@@ -2348,8 +2313,7 @@ Products:
   product_id: handofgod
   quantity: "60"
   featured_image: dsc00067_1.jpg
-  images: |
-    - dsc00068_1.jpg
+  images: '- dsc00068_1.jpg'
 - 
   name: Flip flop charms
   text: |
@@ -2369,8 +2333,7 @@ Products:
   product_id: flipflop1
   quantity: "50"
   featured_image: dsc00069_1.jpg
-  images: |
-    - dsc00070_1.jpg
+  images: '- dsc00070_1.jpg'
 - 
   name: PA charm, physicians assistant charm
   text: |
@@ -2390,8 +2353,7 @@ Products:
   product_id: PA
   quantity: "50"
   featured_image: dsc00071_1.jpg
-  images: |
-    - dsc00072_1.jpg
+  images: '- dsc00072_1.jpg'
 - 
   name: Autism heart Charm, puzzle piece charm
   text: |
@@ -2453,8 +2415,7 @@ Products:
   product_id: apple
   quantity: "50"
   featured_image: dsc00075_1.jpg
-  images: |
-    - dsc00076_1.jpg
+  images: '- dsc00076_1.jpg'
 - 
   name: Best Friends charm
   text: |
@@ -2474,8 +2435,7 @@ Products:
   product_id: bff
   quantity: "50"
   featured_image: dsc00077_1.jpg
-  images: |
-    - dsc00078_1.jpg
+  images: '- dsc00078_1.jpg'
 - 
   name: Spiral charm, swirl charm
   text: |
@@ -2495,8 +2455,7 @@ Products:
   product_id: spiral
   quantity: "60"
   featured_image: dsc00079_1.jpg
-  images: |
-    - dsc00080_1.jpg
+  images: '- dsc00080_1.jpg'
 - 
   name: flip flops charm
   text: |
@@ -2516,8 +2475,7 @@ Products:
   product_id: flipflop2
   quantity: "50"
   featured_image: dsc00082_1.jpg
-  images: |
-    - dsc00083_1.jpg
+  images: '- dsc00083_1.jpg'
 - 
   name: Castle charm
   text: |
@@ -2537,8 +2495,7 @@ Products:
   product_id: castle
   quantity: "50"
   featured_image: dsc00085_1.jpg
-  images: |
-    - dsc00086_1.jpg
+  images: '- dsc00086_1.jpg'
 - 
   name: Stethoscope charm
   text: |
@@ -2558,8 +2515,7 @@ Products:
   product_id: stethescope
   quantity: "50"
   featured_image: dsc00087_1.jpg
-  images: |
-    - dsc00088_1.jpg
+  images: '- dsc00088_1.jpg'
 - 
   name: Rx charm, pharmacist charm
   text: |
@@ -2579,8 +2535,7 @@ Products:
   product_id: Rx
   quantity: "60"
   featured_image: dsc00089_1.jpg
-  images: |
-    - dsc00090_1.jpg
+  images: '- dsc00090_1.jpg'
 - 
   name: Lips charm
   text: |
@@ -2600,8 +2555,7 @@ Products:
   product_id: lips
   quantity: "50"
   featured_image: dsc00091_1.jpg
-  images: |
-    - dsc00092_1.jpg
+  images: '- dsc00092_1.jpg'
 - 
   name: Ruler charm
   text: |
@@ -2661,8 +2615,7 @@ Products:
   product_id: palmtree
   quantity: "50"
   featured_image: dsc00096_1.jpg
-  images: |
-    - dsc00097_1.jpg
+  images: '- dsc00097_1.jpg'
 - 
   name: High heel charm
   text: |
@@ -2682,8 +2635,7 @@ Products:
   product_id: highheel
   quantity: "60"
   featured_image: dsc00098_1.jpg
-  images: |
-    - dsc00099_1.jpg
+  images: '- dsc00099_1.jpg'
 - 
   name: Bullet charm, Reborn charm
   text: |
@@ -2703,8 +2655,7 @@ Products:
   product_id: bullet
   quantity: "50"
   featured_image: dsc00100_1.jpg
-  images: |
-    - dsc00101_1.jpg
+  images: '- dsc00101_1.jpg'
 - 
   name: Bullet charm, Reborn charm
   text: |
@@ -2724,8 +2675,7 @@ Products:
   product_id: bullet2
   quantity: "50"
   featured_image: dsc00102_1.jpg
-  images: |
-    - dsc00103_1.jpg
+  images: '- dsc00103_1.jpg'
 - 
   name: Wrestler mask, mask charm
   text: |
@@ -2745,8 +2695,7 @@ Products:
   product_id: mask
   quantity: "50"
   featured_image: dsc00104_1.jpg
-  images: |
-    - dsc00105_1.jpg
+  images: '- dsc00105_1.jpg'
 - 
   name: skull charm
   text: |
@@ -2788,8 +2737,7 @@ Products:
   product_id: sandal
   quantity: "60"
   featured_image: dsc00108_20180704131957930.jpg
-  images: |
-    - dsc00109.jpg
+  images: '- dsc00109.jpg'
 - 
   name: Dog person charm
   text: |
@@ -2809,8 +2757,7 @@ Products:
   product_id: dogperson
   quantity: "50"
   featured_image: dsc00110_1.jpg
-  images: |
-    - dsc00111_1.jpg
+  images: '- dsc00111_1.jpg'
 - 
   name: Number 25 charm
   text: |
@@ -2874,8 +2821,7 @@ Products:
   product_id: granddaughter
   quantity: "50"
   featured_image: dsc00118.jpg
-  images: |
-    - dsc00120.jpg
+  images: '- dsc00120.jpg'
 - 
   name: Colorful camera charm
   text: |
@@ -2917,8 +2863,7 @@ Products:
   product_id: camera3
   quantity: "50"
   featured_image: dsc00125.jpg
-  images: |
-    - dsc00126.jpg
+  images: '- dsc00126.jpg'
 - 
   name: Sun charm, bling charm
   text: |
@@ -2938,8 +2883,7 @@ Products:
   product_id: sun
   quantity: "50"
   featured_image: dsc00129.jpg
-  images: |
-    - dsc00131.jpg
+  images: '- dsc00131.jpg'
 - 
   name: Jester charm
   text: |
@@ -2982,8 +2926,7 @@ Products:
   product_id: acorn
   quantity: "50"
   featured_image: dsc00138.jpg
-  images: |
-    - dsc00139.jpg
+  images: '- dsc00139.jpg'
 - 
   name: Number 18 charms
   text: |
@@ -3003,8 +2946,7 @@ Products:
   product_id: "18"
   quantity: "50"
   featured_image: dsc00140.jpg
-  images: |
-    - dsc00141.jpg
+  images: '- dsc00141.jpg'
 - 
   name: Happy Birthday charm
   text: |
@@ -3024,8 +2966,7 @@ Products:
   product_id: happy birthday
   quantity: "50"
   featured_image: dsc00144.jpg
-  images: |
-    - dsc00145.jpg
+  images: '- dsc00145.jpg'
 - 
   name: Colorful camera charm
   text: |
@@ -3085,8 +3026,7 @@ Products:
   product_id: pearl crown
   quantity: "50"
   featured_image: dsc00152.jpg
-  images: |
-    - dsc00153.jpg
+  images: '- dsc00153.jpg'
 - 
   name: Crown charm
   text: |
@@ -3268,8 +3208,7 @@ Products:
   product_id: crown4
   quantity: "50"
   featured_image: dsc00173.jpg
-  images: |
-    - dsc00175.jpg
+  images: '- dsc00175.jpg'
 - 
   name: Crown charms
   text: |
@@ -3289,8 +3228,7 @@ Products:
   product_id: crown5
   quantity: "50"
   featured_image: dsc00176.jpg
-  images: |
-    - dsc00178.jpg
+  images: '- dsc00178.jpg'
 - 
   name: Number 13 charms
   text: |
@@ -3310,8 +3248,7 @@ Products:
   product_id: number13s
   quantity: "60"
   featured_image: dsc00179.jpg
-  images: |
-    - dsc00181.jpg
+  images: '- dsc00181.jpg'
 - 
   name: Number 13 charm
   text: |
@@ -3331,8 +3268,7 @@ Products:
   product_id: "13"
   quantity: "50"
   featured_image: dsc00182.jpg
-  images: |
-    - dsc00183.jpg
+  images: '- dsc00183.jpg'
 - 
   name: Sweet 16 charm
   text: |
@@ -3352,8 +3288,7 @@ Products:
   product_id: sweet16
   quantity: "50"
   featured_image: dsc00184.jpg
-  images: |
-    - dsc00186.jpg
+  images: '- dsc00186.jpg'
 - 
   name: Grenade charm
   text: |
@@ -3413,8 +3348,7 @@ Products:
   product_id: pineapple1
   quantity: "100"
   featured_image: dsc00349.jpg
-  images: |
-    - dsc00348.jpg
+  images: '- dsc00348.jpg'
 - 
   name: Cupcake charm, cupcake, food charm
   text: |
@@ -3456,8 +3390,7 @@ Products:
   product_id: lollipop
   quantity: "50"
   featured_image: dsc00354.jpg
-  images: |
-    - dsc00355.jpg
+  images: '- dsc00355.jpg'
 - 
   name: >
     Candy charm, taffy charm, candy, food
@@ -3501,8 +3434,7 @@ Products:
   product_id: spoon
   quantity: "50"
   featured_image: dsc00358.jpg
-  images: |
-    - dsc00359.jpg
+  images: '- dsc00359.jpg'
 - 
   name: >
     Baby Spoon charm, baby spoon, utensil
@@ -3524,8 +3456,7 @@ Products:
   product_id: baby spoon
   quantity: "50"
   featured_image: dsc00360.jpg
-  images: |
-    - dsc00361.jpg
+  images: '- dsc00361.jpg'
 - 
   name: >
     Wine Glass charm, wine charm, glass
@@ -3547,8 +3478,7 @@ Products:
   product_id: wineglass
   quantity: "50"
   featured_image: dsc00362.jpg
-  images: |
-    - dsc00363.jpg
+  images: '- dsc00363.jpg'
 - 
   name: Cup charm, glass charm, cheers
   text: |
@@ -3590,8 +3520,7 @@ Products:
   product_id: watermelon
   quantity: "50"
   featured_image: dsc00366.jpg
-  images: |
-    - dsc00365.jpg
+  images: '- dsc00365.jpg'
 - 
   name: Lollipop charm, lollipop, sucker charm
   text: |
@@ -3611,8 +3540,7 @@ Products:
   product_id: lollipop2
   quantity: "50"
   featured_image: dsc00369.jpg
-  images: |
-    - dsc00370.jpg
+  images: '- dsc00370.jpg'
 - 
   name: >
     Utensil charm, utensils, fork, knife,
@@ -3634,8 +3562,7 @@ Products:
   product_id: utensil
   quantity: "25"
   featured_image: dsc00371.jpg
-  images: |
-    - dsc00372.jpg
+  images: '- dsc00372.jpg'
 - 
   name: >
     Cup cake char, cupcake charm, cupcakes,
@@ -3657,8 +3584,7 @@ Products:
   product_id: cupcake 2
   quantity: "50"
   featured_image: dsc00374.jpg
-  images: |
-    - dsc00373.jpg
+  images: '- dsc00373.jpg'
 - 
   name: >
     Ice Cream Cone charm, Ice cream charm,
@@ -3704,8 +3630,7 @@ Products:
   product_id: pineapple2
   quantity: "50"
   featured_image: dsc00382.jpg
-  images: |
-    - dsc00383.jpg
+  images: '- dsc00383.jpg'
 - 
   name: >
     Cute Pineapple charm, pineapple charm,
@@ -3727,8 +3652,7 @@ Products:
   product_id: pineapple3
   quantity: "50"
   featured_image: dsc00386.jpg
-  images: |
-    - dsc00387.jpg
+  images: '- dsc00387.jpg'
 - 
   name: >
     Coffe cup charm, coffee charm, coffee
@@ -3750,8 +3674,7 @@ Products:
   product_id: coffee cup
   quantity: "50"
   featured_image: dsc00388.jpg
-  images: |
-    - dsc00389.jpg
+  images: '- dsc00389.jpg'
 - 
   name: Cupcake charm, cupcake, muffin charm
   text: |
@@ -3793,8 +3716,7 @@ Products:
   product_id: teapot
   quantity: "50"
   featured_image: dsc00401.jpg
-  images: |
-    - dsc00400.jpg
+  images: '- dsc00400.jpg'
 - 
   name: Cupcake charm, cup cake charm, cup cake
   text: |
@@ -3814,8 +3736,7 @@ Products:
   product_id: cup cake 5
   quantity: "50"
   featured_image: dsc00405.jpg
-  images: |
-    - dsc00406.jpg
+  images: '- dsc00406.jpg'
 - 
   name: Luck charm, good luck, good luck charm
   text: |
@@ -3851,12 +3772,11 @@ Products:
     
     *Due to the small size of this item it is not intended for small children.
   price: "0.50"
-  category: Message
+  category: Animal
   product_id: cats
   quantity: "50"
   featured_image: dsc00486.jpg
-  images: |
-    - dsc00487.jpg
+  images: dsc00487.jpg
 - 
   name: Baby feet charm, heart charm, feet charm
   text: |
@@ -3876,8 +3796,7 @@ Products:
   product_id: baby feet
   quantity: "50"
   featured_image: dsc00488.jpg
-  images: |
-    - dsc00489.jpg
+  images: '- dsc00489.jpg'
 - 
   name: Feet charm, feet, cute feet charm
   text: |
@@ -3897,8 +3816,7 @@ Products:
   product_id: feet
   quantity: "50"
   featured_image: dsc00493.jpg
-  images: |
-    - dsc00492.jpg
+  images: '- dsc00492.jpg'
 - 
   name: Bronze hook charm, hook charm, hook
   text: |
@@ -3980,8 +3898,7 @@ Products:
   product_id: baby feet2
   quantity: "50"
   featured_image: dsc00501.jpg
-  images: |
-    - dsc00502.jpg
+  images: '- dsc00502.jpg'
 - 
   name: >
     Gun charm, pistol charm, gun charms,
@@ -4003,8 +3920,7 @@ Products:
   product_id: guncharm
   quantity: "50"
   featured_image: dsc00503.jpg
-  images: |
-    - dsc00504.jpg
+  images: '- dsc00504.jpg'
 - 
   name: >
     Cake charm, wedding cake charm, birthday
@@ -4026,8 +3942,7 @@ Products:
   product_id: cake1
   quantity: "50"
   featured_image: dsc00505.jpg
-  images: |
-    - dsc00506.jpg
+  images: '- dsc00506.jpg'
 - 
   name: >
     Happy Birthday cake charm, happy
@@ -4049,8 +3964,7 @@ Products:
   product_id: cake2
   quantity: "25"
   featured_image: dsc00508.jpg
-  images: |
-    - dsc00507.jpg
+  images: '- dsc00507.jpg'
 - 
   name: Star charm, bronze star, star
   text: |
@@ -4070,8 +3984,7 @@ Products:
   product_id: star1
   quantity: "50"
   featured_image: dsc00509.jpg
-  images: |
-    - dsc00510.jpg
+  images: '- dsc00510.jpg'
 - 
   name: Star charm, star
   text: |
@@ -4109,12 +4022,11 @@ Products:
     
     *Due to the small size of this item it is not intended for small children.
   price: "0.50"
-  category: Message
+  category: Animal
   product_id: bluebutterfly
   quantity: "50"
   featured_image: dsc00514.jpg
-  images: |
-    - dsc00513.jpg
+  images: dsc00513.jpg
 - 
   name: Hook charm, hook me charm, hook
   text: |
@@ -4134,8 +4046,7 @@ Products:
   product_id: hookme
   quantity: "50"
   featured_image: dsc00515.jpg
-  images: |
-    - dsc00516.jpg
+  images: '- dsc00516.jpg'
 - 
   name: >
     Cancer ribbon charm, cancer charm,
@@ -4157,8 +4068,7 @@ Products:
   product_id: cancerribbon
   quantity: "50"
   featured_image: dsc00518.jpg
-  images: |
-    - dsc00517.jpg
+  images: '- dsc00517.jpg'
 - 
   name: Flower charm, flower, nature charm
   text: |
@@ -4174,12 +4084,11 @@ Products:
     
     *Due to the small size of this item it is not intended for small children.
   price: "0.50"
-  category: Message
+  category: Flower
   product_id: flower1
   quantity: "50"
   featured_image: dsc00551.jpg
-  images: |
-    - dsc00552.jpg
+  images: dsc00552.jpg
 - 
   name: >
     Fairy charm, fairy on a moon charm, moon
@@ -4201,8 +4110,7 @@ Products:
   product_id: fairy1
   quantity: "50"
   featured_image: dsc00523.jpg
-  images: |
-    - dsc00524.jpg
+  images: '- dsc00524.jpg'
 - 
   name: Moon charm, moon, cute moon charm
   text: |
@@ -4242,8 +4150,7 @@ Products:
   product_id: sun1
   quantity: "50"
   featured_image: dsc00533.jpg
-  images: |
-    - dsc00532.jpg
+  images: '- dsc00532.jpg'
 - 
   name: >
     Just Married charm, just married car,
@@ -4265,8 +4172,7 @@ Products:
   product_id: justmarried
   quantity: "50"
   featured_image: dsc00534.jpg
-  images: |
-    - dsc00535.jpg
+  images: '- dsc00535.jpg'
 - 
   name: Bracelet 1
   text: ""
@@ -4327,13 +4233,224 @@ Products:
     Stainless Steel Cubic Zirconium Flower
     charm.
   price: "5"
-  category: Message
+  category: Flower
   product_id: CZ flower
   quantity: "25"
   featured_image: 8647.jpg
   images: |
     - 8647_20180903185310524.jpg
     - dsc006831.jpg
+- 
+  name: Flower Charm
+  text: Tree Charm
+  price: "1.00"
+  category: Flower
+  product_id: flower
+  quantity: "20"
+  featured_image: 8647.jpg
+  images: |
+    - 8647.jpg
+    - 8647_20180903185310524.jpg
+- 
+  name: Flower Charm
+  text: Flower charm
+  price: "1"
+  category: Flower
+  product_id: flower2
+  quantity: "50"
+  featured_image: dsc09829.jpg
+  images: dsc09829.jpg
+- 
+  name: Flower Charm
+  text: FLower Charm
+  price: "1"
+  category: Flower
+  product_id: flower3
+  quantity: "20"
+  featured_image: img_20180903_184341864.jpg
+  images: img_20180903_184341864.jpg
+- 
+  name: Flower Charm
+  text: Flower Charm
+  price: "1"
+  category: Flower
+  product_id: flower4
+  quantity: "20"
+  featured_image: dsc09993_1j.jpg
+  images: dsc09993_1j.jpg
+- 
+  name: Flower Charm
+  text: Flower Charms
+  price: "1"
+  category: Flower
+  product_id: flower5
+  quantity: "20"
+  featured_image: dsc09823.jpg
+  images: dsc09823.jpg
+- 
+  name: Flower charm
+  text: Flower Charm
+  price: "1"
+  category: Flower
+  product_id: flower6
+  quantity: "20"
+  featured_image: dsc09821.jpg
+  images: dsc09821.jpg
+- 
+  name: Flower Charm
+  text: Flower CHarm
+  price: "1"
+  category: Flower
+  product_id: flower7
+  quantity: "20"
+  featured_image: dsc09800.jpg
+  images: dsc09800.jpg
+- 
+  name: Bracelet
+  text: charm bracelet
+  price: "5"
+  category: Bracelet
+  product_id: charmbracelet
+  quantity: "20"
+  featured_image: 1.png
+  images: 1.png
+- 
+  name: Bracelet
+  text: Bracelet
+  price: "3"
+  category: Bracelet
+  product_id: bracelet1
+  quantity: "20"
+  featured_image: 1.png
+  images: ""
+- 
+  name: Bracelet
+  text: Bracelet
+  price: "2"
+  category: Bracelet
+  product_id: bracelet3
+  quantity: "20"
+  featured_image: 4.png
+  images: 4.png
+- 
+  name: Bracelet
+  text: Bracelet
+  price: "2"
+  category: Bracelet
+  product_id: bracelets
+  quantity: "10"
+  featured_image: 2.png
+  images: ""
+- 
+  name: "Don't stop trying charm"
+  text: You only fail when you stop trying charm
+  price: "2.5"
+  category: Message
+  product_id: fail
+  quantity: "20"
+  featured_image: >
+    dsc01554_20190224155433042_20190226005447528.jpg
+  images: >
+    dsc01554_20190224155433042_20190226005447528.jpg
+- 
+  name: "Don't be afraid to dream charm"
+  text: "Don't be afraid to Dream"
+  price: "2.50"
+  category: Message
+  product_id: dream
+  quantity: "10"
+  featured_image: >
+    dsc01582_20190221195338767_20190226003128861_20190226003245541_20190226003451697.jpg
+  images: >
+    dsc01582_20190221195338767_20190226003128861_20190226003245541_20190226003451697.jpg
+- 
+  name: Addicted to the Beach charm
+  text: Addicted to the Beach charm
+  price: "2.50"
+  category: Message
+  product_id: beach addict
+  quantity: "6"
+  featured_image: dsc01592_20190221191905470.jpg
+  images: dsc01592_20190221191905470.jpg
+- 
+  name: Autism charm
+  text: Autism charm
+  price: "2.50"
+  category: Message
+  product_id: autism
+  quantity: "20"
+  featured_image: >
+    dsc01592_20190221191905470_20190224221813657.jpg
+  images: >
+    dsc01592_20190221191905470_20190224221813657.jpg
+- 
+  name: Autism charm
+  text: Autism charm
+  price: "2.50"
+  category: Message
+  product_id: autism1
+  quantity: "20"
+  featured_image: >
+    dsc01592_20190221191905470_20190224222010757.jpg
+  images: >
+    dsc01592_20190221191905470_20190224222010757.jpg
+- 
+  name: "Autism doesn't come with a manual"
+  text: Autism charm
+  price: "2.50"
+  category: Message
+  product_id: autism manual
+  quantity: "20"
+  featured_image: >
+    dsc01592_20190221191905470_20190224222102184.jpg
+  images: >
+    dsc01592_20190221191905470_20190224222102184.jpg
+- 
+  name: Autism charm
+  text: Autism charm
+  price: "2.50"
+  category: Message
+  product_id: autism3
+  quantity: "20"
+  featured_image: >
+    dsc01592_20190221191905470_20190224222310167.jpg
+  images: >
+    dsc01592_20190221191905470_20190224222310167.jpg
+- 
+  name: Autism charm
+  text: |
+    Autism charm
+    Seeing the world differently.
+  price: "2.50"
+  category: Message
+  product_id: autism upsidedown
+  quantity: "20"
+  featured_image: >
+    dsc01592_20190221191905470_20190224222401551.jpg
+  images: >
+    dsc01592_20190221191905470_20190224222401551.jpg
+- 
+  name: Autism moon charm
+  text: Autism moon charm
+  price: "2.50"
+  category: Message
+  product_id: autism moon
+  quantity: "20"
+  featured_image: >
+    dsc01592_20190221191905470_20190224222534296.jpg
+  images: >
+    dsc01592_20190221191905470_20190224222534296.jpg
+- 
+  name: Autism hand charm
+  text: Autism hand charm
+  price: "2.50"
+  category: Message
+  product_id: autism hand
+  quantity: "20"
+  featured_image: >
+    dsc01592_20190221191905470_20190224222612316.jpg
+  images: >
+    dsc01592_20190221191905470_20190224222612316.jpg
 
 ----
 
