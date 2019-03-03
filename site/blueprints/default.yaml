@@ -13,4 +13,3 @@ fields:
       image:
         label: Image
         type: image
-        required: true

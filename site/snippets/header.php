@@ -27,6 +27,13 @@
 
 	<body id="<?= $product ?? $page->slug().r($page->isThankYou(), '-success') ?>" class="<?= isset($product) ? 'product' : $page->template() ?>">
 
+		<mobile-popup style="display: none">
+			<div class="container">
+				<img src="<?= url('assets/images/babble-charms-logo.png') ?>" alt="Babble Charms Logo">
+				We are currently working on a better mobile experience for our customers. In the meantime, you can view this site on desktop.
+			</div>
+		</mobile-popup>
+
 		<header>
 			<div id="topbar">
 				<div class="container">

@@ -15,7 +15,7 @@ We at Charms for Etsy sell quality charms at wholesale prices, we have hundreds 
 
 ----
 
-Background: 
+Background: default-hero.png
 
 ----
 
@@ -28,7 +28,7 @@ Sections:
     We have been buying charms and selling stamped custom products on Amazon and Etsy, we decided to jump in with both feet and sell charms wholesale. All kinds of charms, you name it we have it! Feel free to ask and we will point you in the right direction.
     
     Charms have been always a special way to say how much you care. It is the most precious and priceless way to show your love. We understand the bond you share with your loved ones and we are happy to help in making this bond more Charmful! We are a company which specializes in selling all kinds of charms; you name it and we have it. We make sure no genre or age group is left behind, we are here to charm you all.
-  image: default-hero.png
+  image: about-1.png
 - 
   text: |
     We sell innovative babble charms that will suit your wit and emotions. We have babble charms in all kinds of material- we sell a variety of metal and stainless steel charms, see sell animals to hearts to travel charms. You name it we have it!
@@ -38,4 +38,4 @@ Sections:
     If you are more of a person who can be described by a word then not to worry, We sell a line of word charms as well. Get any charm customized at our website. We sell personalized mom charms to anything that meets your fancy. We don’t stop there,  we plan to have the most comprehensive variety of charms out there!
     
     We even sell custom engraved charms; now add your voice to your charms! Add a friendship engraved charm to your best friend’s bracelet or add a love charm celebrating your endless love to your spouse. Get your child’s name engraved to be added to your custom charm bracelet to keep them close to your heart.
-  image: default-hero.png
+  image: about-2.png

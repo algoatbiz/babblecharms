@@ -552,7 +552,58 @@ input[type=checkbox] {
 =           Default           =
 =============================*/
 
-body.default main section {
+body.default main section:not(.half) {
+	padding: 3rem 0;
+
+	h2, h3 {
+		font-weight: $light;
+		font-family: $oswald;
+		text-transform: uppercase;
+	}
+	h2 {
+		color: $blue;
+		font-size: $title;
+
+		&:not(:last-child) {
+			margin-bottom: .75rem;
+		}
+	}
+	h3 {
+		font-size: $big;
+
+		&:not(:last-child) {
+			margin-bottom: .25rem;
+		}
+	}
+	ul, ol, p:not(:last-child) {
+		margin-bottom: 1.5rem;
+	}
+	ul li {
+		position: relative;
+		padding-left: .75rem;
+
+		&:before {
+			content: '';
+			left: 0;
+			top: 8px;
+			width: 4px;
+			height: 4px;
+			background: $blue;
+			border-radius: 50%;
+			position: absolute;
+		}
+	}
+	a {
+		color: $blue;
+		text-decoration: underline;
+
+		&:hover {
+			color: $orange;
+		}
+	}
+}
+
+body.default main section.half {
 	position: relative;
 
 	&:nth-of-type(odd) > div {
@@ -596,7 +647,6 @@ body.default main section {
 			width: 50%;
 			height: 100%;
 			position: absolute;
-			background-attachment: fixed;
 		}
 	}
 }
@@ -941,5 +991,38 @@ body#login {
 		display: block;
 		margin-top: 2.5rem;
 		@include max-width(15.625rem);
+	}
+}
+
+/*=============================
+=        Mobile Message       =
+=============================*/
+
+body.desktop mobile-popup {
+	display: none;
+}
+
+body.mobile {
+	overflow: hidden;
+
+	header, main, #footer-contact, footer, #popup-signup {
+		display: none !important;
+	}
+	mobile-popup {
+		display: block !important;
+	}
+}
+
+mobile-popup {
+	top: 0;
+	left: 0;
+	z-index: 3;
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+
+	img {
+		display: block;
+		margin: 3rem auto 2rem;
 	}
 }

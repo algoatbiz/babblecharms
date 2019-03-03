@@ -6,7 +6,7 @@ Text: Thank you for shopping with Babble charms!!
 
 ----
 
-Background: 
+Background: babble-inner-banner-peach.jpg
 
 ----
 

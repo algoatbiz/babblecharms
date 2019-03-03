@@ -31,8 +31,11 @@ class DefaultPage extends Page {
 	public function buildSections() {
 		$content = '';
 
-		foreach($this->sections()->toStructure() as $section)
-			$content.= brick('section', brick('div', brick('div', $section->text()->kt()), ['class'=>'container']).brick('div', '', ['style'=>'background-image: url('.$this->image($section->image())->url().')']));
+		foreach($this->sections()->toStructure() as $section) {
+			$bg = $section->image();
+			$bg = $bg->isNotEmpty() ? brick('div', '', ['style'=>'background-image: url('.$this->image($bg)->url().')']) : '';
+			$content.= brick('section', brick('div', brick('div', $section->text()->kt()), ['class'=>'container']).$bg, ['class'=>r($bg, 'half')]);
+		}
 
 		return $content;
 	}

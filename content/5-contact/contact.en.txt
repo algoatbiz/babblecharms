@@ -9,8 +9,8 @@ Title: Contact Us
 Text: 
 
 # Contact Us
-Have Questions? Please contact us. babblecharms1@gmail.com
+Have Questions? Please contact us. babblecharms@gmail.com
 
 ----
 
-Background: cta.png
+Background: babble-inner-banner-peach.jpg

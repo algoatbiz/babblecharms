@@ -22,4 +22,4 @@ we have hundreds of charms to choose from.
 
 ----
 
-Signup-bg: 
+Signup-bg: default-hero.png
