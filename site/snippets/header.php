@@ -1,4 +1,3 @@
-<?php c::get('live') ? redirect::to('/coming-soon') : '' ?>
 <!doctype html>
 <html lang="en">
 	<head>
