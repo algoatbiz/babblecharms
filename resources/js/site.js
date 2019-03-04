@@ -198,14 +198,8 @@ if(forms.length > 0) {
 				if(form.id == 'checkout-process')
 					window.location.href = r.data.checkoutUrl;
 
-				if(form.id == 'signup-form') {
-					setTimeout(function() {
-						window.location.reload();
-					}, 300);
-				}
-
-				if(form.id == 'login-form')
-					window.location.href = '/';
+				if(form.id == 'login-form' || form.id == 'signup-form')
+					window.location.href = '/account';
 
 		 		form.reset();
 
@@ -544,4 +538,44 @@ function togglePopup(e) {
 		options = {duration: 250, display: (style.display==='none' ? 'block' : 'none')};
 			
 	Velocity(signup_popup, {opacity: (style.display==='none' ? [1,0] : [0,1])}, options);
+}
+
+/*=============================
+=         Edit Account        =
+=============================*/
+
+var accountForm = document.getElementById('edit-account');
+
+if(accountForm) {
+	var fields = fields = accountForm.querySelectorAll('#edit-account input'),
+		msgContainer = accountForm.querySelector('#form-message');
+
+	for(var i=0; i<fields.length; i++) {
+		fields[i].addEventListener('focusout', function() {
+			var data = {},
+				row = this.parentNode;
+
+			data[this.name] = this.value;
+
+			ax.post('edit-account-process', formDataAjax(data))
+			.then(function(r) {
+				clearErrors(accountForm);
+
+				msgContainer.innerHTML = r.data.message;
+		 		msgContainer.className = 'success';
+
+				row.className += ' saved';
+
+				setTimeout(function() {
+					row.classList.remove('saved');
+				}, 3000);
+			})
+			.catch(function(e) {
+			 	setErrors(accountForm, e.response.data);
+
+		 		msgContainer.innerHTML = e.response.data.message;
+		 		msgContainer.className = 'error';
+			});
+		});
+	}
 }

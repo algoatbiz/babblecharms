@@ -61,16 +61,28 @@ main {
 		text-transform: uppercase;
 		border-bottom: 1px solid $border2;
 
-		&:not(:first-child) {
+		&:not(:nth-child(2)) {
 			margin-top: 2rem;
 		}
 	}
+	#form-message.error {
+		margin-bottom: 1rem;
+	}
 	.row {
+		position: relative;
 		padding-right: 12.5%;
 		@include flex(flex, flex-end);
 
 		&:not(:last-child) {
 			margin-bottom: .75rem;
+		}
+		&:after {
+			@include fa('\f00c');
+			opacity: 0;
+			right: 4.75%;
+			color: $green;
+			position: absolute;
+			transition: all .3s;
 		}
 		label {
 			width: 18%;
@@ -86,6 +98,9 @@ main {
 			border-radius: 0;
 			font-size: .875rem;
 			border-bottom: 1px solid rgba($border2, 0.302);
+		}
+		&.saved:after {
+			opacity: 1;
 		}
 	}
 }

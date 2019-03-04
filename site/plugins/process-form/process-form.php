@@ -10,8 +10,6 @@ class ProcessForm {
 
         $this->options = $options;
 
-        $this->db_id = 0;
-
         $this->errorFields = $this->missing($this->data, array_values(a::get($options, 'required', [])));
 
         $this->errorMessages = '';
@@ -56,41 +54,11 @@ class ProcessForm {
 
     protected function validateUserData() {
 
-        $errors = [];
-        $password = $this->data['password'];
+        $validate = validateUserData($this->data);
 
-        $messages = [];
+        $this->errorFields = array_unique(array_merge($this->errorFields, $validate['errors']));
 
-        if(!v::minLength($password, 8)) {
-            $errors[] = 'password';
-            $messages[] = 'Password must be at least 8 characters';
-        }
-
-        if(!v::match($password, '@[A-Z]@') || !v::match($password, '@[a-z]@') || !v::match($password, '@[0-9]@')) {
-            $errors[] = 'password';
-            $messages[] = 'Password must contain at least 1 number, uppercase and lowercase letters';
-        }
-
-        if(v::different($password, $this->data['confirm_password'])) {
-            $errors[] = 'confirm_password';
-            $messages[] = 'Passwords do not match';
-        }
-
-        if($this->data['accept_pp'] == 'No') {
-            $errors[] = 'accept_pp';
-            $messages[] = 'Please read and accept our Privacy Policy';
-        }
-
-        if(db::select('users', 'email', ['email'=>$this->data['email']])->first()) {
-            $errors[] = 'email';
-            $messages[] = 'This email already exists';
-        }
-
-        $this->errorFields = array_unique(array_merge($this->errorFields, $errors));
-
-        $i = 0;
-        foreach($messages as $m)
-            $this->errorMessages.= r($i++, '<br>').$m;
+        $this->errorMessages = $validate['errorMessages'];
 
     }
 
@@ -128,8 +96,6 @@ class ProcessForm {
             if(!$id = db::insert('form_log', $formData))
                 throw new Exception(database::lastError());
 
-            $this->db_id = $id;
-
         } catch (Exception $e) {
 
             exit(var_dump($e));
@@ -157,6 +123,8 @@ class ProcessForm {
 
 		if(!$id = db::insert(a::get($this->options, 'table', 'contact_data'), $insert_array))
 		    throw new Exception(database::lastError());
+
+        $this->db_id = $id;
 
 		return [
 			'success' => true,

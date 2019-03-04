@@ -1,5 +1,7 @@
 <?php
 
+use Carbon\Carbon;
+
 class AccountPage extends DefaultPage {
 
 	public $css = [
@@ -19,21 +21,22 @@ class AccountPage extends DefaultPage {
 		$user = db::select('users', '*', ['id'=>s::get('user_id')])->first();
 
 		$structure = [
-			'Personal Information' => ['name', 'email'],
-			'Contact Information' => ['address', 'address2', 'city', 'state', 'zip', 'phone'],
+			'Personal Information' => ['last', 'first', 'dob'],
+			'Contact Information' => ['address', 'address2', 'city', 'state', 'zip', 'email', 'phone'],
 			'Change Password' => ['password']
 		];
 
-		$content = '';
+		$content = brick('div', '', ['id'=>'form-message']);
 
 		foreach($structure as $title => $fields) {
 			$content.= brick('div', $title, ['class'=>'title']);
 
 			foreach($fields as $field) {
-				$label = $field == 'name' ? 'Name' : r($field == 'password', 'New ').str::ucfirst($field);
-				$value = $field == 'name' ? $user->first.' '.$user->last : r($field != 'password', $user->{$field});
+				$label = $field == 'dob' ? 'Date of Birth' : r($field == 'password', 'New ').str::ucfirst($field).r(in_array($field, ['last', 'first']), ' Name');
+				$value = r($field != 'password', $user->{$field});
+				$type = in_array($field, ['email', 'password']) ? $field : ($field == 'dob' ? 'date' : 'text');
 
-				$content.= brick('div', brick('label', $label).brick('input', '', ['type'=>r(in_array($field, ['email', 'password']), $field, 'text'), 'value'=>$value]), ['class'=>'row']);
+				$content.= brick('div', brick('label', $label).brick('input', '', ['type'=>$type, 'name'=>$field, 'id'=>$field, 'value'=>$value]), ['class'=>'row']);
 			}
 		}
 
@@ -41,12 +44,21 @@ class AccountPage extends DefaultPage {
 	}
 
 	public function previousOrders() {
-		$orders = site()->productsPage()->products()->toStructure()->limit(4)->pluck('product_id');
+		$orders = db::select('transactions', 'bag', ['user_id'=>s::get('user_id')], 'updated_at desc');
+
 		if($orders) {
+			$ids = [];
+			$i = 0;
+
+			foreach($orders as $order)
+				foreach(json_decode($order->bag(), true) as $id => $qty)
+					if($i++ < 5)
+						$ids[] = $id;
+
 			$previousOrders = '';
 
 			foreach(site()->productsPage()->products()->toStructure() as $p) {
-				foreach($orders as $id) {
+				foreach($ids as $id) {
 					if($p->product_id()->value() == $id) {
 						$productUrl = url('products/'.strtolower($p->category()).'/'.str::slug($p->name()));
 						$price = $p->price()->value();

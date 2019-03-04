@@ -46,3 +46,44 @@ function timestamp() {
 	return date('Y-m-d H:i:s');
 
 }
+
+function validateUserData($data) {
+
+	$errors = [];
+    $password = $data['password'] ?? false;
+
+    $messages = [];
+
+    if($password && !v::minLength($password, 8)) {
+        $errors[] = 'password';
+        $messages[] = 'Password must be at least 8 characters';
+    }
+
+    if($password && (!v::match($password, '@[A-Z]@') || !v::match($password, '@[a-z]@') || !v::match($password, '@[0-9]@'))) {
+        $errors[] = 'password';
+        $messages[] = 'Password must contain at least 1 number, uppercase and lowercase letters';
+    }
+
+    if($password && isset($data['confirm_password']) && v::different($password, $data['confirm_password'])) {
+        $errors[] = 'confirm_password';
+        $messages[] = 'Passwords do not match';
+    }
+
+    if(isset($data['accept_pp']) && $data['accept_pp'] == 'No') {
+        $errors[] = 'accept_pp';
+        $messages[] = 'Please read and accept our Privacy Policy';
+    }
+
+    if(isset($data['email']) && db::select('users', 'email', ['email'=>$data['email']])->first()) {
+        $errors[] = 'email';
+        $messages[] = 'This email already exists';
+    }
+
+    $i = 0;
+    $errorMessages = '';
+    foreach($messages as $m)
+        $errorMessages.= r($i++, '<br>').$m;
+
+    return compact('errors', 'errorMessages');
+
+}

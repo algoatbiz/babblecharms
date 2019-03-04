@@ -15,9 +15,11 @@ kirby()->routes([
 
 			$errors = $form->showErrors();
 
-			$message = $form->errorMessages() ?: 'Your account has been created!';
+			$message = count($errors) ? ($form->errorMessages() ?: '') : 'Your account has been created!';
 
-			if($id = $form->getDbId() && empty($errors))
+			$id = $form->getDbId();
+
+			if($id && empty($errors))
 				UserAccount::login($id);
 
 			return response::json(compact('message', 'errors'), (count($errors) ? 400 : 200));
@@ -53,6 +55,37 @@ kirby()->routes([
 				$errors['email'] = true;
 				$message = 'This email does not exist';
 			}
+
+			return response::json(compact('message', 'errors'), (count($errors) ? 400 : 200));
+
+		}
+	],
+	[
+		'pattern' => 'edit-account-process',
+		'method' => 'POST',
+		'action' => function() {
+
+			$required = ['last', 'first', 'dob', 'email'];
+
+			$errors = [];
+			$message = '';
+
+			$key = array_keys(r::get())[0];
+			$value = get($key);
+
+			if(in_array($key, $required) && $value == '')
+				$errors[$key] = true;
+			if(get('email') || get('password')) {
+				$validate = validateUserData(r::get());
+
+				if(count($validate['errors'])) {
+					$errors[$key] = true;
+					$message = $validate['errorMessages'];
+				}
+			}
+
+			if(empty($errors))
+				db::update('users', [$key=>r($key == 'password', Password::hash($value), $value), 'updated_at'=>timestamp()], ['id'=>s::get('user_id')]);
 
 			return response::json(compact('message', 'errors'), (count($errors) ? 400 : 200));
 
