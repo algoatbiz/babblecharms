@@ -16,6 +16,8 @@ kirby()->routes([
 
                 $bag = $_COOKIE['shopping-bag'];
 
+                $addons = addons();
+
                 $subtotal = [];
 
                 $line_items = [];
@@ -37,6 +39,42 @@ kirby()->routes([
 			                        'percentage' => (string)(c::get('sales_tax') * 100)
 				                ]]
                             ];
+
+                            if($birthstone = $addons[$id]['birthstone']) {
+                                $line_items[] = [
+                                    'name' => $p->name()->value().' Birthstone: '.$birthstone,
+                                    'quantity' => (string)$qty,
+                                    'base_price_money' => [
+                                        // multiply by 100 due to it being in cents
+                                        'amount' => intval(site()->birthstone_price()->value() * 100),
+                                        'currency' => 'USD'
+                                    ],
+                                    'taxes' => [[
+                                        'name' => 'Sales Tax',
+                                        'percentage' => (string)(c::get('sales_tax') * 100)
+                                    ]]
+                                ];
+
+                                $subtotal[] = site()->birthstone_price()->value() * $qty;
+                            }
+
+                            if($engraving = $addons[$id]['engraving']) {
+                                $line_items[] = [
+                                    'name' => $p->name()->value().' Engraving: '.$engraving,
+                                    'quantity' => (string)$qty,
+                                    'base_price_money' => [
+                                        // multiply by 100 due to it being in cents
+                                        'amount' => intval(site()->engraving_price()->value() * 100),
+                                        'currency' => 'USD'
+                                    ],
+                                    'taxes' => [[
+                                        'name' => 'Sales Tax',
+                                        'percentage' => (string)(c::get('sales_tax') * 100)
+                                    ]]
+                                ];
+
+                                $subtotal[] = site()->engraving_price()->value() * $qty;
+                            }
                         }
                     }
                 }
@@ -70,7 +108,7 @@ kirby()->routes([
 
             $checkoutUrl = $response->getCheckout()->getCheckoutPageUrl();
 
-            if(!$id = db::insert('transactions', ['checkout_id'=>$response->getCheckout()->getId(), 'bag'=>$bag, 'user_id'=>s::get('user_id'), 'total'=>getCartTotal(array_sum($subtotal))]))
+            if(!$id = db::insert('transactions', ['checkout_id'=>$response->getCheckout()->getId(), 'bag'=>$bag, 'addons'=>$_COOKIE['add-ons'], 'user_id'=>s::get('user_id'), 'total'=>getCartTotal(array_sum($subtotal)), 'status'=>'New']))
                 throw new Exception(database::lastError());
 
 			return response::json(compact('checkoutUrl'), 200);
@@ -85,6 +123,29 @@ kirby()->routes([
                 db::update('transactions', ['transaction_id'=>get('transactionId'), 'updated_at'=>timestamp()], ['checkout_id'=>$checkoutId]);
 
             return ['thank-you', []];
+
+        }
+    ],
+    [
+        'pattern' => 'add-bag-process',
+        'method' => 'POST',
+        'action' => function() {
+
+            foreach(site()->productsPage()->products()->toStructure() as $p)
+                if($p->product_id()->value() == get('product_id'))
+                    $subtotal = $p->price()->value();
+
+            $qty = get('qty');
+
+            if($qty) {
+                $birthstone = get('birthstone') ? site()->birthstone_price()->value() : 0;
+                $engraving = get('engraving') ? site()->engraving_price()->value() : 0;
+                $subtotal = ($subtotal + $birthstone + $engraving) * $qty;
+            }
+
+            $subtotal = '$'.priceFormat($subtotal);
+
+            return response::json(compact('subtotal'), 200);
 
         }
     ]

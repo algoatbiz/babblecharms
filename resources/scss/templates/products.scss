@@ -26,36 +26,26 @@ body.product {
 		}
 	}
 	.product-details {
-		margin: 1.75rem 0 4rem;
+		margin: 1.75rem 0;
 		@include flex(flex, flex-start);
+		@include flex-space;
 
-		> div:last-child {
-			width: 45.727%;
-		}
-		h2 {
-			font-size: 1.5rem;
-			margin-bottom: .5rem;
-			font-weight: $light;
-			font-family: $oswald;
-			text-transform: uppercase;
-		}
-		p {
-			line-height: 1.75;
-			font-weight: $light;
-
-			&:not(:last-child) {
-				margin-bottom: 1rem;
+		> div {
+			&:first-child {
+				width: 74.359%;
+				border: 1px solid $border2;
+				@include flex(flex, flex-start);
+			}
+			&:last-child {
+				width: 22.821%;
 			}
 		}
 		.photo-container {
 			@include bg;
-			width: 50%;
+			width: 69.24%;
 			position: relative;
-			max-width: 36.5rem;
-			padding-bottom: 45%;
-			margin-right: 4.273%;
-			border: 1px solid $border2;
-			// width: 584px;
+			padding-bottom: 45.392%;
+			// width: 601px;
 			// height: 398px;
 
 			> div {
@@ -75,17 +65,76 @@ body.product {
 				}
 			}
 		}
+		.add-ons {
+			width: 30.76%;
+			overflow-y: scroll;
+			padding-bottom: 1rem;
+			max-height: 24.625rem;
+			border-left: 1px solid $border2;
+			// width: 267px;
+
+			.label {
+				font-size: 1.5rem;
+				font-weight: $light;
+				font-family: $oswald;
+				padding: 1.25rem 1rem;
+				text-transform: uppercase;
+			}
+			.select-container:after {
+				right: 1rem;
+			}
+			select {
+				height: 3.5rem;
+				border-left: 0;
+				border-right: 0;
+				border-radius: 0;
+				border-width: 1px;
+				color: $body-color;
+				border-color: $border2;
+				padding: 0 2.5rem 0 1rem;
+				text-transform: uppercase;
+			}
+			.engraving-container {
+				height: 3.563rem;
+				overflow: hidden;
+				padding: 1.25rem 1rem;
+				border-bottom: 1px solid $border2;
+
+				&.open {
+					height: 100%;
+				}
+				.select-container {
+					font-weight: $normal;
+					margin-bottom: 1.25rem;
+					text-transform: uppercase;
+
+					&:after {
+						right: 0;
+					}
+				}
+				textarea {
+					border: 1px solid $border2;
+				}
+			}
+			p {
+				padding: 0 1rem;
+				margin-top: 1rem;
+				font-size: .875rem;
+				font-weight: $light;
+
+				&:before {
+					content: '* ';
+					color: $red;
+				}
+			}
+		}
 		.reviews-container {
-			@include flex;
-			@include flex-space;
-			margin-top: 1.5rem;
+			@include flex(flex, flex-end);
+			margin-bottom: 1rem;
 			padding: 1.5rem .75rem;
 			border-top: 1px solid $border;
 			border-bottom: 1px solid $border;
 
-			> div:first-child {
-				@include flex(flex, flex-end);
-			}
 			.ratings {
 				margin-left: .75rem;
 
@@ -98,28 +147,13 @@ body.product {
 				}
 			}
 		}
-		.price {
-			padding: 0 .75rem;
-			font-size: 2.25rem;
-			margin-top: 1.5rem;
-			font-family: $oswald;
-		}
-		.buy-container {
-			@include flex;
-			@include flex-space;
-			margin-top: 1.5rem;
+		> div:last-child {
+			.select-container {
+				margin-top: 2rem;
 
-			> * {
-				width: 47%;
-				max-width: 15.625rem;
-			}
-			.button {
-				height: 3rem;
-				text-align: center;
-				line-height: 3rem;
-			}
-			.select-container:after {
-				right: 1.25rem;
+				&:after {
+					right: 1.25rem;
+				}
 			}
 			select {
 				height: 3rem;
@@ -128,6 +162,43 @@ body.product {
 				font-family: $oswald;
 				border: 1px solid $black;
 				text-transform: uppercase;
+			}
+		}
+		.subtotal-label {
+			margin-top: 4.25rem;
+			font-weight: $semi-bold;
+			text-transform: uppercase;
+			text-decoration: underline;
+		}
+		.price {
+			font-size: 2.25rem;
+			font-family: $oswald;
+		}
+		button {
+			width: 100%;
+			height: 3rem;
+			display: block;
+			margin-top: 1rem;
+			line-height: 3rem;
+			text-align: center;
+		}
+	}
+	.product-description {
+		margin-bottom: 2.75rem;
+
+		h2 {
+			font-size: 1.5rem;
+			margin-bottom: .5rem;
+			font-weight: $light;
+			font-family: $oswald;
+			text-transform: uppercase;
+		}
+		p {
+			line-height: 1.75;
+			font-weight: $light;
+
+			&:not(:last-child) {
+				margin-bottom: 1rem;
 			}
 		}
 	}

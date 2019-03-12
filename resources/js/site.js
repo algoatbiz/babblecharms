@@ -284,9 +284,13 @@ if(search) {
 =============================*/
 
 var bagCookieName = 'shopping-bag',
+	addOnsCookieName = 'add-ons',
+	singleProductForm = document.querySelector('form.product-details'),
 	shoppingBag = document.querySelector('#shopping-bag span'),
 	addToBagButton = document.querySelectorAll('.add-bag:not(.added)'),
-	selectQty = document.querySelector('.buy-container .select-container select');
+	selectQty = document.querySelector('.product-details > div:last-child select'),
+	birthstone = document.getElementById('birthstone'),
+	engraving = document.getElementById('engraving');
 
 if(addToBagButton.length > 0) {
 	for(var i=0; i<addToBagButton.length; i++) {
@@ -294,6 +298,21 @@ if(addToBagButton.length > 0) {
 			e.preventDefault();
 
 			var isSingle = this.classList.contains('single');
+
+			if(singleProductForm) {
+				var data = {};
+				data.product_id = this.getAttribute('product-id');
+				data.qty = selectQty.value;
+				data.birthstone = birthstone.value;
+				data.engraving = engraving.value;
+
+				ax.post(singleProductForm.action, formDataAjax(data))
+				.then(function(r) {
+					document.getElementById('subtotal').innerHTML = r.data.subtotal;
+				})
+				.catch(function(e) {
+				});
+			}
 
 			updateCartCookie(this.getAttribute('product-id'), (isSingle ? this : false));
 
@@ -314,27 +333,33 @@ if(addToBagButton.length > 0) {
 }
 
 function updateCartCookie(id, el) {
-	var bag = getCookie(bagCookieName),
-		products = bag ? JSON.parse(bag) : {};
+	var products = getCookie(bagCookieName) ? JSON.parse(getCookie(bagCookieName)) : {},
+		addons = getCookie(addOnsCookieName) ? JSON.parse(getCookie(addOnsCookieName)) : {};
 
-	selectQty = el && selectQty && selectQty == el.nextSibling.querySelector('select') ? selectQty : false;
+	selectQty = el && selectQty && selectQty == el.parentNode.querySelector('select') ? selectQty : false;
 
-	if((el && el.classList.contains('remove')) || (selectQty && selectQty.value === ''))
+	if(products[id] && ((el && el.classList.contains('remove')) || (selectQty && selectQty.value === ''))) {
 		delete products[id];
+		delete addons[id];
+	}
 	else {
 		var currentQty = products[id] ? parseInt(products[id]) : 1,
-			qty = el ? (el.classList.contains('add') ? currentQty + 1 : (selectQty && selectQty.value ? selectQty.value : currentQty - 1)) : currentQty;
+			qty = el ? (el.classList.contains('add') ? currentQty + 1 : (selectQty && selectQty.value ? selectQty.value : (products[id] ? currentQty - 1 : 1))) : currentQty;
 
 		products[id] = qty;
+		addons[id] = {'birthstone': birthstone ? birthstone.value : '', 'engraving': engraving ? engraving.value : ''};
 	}
 
 	document.cookie = bagCookieName + '=' + JSON.stringify(products) + ';path=/';
+	document.cookie = addOnsCookieName + '=' + JSON.stringify(addons) + ';path=/';
 
 	return qty;
 }
 
-if(document.getElementById('thank-you-success'))
+if(document.getElementById('thank-you-success')) {
 	deleteCookie(bagCookieName);
+	deleteCookie(addOnsCookieName);
+}
 
 function deleteCookie(cname) {
 	document.cookie = cname + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
@@ -578,4 +603,12 @@ if(accountForm) {
 			});
 		});
 	}
+}
+
+var engravingContainer = document.querySelector('.engraving-container .select-container');
+
+if(engravingContainer) {
+	engravingContainer.addEventListener('click', function() {
+		this.parentNode.classList.toggle('open');
+	});
 }

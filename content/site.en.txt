@@ -12,8 +12,7 @@ Map-text: Get In Touch
 
 Address: 
 
-787 Cherry Ridge Court, Grantsville
-UT 84029, US
+Grantsville, UT 84029
 
 ----
 
@@ -93,3 +92,11 @@ Shipping-methods:
     Next Day (Within 1-2 Business Days)
     $15.00
   price: "15"
+
+----
+
+Birthstone-price: 1.25
+
+----
+
+Engraving-price: 1.25

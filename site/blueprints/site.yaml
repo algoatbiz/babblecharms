@@ -10,9 +10,27 @@ fields:
   background:
     label: Default Background
     type: image
+    width:  1/2
+    required: true
   notify_limit:
     label: Low Stock Count
     type: number
+    width:  1/2
+    required: true
+  birthstone_price:
+    label: Birthstone Price
+    type: number
+    step: .01
+    required: true
+    placeholder: e.g. 1.25
+    width: 1/2
+  engraving_price:
+    label: Engraving Price
+    type: number
+    step: .01
+    required: true
+    placeholder: e.g. 1.25
+    width: 1/2
   # shipping_methods:
   #   label: Shipping Methods
   #   type: structure
@@ -32,6 +50,7 @@ fields:
   #       type: number
   #       step: .01
   #       required: true
+
   tabForm:
     label: Form
     type:  tabs
@@ -39,18 +58,24 @@ fields:
   form_title:
     label: Form Title
     type: text
+    required: true
   map_text:
     label: Map Text
     type: text
+    required: true
   address:
     label: Address
     type: markdown
+    required: true
   phone:
     label: Phone Number
     type: Text
+    required: true
   office_hours:
     label: Office Hours
     type: markdown
+    required: true
+
   tabFooter:
     label: Footer
     type:  tabs
@@ -58,14 +83,17 @@ fields:
   copyright:
     label: Copyright
     type:  markdown
+    required: true
   social_title:
     label: Social Media Title
     type: Text
+    required: true
   social_media:
     label: Social Media Links
     type: structure
     modalsize: large
     style: table
+    required: true
     fields:
       social_title:
         label: Title
@@ -75,6 +103,7 @@ fields:
         label: Link
         type: url
         required: true
+
   tabComingSoon:
     label: Coming Soon
     type:  tabs

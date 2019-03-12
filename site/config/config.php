@@ -71,6 +71,21 @@ c::set('states', [
   'Outside of US'
 ]);
 
+c::set('birthstones', [
+  'Garnet (January)',
+  'Amethyst (February)',
+  'Aquamarine, Bloodstone (March)',
+  'Diamond (April)',
+  'Emerald (May)',
+  'Pearl, Alexandrite, Moonstone (June)',
+  'Ruby (July)',
+  'Peridot, Sardonyx, Spinel (August)',
+  'Sapphire (September)',
+  'Opal, Tourmaline (October)',
+  'Topaz, Citrine (November)',
+  'Tanzanite, Zircon, Turquoise (December)'
+]);
+
 c::set('shipping_fee', 3.99);
 
 c::set('sales_tax', .068);

@@ -36,6 +36,7 @@ class ProductsPage extends DefaultPage {
 		$products = site()->productsPage()->products()->toStructure();
 		$cart = cart();
 		$cartIds = array_keys($cart);
+		$addons = addons();
 
 		foreach($products as $p) {
 			if($productUri == str::slug($p->name())) {
@@ -50,19 +51,46 @@ class ProductsPage extends DefaultPage {
 						$images.= brick('img', false, ['src'=>$this->image($img)->url()]);
 				}
 
-				$reviews = brick('div', 'Review: '.site()->getRatings()).brick('a', 'Write a review');
+				$selected_birthstone = $addons[$id]['birthstone'] ?? '';
 
+				$birthstones = '<option value="">Birthstone</option>';
+				foreach(c::get('birthstones') as $b)
+					$birthstones.= brick('option', $b, ['selected'=>($selected_birthstone == $b)]);
+
+                $engraving_value = $addons[$id]['engraving'] ?? '';
+
+				$addons = brick('div', 'Add-Ons', ['class'=>'label']).
+						  brick('div', brick('select', $birthstones, ['id'=>'birthstone', 'name'=>'birthstone']), ['class'=>'select-container']).
+						  brick('div', brick('div', 'Engraving', ['class'=>'select-container']).brick('textarea', $engraving_value, ['id'=>'engraving', 'name'=>'engraving']), ['class'=>'engraving-container'.r($engraving_value, ' open')]).
+						  brick('p', 'Quantity of birthstones are equivalent to the quantity you select for this product.').
+						  brick('p', 'The engraving text you add will be applied to all the quantities you have selected for this product.');
+
+			  	$qty = $cart[$id] ?? 0;
 				$qtyOptions = '<option value="">Quantity</option>';
 				for($i=1; $i<=$p->quantity()->value(); $i++)
-					$qtyOptions.= brick('option', $i, ['value'=>$i, 'selected'=>(isset($cart[$id]) && $cart[$id] == $i)]);
+					$qtyOptions.= brick('option', $i, ['value'=>$i, 'selected'=>($qty == $i)]);
 
-				$content = brick('div', brick('div', $images), ['class'=>'photo-container', 'style'=>'background-image: url('.$featuredImage.')']).
-						   brick('div', brick('div', $p->text()->kt()).brick('div', $reviews, ['class'=>'reviews-container']).
-						   brick('div', '$'.$p->price(), ['class'=>'price']).
-						   brick('div', brick('a', r(in_array($id, $cartIds), 'Update', 'Add to').' bag', ['class'=>'button single add-bag'.r(in_array($id, $cartIds), ' update'), 'href'=>'#', 'product-id'=>$id]).brick('div', brick('select', $qtyOptions), ['class'=>'select-container']), ['class'=>'buy-container']));
+                $price = $p->price()->value();
+
+				if($qty) {
+	                $birthstone_price = $selected_birthstone ? site()->birthstone_price()->value() : 0;
+	                $engraving_price = $engraving_value ? site()->engraving_price()->value() : 0;
+
+					$price = ($price + $birthstone_price + $engraving_price) * $qty;
+				}
+
+				$content = brick('div',
+						   brick('div', brick('div', $images), ['class'=>'photo-container', 'style'=>'background-image: url('.$featuredImage.')']).
+						   brick('div', $addons, ['class'=>'add-ons'])).
+						   brick('div',
+						   brick('div', 'Review: '.site()->getRatings(), ['class'=>'reviews-container']).brick('a', 'Write a review').
+						   brick('div', brick('select', $qtyOptions), ['class'=>'select-container']).
+						   brick('div', 'Sub Total', ['class'=>'subtotal-label']).brick('div', '$'.priceFormat($price), ['id'=>'subtotal', 'class'=>'price']).
+						   brick('button', r(in_array($id, $cartIds), 'Update', 'Add to').' bag', ['class'=>'single add-bag'.r(in_array($id, $cartIds), ' update'), 'href'=>'#', 'product-id'=>$id]));
 			}
 		}
-		return $header.brick('div', $content, ['class'=>'product-details']);
+
+		return $header.brick('form', $content, ['action'=>'/add-bag-process', 'class'=>'product-details', 'method'=>'POST']).brick('div', brick('div', $p->text()->kt()), ['class'=>'product-description']);
 	}
 
 }

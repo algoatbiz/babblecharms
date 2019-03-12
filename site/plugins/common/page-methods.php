@@ -175,6 +175,8 @@ page::$methods['isThankYou'] = function($page) {
 
 page::$methods['getRatings'] = function($site) {
 
+	return '';
+
 	$rating = 4;
 	$stars = '';
 	for($i=0; $i<5; $i++)

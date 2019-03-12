@@ -29,6 +29,14 @@ function cart($id=false) {
 
 }
 
+function addons() {
+
+    $addons = $_COOKIE['add-ons'] ?? false;
+
+    return $addons ? json_decode($addons, true) : [];
+
+}
+
 function priceFormat($price) {
 
 	return number_format((float)$price, 2, '.', '');
