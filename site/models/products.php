@@ -3,14 +3,26 @@
 class ProductsPage extends DefaultPage {
 
 	public function productNavigation($category) {
-		$allProductsPage = site()->productsPage();
-		$categories = site()->productCategories(true, $this->template());
+		if($this->template() != 'products')
+			return '';
 
-		$content = $this->template() == 'products' ? brick('a', brick('span', 'All '.$allProductsPage->title()), ['href'=>$allProductsPage->url(), 'class'=>r($allProductsPage->isActive() && !$category, 'active')]) : '';
-		foreach($categories as $cat) {
-			$content.= brick('a', brick('span', $cat['name']), ['href'=>$cat['link'], 'class'=>r($cat['uri'] == $category, 'active')]);
-		}
-		return brick('div', brick('div', $content, ['class'=>'container']), ['id'=>'product-navigation']);
+		$allProductsPage = site()->productsPage();
+
+		$categories = brick('option', 'All '.$allProductsPage->title(), ['value'=>$allProductsPage->url(), 'selected'=>$allProductsPage->isActive() && !$category]);
+
+		foreach(site()->productCategories(true, $this->template()) as $cat)
+			$categories.= brick('option', $cat['name'], ['value'=>$cat['link'], 'selected'=>$cat['uri'] == $category]);
+
+		$content = brick('div', brick('div', 'Category:').brick('div', brick('select', $categories), ['class'=>'select-container']));
+
+		$sort = brick('option', 'None', ['value'=>url('products')]);
+
+		foreach(['price-low-high'=>'Price (Low - High)', 'newest'=>'Newest', 'top-sellers'=>'Top Sellers', 'price-high-low'=>'Price (High - Low)', 'top-rated'=>'Top Rated'] as $id => $title)
+			$sort.= brick('option', $title, ['value'=>url('products').r($category, '/'.strtolower($category)).'?sort='.$id, 'selected'=>get('sort') == $id]);
+
+		$content.= brick('div', brick('div', 'Sort By:').brick('div', brick('select', $sort), ['class'=>'select-container']));
+
+		return brick('div', brick('div', $content, ['class'=>'container']), ['class'=>'product-navigation']);
 	}
 
 	public function categoryContent($category) {

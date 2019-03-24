@@ -3,6 +3,7 @@
 	<?php
 		$pages = $site->pages()->visible();
 		$bab = page('build-a-bracelet');
+		$i = 0;
 	?>
 	<?php foreach($pages as $pg): ?>
 		<li class="top<?= r($pg->hasMenuPages() || $pg->template() == 'products', ' has-children') ?><?= r($pg->isOpen(), ' active') ?>">
@@ -31,9 +32,11 @@
 					<div>
 						<ul>
 							<?php foreach($site->productCategories(true) as $cat): ?>
-								<li class="<?= $page->template() == 'products' && isset($category) && $category == $cat['uri'] ? 'active' : false ?>">
-									<a href="<?= $cat['link'] ?>" data-image="<?= $cat['image'] ?>"><?= $cat['name'] ?></a>
-								</li>
+								<?php if($i++ < 4): ?>
+									<li class="<?= $page->template() == 'products' && isset($category) && $category == $cat['uri'] ? 'active' : false ?>">
+										<a href="<?= $cat['link'] ?>" data-image="<?= $cat['image'] ?>"><?= $cat['name'] ?></a>
+									</li>
+								<?php endif ?>
 							<?php endforeach; ?>
 							<li class="<?= r($pg->isActive() && (!isset($category) || !$category), 'active') ?>">
 								<a href="<?= $pg->url() ?>" data-image="<?= $pg->file($pg->menu_image())->url() ?>">All <?= $pg->title() ?></a>

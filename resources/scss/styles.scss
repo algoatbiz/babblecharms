@@ -132,7 +132,7 @@ button, .button {
 }
 
 #slider, #hero, body.product main,
-body.gallery #product-navigation,
+body.gallery .product-navigation,
 body.login main {
 	margin-top: 11.875rem;
 }
@@ -489,38 +489,56 @@ input[type=checkbox] {
 =      Product Navigation     =
 =============================*/
 
-#product-navigation {
+.product-navigation {
 	border-bottom: 1px solid $border;
 
 	.container {
 		@include flex;
 		@include flex-space(center);
+
+		> *, select {
+			color: inherit;
+			font-size: $small;
+			font-weight: $bold;
+			font-family: $oswald;
+			text-transform: uppercase;
+		}
+		a, select {
+			height: 3.125rem;
+		}
 	}
 	a {
-		height: 3.125rem;
-		color: inherit;
-		font-size: $small;
-		font-weight: $bold;
-		font-family: $oswald;
 		position: relative;
-		text-transform: uppercase;
 
 		&:not(:last-child) span {
 			border-right: 1px solid $border;
 		}
-		&.active:after {
-			content: '';
-			width: 100%;
-			height: 1px;
-			bottom: -1px;
-			position: absolute;
-			background: $black;
-		}
+	}
+	a.active:after, .select-container:before {
+		content: '';
+		width: 100%;
+		height: 1px;
+		bottom: -1px;
+		position: absolute;
+		background: $black;
 	}
 	span {
 		display: block;
 		padding: 0 2.5rem;
 		@include vertical-center;
+	}
+}
+
+body#products .product-navigation {
+	.container {
+		justify-content: space-between;
+
+		> div {
+			@include flex;
+		}
+	}
+	select {
+		border: 0;
 	}
 }
 

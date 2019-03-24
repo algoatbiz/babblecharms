@@ -612,3 +612,17 @@ if(engravingContainer) {
 		this.parentNode.classList.toggle('open');
 	});
 }
+
+/*=============================
+=      Category Navigation    =
+=============================*/
+
+var categorySort = document.querySelectorAll('.product-navigation select');
+
+if(categorySort.length > 0) {
+	for(var i=0; i<categorySort.length; i++) {
+		categorySort[i].addEventListener('change', function() {
+			window.location.href = this.value;
+		});
+	}
+}

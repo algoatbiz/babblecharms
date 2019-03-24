@@ -72,6 +72,12 @@ page::$methods['productsPage'] = function($site) {
 
 };
 
+page::$methods['galleryPage'] = function($site) {
+
+	return $site->index()->filterBy('template', 'gallery')->first();
+
+};
+
 page::$methods['productList'] = function($site, $category = false, $limit = false, $productUri = false, $search = false) {
 
 	$products = $site->productsPage()->products()->toStructure();
@@ -99,13 +105,21 @@ page::$methods['productList'] = function($site, $category = false, $limit = fals
 	if($limit)
 		$products = $products->limit($limit);
 
+	if(get('sort') == 'price-low-high')
+		$products = $products->sortBy('price');
+
+	if(get('sort') == 'price-high-low')
+		$products = $products->sortBy('price', 'desc');
+
 	return $site->buildProductList($products);
 
 };
 
 page::$methods['productCategories'] = function($site, $menu = false, $template = 'products') {
 
-	$categories = $site->productsPage()->category_descriptions()->toStructure();
+	$page = $template == 'gallery' ? 'galleryPage' : 'productsPage';
+
+	$categories = $site->{$page}()->category_descriptions()->toStructure();
 
 	if($menu) {
 		$categoriesForMenu = [];
@@ -115,7 +129,7 @@ page::$methods['productCategories'] = function($site, $menu = false, $template =
 				'name' => r($category == 'Bracelet', $category.'s', $category).r($category != 'Bracelet', ' Charms'),
 				'link' => url(r($template == 'gallery', 'photo-gallery', 'products').'/'.strtolower($category)),
 				'uri' => strtolower($category),
-				'image' => $site->productsPage()->image($c->featured_image())->url()
+				'image' => $template == 'products' ? $site->productsPage()->image($c->featured_image())->url() : false
 			];
 		}
 

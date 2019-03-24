@@ -3647,7 +3647,7 @@ Products:
     All of our charms are lead and nickel safe.
     
     *Due to the small size of this item it is not intended for small children.
-  price: "050"
+  price: "0.50"
   category: Message
   product_id: pineapple3
   quantity: "50"
@@ -4454,7 +4454,7 @@ Products:
 
 ----
 
-Categories: Message,Flower,Animal,Bracelet
+Categories: Message,Flower,Animal,Bracelet,Hearts,Travel,Custom Stamped,Trees,Word Charm,Stars,Pop Culture,Birthstones,Sports,Religious,Initials,Pearl Cages,Floating Locket,Sterling Silver,Jewelry Findings,Misc
 
 ----
 
@@ -4475,6 +4475,70 @@ Category-descriptions:
 - 
   category: Bracelet
   text: Bracelet Lorem Ipsum
+  featured_image: bracelet1.png
+- 
+  category: Hearts
+  text: Hearts Lorem Ipsum
+  featured_image: dsc00010.jpg
+- 
+  category: Travel
+  text: Travel Lorem Ipsum
+  featured_image: dsc09626.jpg
+- 
+  category: Custom Stamped
+  text: Custom Stamped Lorem Ipsum
+  featured_image: dsc08183.jpg
+- 
+  category: Trees
+  text: Trees Lorem Ipsum
+  featured_image: bracelet1.png
+- 
+  category: Word Charm
+  text: Word Charm Lorem Ipsum
+  featured_image: dsc00010.jpg
+- 
+  category: Stars
+  text: Stars Lorem Ipsum
+  featured_image: dsc09626.jpg
+- 
+  category: Pop Culture
+  text: Pop Culture Lorem Ipsum
+  featured_image: dsc08183.jpg
+- 
+  category: Birthstones
+  text: Birthstones Lorem Ipsum
+  featured_image: bracelet1.png
+- 
+  category: Sports
+  text: Sports Lorem Ipsum
+  featured_image: dsc00010.jpg
+- 
+  category: Religious
+  text: Religious Lorem Ipsum
+  featured_image: dsc09626.jpg
+- 
+  category: Initials
+  text: Initials Lorem Ipsum
+  featured_image: dsc08183.jpg
+- 
+  category: Pearl Cages
+  text: Pearl Cages Lorem Ipsum
+  featured_image: bracelet1.png
+- 
+  category: Floating Locket
+  text: Floating Locket Lorem Ipsum
+  featured_image: dsc00010.jpg
+- 
+  category: Sterling Silver
+  text: Sterling Silver Lorem Ipsum
+  featured_image: dsc09626.jpg
+- 
+  category: Jewelry Findings
+  text: Jewelry Findings Lorem Ipsum
+  featured_image: dsc08183.jpg
+- 
+  category: Misc
+  text: Misc Lorem Ipsum
   featured_image: bracelet1.png
 
 ----

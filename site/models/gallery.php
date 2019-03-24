@@ -2,6 +2,18 @@
 
 class GalleryPage extends ProductsPage {
 
+	public function productNavigation($category) {
+		$allProductsPage = site()->productsPage();
+		$categories = site()->productCategories(true, $this->template());
+
+		$content = $this->template() == 'products' ? brick('a', brick('span', 'All '.$allProductsPage->title()), ['href'=>$allProductsPage->url(), 'class'=>r($allProductsPage->isActive() && !$category, 'active')]) : '';
+
+		foreach($categories as $cat)
+			$content.= brick('a', brick('span', $cat['name']), ['href'=>$cat['link'], 'class'=>r($cat['uri'] == $category, 'active')]);
+
+		return brick('div', brick('div', $content, ['class'=>'container']), ['class'=>'product-navigation']);
+	}
+
 	public function buildGallery($category) {
 		$firstImage = '';
 		$images = '';
